@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EvoMol-Lab | UFRN</title>
     
+    <link rel="icon" href="ficon.png" type="image/png">
+
     <style>
         /* Basic Setup */
         body {
@@ -29,10 +31,24 @@
             border-bottom: 2px solid #eee;
             padding-bottom: 20px;
             margin-bottom: 20px;
+            text-align: center; /* Center the content */
+        }
+        header .banner-img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 8px; /* Slightly rounded corners for the banner */
+            margin-bottom: 15px; /* Space between banner and text */
+        }
+        header .logo-img {
+            height: 60px; /* Adjust logo height as needed */
+            vertical-align: middle;
+            margin-right: 10px;
         }
         header h1 {
             color: #2c3e50;
             margin: 0;
+            display: inline-block; /* Allows logo and title to be on same line */
+            vertical-align: middle;
         }
         header h2 {
             color: #34495e;
@@ -150,6 +166,9 @@
                 padding: 15px;
                 border-radius: 0;
             }
+            header .logo-img {
+                height: 40px; /* Smaller logo on small screens */
+            }
         }
     </style>
 </head>
@@ -157,7 +176,13 @@
 
     <div class="container">
         <header>
-            <h1>EvoMol-Lab</h1>
+            <img src="banner.png" alt="EvoMol Lab Banner" class="banner-img">
+
+            <div>
+                <img src="EvoMol-logo" alt="EvoMol Lab Logo" class="logo-img">
+                <h1>EvoMol-Lab</h1>
+            </div>
+            
             <h2>Laboratory of Evolution of Molecules and Systems</h2>
             <p>
                 Associated with the Bioinformatics Multidisciplinary Environment (BioME),
