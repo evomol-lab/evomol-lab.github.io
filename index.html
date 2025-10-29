@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EvoMol-Lab | UFRN</title>
+    
+    <style>
+        /* Basic Setup */
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            line-height: 1.6;
+            background-color: #f8f9fa;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 960px;
+            margin: 20px auto;
+            padding: 20px;
+            background: #ffffff;
+            border-radius: 8px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+        }
+
+        /* Header */
+        header {
+            border-bottom: 2px solid #eee;
+            padding-bottom: 20px;
+            margin-bottom: 20px;
+        }
+        header h1 {
+            color: #2c3e50;
+            margin: 0;
+        }
+        header h2 {
+            color: #34495e;
+            margin: 5px 0;
+            font-weight: 400;
+        }
+        header p {
+            color: #7f8c8d;
+            font-style: italic;
+            margin: 0;
+        }
+
+        /* Navigation Tabs */
+        nav {
+            background: #34495e;
+            overflow: hidden;
+            border-radius: 5px;
+        }
+        nav button {
+            background-color: #34495e;
+            border: none;
+            color: white;
+            padding: 14px 20px;
+            float: left;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s;
+            outline: none;
+        }
+        nav button:hover {
+            background-color: #4a6580;
+        }
+        nav button.active {
+            background-color: #007bff;
+        }
+
+        /* Tab Content */
+        .tab-content {
+            display: none;
+            padding: 20px 0;
+            animation: fadeIn 0.5s;
+        }
+        .tab-content.active {
+            display: block;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* Section-specific styles */
+        #home p {
+            text-align: justify;
+        }
+
+        #publications ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #publications li {
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid #eee;
+        }
+        #publications li strong {
+            font-size: 1.1em;
+            color: #0056b3;
+        }
+        #publications li a {
+            text-decoration: none;
+            color: #0056b3;
+        }
+        #publications li a:hover {
+            text-decoration: underline;
+        }
+        #publications li em {
+            color: #555;
+            display: block;
+            margin-top: 5px;
+        }
+
+        #tools ul, #people ul {
+            list-style-type: disc;
+            padding-left: 20px;
+        }
+        #tools li {
+            margin-bottom: 10px;
+        }
+        #tools li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        #tools li a:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            font-size: 0.9em;
+            color: #888;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 600px) {
+            nav button {
+                width: 100%;
+                float: none;
+                text-align: left;
+            }
+            .container {
+                margin: 0;
+                padding: 15px;
+                border-radius: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <header>
+            <h1>EvoMol-Lab</h1>
+            <h2>Laboratory of Evolution of Molecules and Systems</h2>
+            <p>
+                Associated with the Bioinformatics Multidisciplinary Environment (BioME),
+                Metrópole Digital Institute (IMD), Federal University of Rio Grande do Norte (UFRN)
+            </p>
+        </header>
+
+        <nav>
+            <button class="tab-link active" onclick="openTab(event, 'home')">Home</button>
+            <button class="tab-link" onclick="openTab(event, 'publications')">Publications</button>
+            <button class="tab-link" onclick="openTab(event, 'tools')">Tools</button>
+            <button class="tab-link" onclick="openTab(event, 'people')">People</button>
+        </nav>
+
+        <main>
+            <div id="home" class="tab-content active">
+                <h2>Welcome to EvoMol-Lab</h2>
+                <p>
+                    The Laboratory of Evolution of Molecules and Systems (EvoMol-Lab) is one of the research groups associated with the Bioinformatics Multidisciplinary Environment (BioME), at the Metrópole Digital Institute (IMD) of the Federal University of Rio Grande do Norte (UFRN).
+                </p>
+                <p>
+                    EvoMol-Lab's mission is to study evolutionary processes that act on molecules, supramolecular complexes, and systems (pathways and interaction networks) and the structural and functional effects caused by genetic variation, using approaches from Bioinformatics, molecular modeling, and evolutionary sequence analysis.
+                </p>
+                <p>
+                    Its Principal Investigator is Prof. João Paulo MS Lima, Full Professor at UFRN.
+                </p>
+            </div>
+
+            <div id="publications" class="tab-content">
+                <h2>Publications</h2>
+                <p id="publications-loading">Loading publications from ORCID...</p>
+                <ul id="publications-list">
+                    </ul>
+            </div>
+
+            <div id="tools" class="tab-content">
+                <h2>Our Tools</h2>
+                <p>Links to software and web servers developed by our group:</p>
+                <ul>
+                    <li><a href="https://evomol-app.bionf.imd.ufrn.br/" target="_blank" rel="noopener noreferrer">EvoMol-App</a></li>
+                    <li><a href="https://interevo-app.bionf.imd.ufrn.br/" target="_blank" rel="noopener noreferrer">InterEvo-App</a></li>
+                    <li><a href="https://github.com/EvoMol-Lab/EvoMol-Py" target="_blank" rel="noopener noreferrer">EvoMol-Py (GitHub)</a></li>
+                    <li><a href="https://interevo-kb.bionf.imd.ufrn.br/" target="_blank" rel="noopener noreferrer">InterEvo-KB</a></li>
+                    <li><a href="https://conformational-ensemble-app.streamlit.app/" target="_blank" rel="noopener noreferrer">Conformational Ensemble App (Streamlit)</a></li>
+                </ul>
+            </div>
+
+            <div id="people" class="tab-content">
+                <h2>People</h2>
+                <p>Add profiles of your lab members here. You can add sections for the PI, Post-docs, PhD students, Master's students, and alumni.</p>
+                
+                <h3>Principal Investigator</h3>
+                <ul>
+                    <li>Prof. João Paulo MS Lima</li>
+                </ul>
+
+                <h3>Students</h3>
+                <ul>
+                    <li>(Student Name 1)</li>
+                    <li>(Student Name 2)</li>
+                </ul>
+                
+                </div>
+        </main>
+
+        <footer>
+            <p>&copy; <span id="current-year"></span> EvoMol-Lab | Federal University of Rio Grande do Norte (UFRN)</p>
+        </footer>
+    </div>
+
+    <script>
+        // --- Tab Navigation Function ---
+        function openTab(evt, tabName) {
+            // Get all elements with class="tab-content" and hide them
+            var tabcontent = document.getElementsByClassName("tab-content");
+            for (var i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+                tabcontent[i].classList.remove("active");
+            }
+
+            // Get all elements with class="tab-link" and remove the class "active"
+            var tablinks = document.getElementsByClassName("tab-link");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].classList.remove("active");
+            }
+
+            // Show the current tab, and add an "active" class to the button that opened the tab
+            document.getElementById(tabName).style.display = "block";
+            document.getElementById(tabName).classList.add("active");
+            evt.currentTarget.classList.add("active");
+        }
+
+        // --- Run functions on page load ---
+        document.addEventListener('DOMContentLoaded', function() {
+            // Set the copyright year
+            document.getElementById('current-year').textContent = new Date().getFullYear();
+
+            // Fetch publications
+            fetchPublications();
+        });
+
+        // --- ORCID Fetch Function ---
+        async function fetchPublications() {
+            const orcidId = '0000-0002-6113-8834';
+            const apiUrl = `https://pub.orcid.org/v3.0/${orcidId}/works`;
+            const listElement = document.getElementById('publications-list');
+            const loadingElement = document.getElementById('publications-loading');
+
+            try {
+                const response = await fetch(apiUrl, {
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (!response.ok) {
+                    throw new Error(`HTTP error! status: ${response.status}`);
+                }
+
+                const data = await response.json();
+                
+                // Clear loading message
+                loadingElement.style.display = 'none';
+
+                if (data.group && data.group.length > 0) {
+                    // Sort works by publication-date (newest first)
+                    const sortedWorks = data.group.sort((a, b) => {
+                        const dateA = a['work-summary'][0]['publication-date'];
+                        const dateB = b['work-summary'][0]['publication-date'];
+                        // Handle potential null dates
+                        const yearA = dateA ? parseInt(dateA.year.value) : 0;
+                        const yearB = dateB ? parseInt(dateB.year.value) : 0;
+                        return yearB - yearA;
+                    });
+
+                    // Process and display each work
+                    sortedWorks.forEach(workGroup => {
+                        const summary = workGroup['work-summary'][0];
+                        
+                        const title = summary.title.title.value;
+                        const journal = summary['journal-title'] ? summary['journal-title'].value : 'N/A';
+                        
+                        // Get publication year
+                        let year = '';
+                        if (summary['publication-date']) {
+                            year = summary['publication-date'].year.value;
+                        }
+
+                        // Find the DOI
+                        let doi = '';
+                        let doiLink = '#';
+                        if (summary['external-ids'] && summary['external-ids']['external-id']) {
+                            const doiObj = summary['external-ids']['external-id'].find(id => id['external-id-type'] === 'doi');
+                            if (doiObj) {
+                                doi = doiObj['external-id-value'];
+                                doiLink = `https://doi.org/${doi}`;
+                            }
+                        }
+
+                        // Create list item
+                        const li = document.createElement('li');
+                        li.innerHTML = `
+                            <strong><a href="${doiLink}" target="_blank" rel="noopener noreferrer">${title}</a></strong>
+                            <em>${journal} (${year})</em>
+                            ${doi ? `<span>DOI: ${doi}</span>` : ''}
+                        `;
+                        listElement.appendChild(li);
+                    });
+                } else {
+                    listElement.innerHTML = '<li>No publications found.</li>';
+                }
+
+            } catch (error) {
+                console.error('Error fetching ORCID data:', error);
+                loadingElement.textContent = 'Failed to load publications. Please try again later.';
+            }
+        }
+    </script>
+
+</body>
+</html>
