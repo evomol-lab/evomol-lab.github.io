@@ -130,7 +130,7 @@
             margin-top: 5px;
         }
         
-        /* --- Styles for new Tools tab --- */
+        /* --- Styles for Tools tab --- */
         #tools h2 {
             color: #2c3e50;
             border-bottom: 2px solid #eee;
@@ -194,9 +194,64 @@
             text-decoration: underline;
         }
 
-        #people ul {
+        /* --- Styles for People tab --- */
+        #people h3 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 10px;
+        }
+        #people .profile-entry {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+        #people .profile-img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 50%; /* Circular image */
+            margin-right: 25px;
+            flex-shrink: 0;
+            border: 3px solid #eee;
+        }
+        #people .profile-description {
+            flex: 1;
+        }
+        #people .profile-description h3 { /* For "Personal Bio" etc. */
+            margin-top: 15px;
+            margin-bottom: 5px;
+            color: #34495e;
+            border-bottom: none; /* Override main h3 style */
+        }
+        #people .profile-description p {
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+        #people .profile-description ul { /* Link list */
+            list-style-type: none;
+            padding-left: 0;
+        }
+        #people .profile-description li {
+            margin-bottom: 8px;
+        }
+        #people .profile-description li a {
+            text-decoration: none;
+            color: #007bff;
+            font-weight: bold;
+        }
+        #people .profile-description li a:hover {
+            text-decoration: underline;
+        }
+        #people .student-list { /* Class for the student list */
             list-style-type: disc;
             padding-left: 20px;
+        }
+        #people hr {
+            border: 0;
+            border-top: 2px solid #eee;
+            margin: 30px 0;
         }
 
         /* Footer */
@@ -233,6 +288,24 @@
             }
             #tools .tool-entry-description p {
                 text-align: center;
+            }
+
+            /* People tab responsive */
+            #people .profile-entry {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            #people .profile-img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            #people .profile-description p {
+                text-align: center;
+            }
+            #people .profile-description ul {
+                display: inline-block;
+                text-align: left; /* Keep links left-aligned */
             }
         }
     </style>
@@ -375,23 +448,45 @@
                     </div>
                 </div>
             </div>
+            
             <div id="people" class="tab-content">
                 <h2>People</h2>
-                <p>Add profiles of your lab members here. You can add sections for the PI, Post-docs, PhD students, Master's students, and alumni.</p>
                 
                 <h3>Principal Investigator</h3>
-                <ul>
-                    <li>Prof. João Paulo MS Lima</li>
-                </ul>
+                <div class="profile-entry">
+                    <img src="JP.png" alt="João Paulo MS Lima" class="profile-img">
+                    <div class="profile-description">
+                        <p>Biologist, Bioinformatics specialist, Ph.D. in Biochemistry. My main research area is the Evolution of Molecules and Metabolic Pathways, using Bioinformatics/Structural Bioinformatics and Molecular Phylogeny approaches. At present, I am a Full Professor at the Biochemistry Department of the Universidade Federal do Rio Grande do Norte. Also, I am a faculty member of the Bioinformatics graduate program (PPg-Bioinfo-IMD/UFRN), a principal investigator at the Bioinformatics Multidisciplinary Environment (<a href="https://bioinfo.imd.ufrn.br" target="_blank" rel="noopener noreferrer">BioME</a>), and an associate researcher at the Institute of Tropical Medicine of Rio Grande do Norte (IMT-RN).</p>
+                        
+                        <ul>
+                            <li><a href="http://lattes.cnpq.br/3289758851760692" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="https://docente.ufrn.br/201900369630/perfil" target="_blank" rel="noopener noreferrer">Página Docente da UFRN</a> / <a href="https://sigaa.ufrn.br/sigaa/public/docente/portal.jsf?siape=1513597" target="_blank" rel="noopener noreferrer">SIGAA</a></li>
+                            <li><a href="https://orcid.org/0000-0002-6113-8834" target="_blank" rel="noopener noreferrer">OrcID</a></li>
+                            <li><a href="https://www.researchgate.net/profile/Joao-Lima-31" target="_blank" rel="noopener noreferrer">ResearchGate</a></li>
+                            <li><a href="https://www.linkedin.com/in/jo%C3%A3o-paulo-ms-lima-b0667351/" target="_blank" rel="noopener noreferrer">LinkedIN</a></li>
+                            <li><a href="https://linktr.ee/jpmslima" target="_blank" rel="noopener noreferrer">LinkTree</a></li>
+                        </ul>
 
+                        <h3>Personal Bio</h3>
+                        <p>Father of humans and dogs. Scientist, amateur cyclist, gravel enthusiast.<br>
+                        Mastodon: <a href="https://mstdn.science/@jpmslima" target="_blank" rel="noopener noreferrer">@jpmslima@mstdn.science</a></p>
+
+                        <h3>House</h3>
+                        <p>Hufflepuff</p>
+                    </div>
+                </div>
+                
+                <hr>
+                
+                <p>Add profiles of your lab members here. You can add sections for Post-docs, PhD students, Master's students, and alumni.</p>
                 <h3>Students</h3>
-                <ul>
+                <ul class="student-list">
                     <li>(Student Name 1)</li>
                     <li>(Student Name 2)</li>
                 </ul>
                 
             </div>
-        </main>
+            </main>
 
         <footer>
             <p>&copy; <span id="current-year"></span> EvoMol-Lab | Federal University of Rio Grande do Norte (UFRN)</p>
