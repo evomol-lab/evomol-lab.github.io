@@ -129,21 +129,74 @@
             display: block;
             margin-top: 5px;
         }
-
-        #tools ul, #people ul {
-            list-style-type: disc;
-            padding-left: 20px;
+        
+        /* --- Styles for new Tools tab --- */
+        #tools h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 25px;
         }
-        #tools li {
+        #tools .tool-link-button {
+            display: inline-block;
+            background-color: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: background-color 0.3s;
+        }
+        #tools .tool-link-button:hover {
+            background-color: #0056b3;
+            color: #ffffff;
+        }
+        #tools hr {
+            border: 0;
+            border-top: 2px solid #eee;
+            margin: 30px 0;
+        }
+        #tools .tool-entry {
+            display: flex;
+            align-items: flex-start;
+            margin-top: 20px;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #eee;
+        }
+        #tools .tool-entry:last-child {
+            border-bottom: none;
+        }
+        #tools .tool-entry img {
+            width: 100px; /* Controlled width */
+            height: 100px; /* Fixed height for uniformity */
+            object-fit: contain; /* Ensures logo fits well */
+            margin-right: 20px;
+            flex-shrink: 0; /* Prevents image from shrinking */
+        }
+        #tools .tool-entry-description {
+            flex: 1;
+        }
+        #tools .tool-entry-description h3 {
+            margin-top: 0;
+            color: #34495e;
+        }
+        #tools .tool-entry-description p {
             margin-bottom: 10px;
+            text-align: justify;
         }
-        #tools li a {
+        #tools .tool-entry-description a {
             text-decoration: none;
             color: #007bff;
             font-weight: bold;
         }
-        #tools li a:hover {
+        #tools .tool-entry-description a:hover {
             text-decoration: underline;
+        }
+
+        #people ul {
+            list-style-type: disc;
+            padding-left: 20px;
         }
 
         /* Footer */
@@ -168,6 +221,18 @@
             }
             header .logo-img {
                 height: 40px; /* Smaller logo on small screens */
+            }
+            #tools .tool-entry {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+            }
+            #tools .tool-entry img {
+                margin-right: 0;
+                margin-bottom: 15px;
+            }
+            #tools .tool-entry-description p {
+                text-align: center;
             }
         }
     </style>
@@ -219,17 +284,97 @@
             </div>
 
             <div id="tools" class="tab-content">
-                <h2>Our Tools</h2>
-                <p>Links to software and web servers developed by our group:</p>
-                <ul>
-                    <li><a href="https://evomol-app.bionf.imd.ufrn.br/" target="_blank" rel="noopener noreferrer">EvoMol-App</a></li>
-                    <li><a href="https://interevo-app.bionf.imd.ufrn.br/" target="_blank" rel="noopener noreferrer">InterEvo-App</a></li>
-                    <li><a href="https://github.com/EvoMol-Lab/EvoMol-Py" target="_blank" rel="noopener noreferrer">EvoMol-Py (GitHub)</a></li>
-                    <li><a href="https://interevo-kb.bionf.imd.ufrn.br/" target="_blank" rel="noopener noreferrer">InterEvo-KB</a></li>
-                    <li><a href="https://conformational-ensemble-app.streamlit.app/" target="_blank" rel="noopener noreferrer">Conformational Ensemble App (Streamlit)</a></li>
-                </ul>
-            </div>
+                <h2>Our Bioinformatics tutorials page:</h2>
+                <p><a href="https://jpmslima.github.io" target="_blank" rel="noopener noreferrer" class="tool-link-button">Tutoriais BioinfoX</a></p>
 
+                <hr>
+
+                <h2>Our tools:</h2>
+                <p>"EvoMol-Lab has a series of <b><i>"magic"</i></b> tools to help you with your work and analyses.</p>
+
+                <div class="tool-entry">
+                    <img src="CaRinDB.png" alt="CarinDB" />
+                    <div class="tool-entry-description">
+                        <h3>CaRinDB</h3>
+                        <p>CaRinDB is an interactive database designed to streamline cancer mutation research by integrating data from The Cancer Genome Atlas (TCGA) and advanced structural analysis tools, along with advanced effect predictions and molecular features such as Residue Interaction Networks (RINs) derived from Protein Data Bank experimental structures and AlphaFoldDB computational models. Covering 33 distinct cancer types, CaRinDB offers a broad spectrum of insights into cancer mutation dynamics.</p>
+                        <p><a href="https://bioinfo.imd.ufrn.br/CaRinDB/" target="_blank" rel="noopener noreferrer">Go to CaRinDB</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="SlytheRINs.png" alt="SlytheRINs" />
+                    <div class="tool-entry-description">
+                        <h3>SlyTheRINs</h3>
+                        <p>SlytheRINs is an interactive Python web application built with Streamlit (https://streamlit.io), designed to analyze and compare protein Residue Interaction Networks (RINs). These graphs represent the amino acid residues as the nodes and their chemical interactions as the edges. They can be easily generated from a single or multiple protein structures, using computational modeling methods, normal-based mode, or molecular dynamics simulation. SlytheRINs provides an analysis dashboard to explore and compare network parameters, identify significant residue-level changes across different conformations, analyze chemical interaction types, and integrate these findings with predicted mutation effects from AlphaMissense (in the case of human proteins).</p>
+                        <p><a href="https://slytherins.streamlit.app" target="_blank" rel="noopener noreferrer">Go to SlyTheRins</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="RoC-Logo.png" alt="RoC" />
+                    <div class="tool-entry-description">
+                        <h3>The Room of Conformations (RoC)</h3>
+                        <p>A user-friendly desktop tool for generating all-atom protein conformational ensembles using Normal Mode Analysis.</p>
+                        <p><a href="https://github.com/evomol-lab/RoC" target="_blank" rel="noopener noreferrer">Go to RoC (GitHub)</a></p>
+                        <p><a href="https://colab.research.google.com/drive/1jd3qgAZPF9bWxlcCjYURpFQAEYW102Y5?usp=sharing" target="_blank" rel="noopener noreferrer">Go to RoC (Google Colab)</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="RevelioPlots.png" alt="RevelioPlots" />
+                    <div class="tool-entry-description">
+                        <h3>RevelioPlots</h3>
+                        <p>RevelioPlots is an interactive web application designed for the quality assessment of protein structure models. By parsing Crystallographic Information Files (.cif or .mmcif), the app provides a suite of intuitive visualizations centered around the per-residue Local Distance Difference Test (pLDDT) score, a key metric for model confidence, particularly in structures generated by tools like AlphaFold.</p>
+                        <p><a href="https://revelioplots.streamlit.app" target="_blank" rel="noopener noreferrer">Go to RevelioPlots (App)</a></p>
+                        <p><a href="https://github.com/jpmslima/RevelioPlots" target="_blank" rel="noopener noreferrer">Go to RevelioPlots (GitHub)</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="HufflePlots.jpg" alt="HufflePlots" />
+                    <div class="tool-entry-description">
+                        <h3>HufflePlots</h3>
+                        <p>HufflePlots is a simple and interactive tool to visualize, analyze and compare RMSD and RMSF plots of protein structural trajectories data from Molecular Dynamics or Normal mode-based geometric simulations.</p>
+                        <p><a href="https://protplots.streamlit.app" target="_blank" rel="noopener noreferrer">Go to HufflePlots</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="DDEA.png" alt="DDEA" />
+                    <div class="tool-entry-description">
+                        <h3>Differential Expression Diagonal Alley (DDEA)</h3>
+                        <p>DDEA is a simple Streamlit application to analyze Case x Control gene expression output data from GEO. Allows users to upload a .tsv file, a custom gene list (optional), and specify a comparison string, with controls in a sidebar. DDEA then plots differentially expressed genes using Plotly and displays their p-values.</p>
+                        <p><a href="https://ddealley.streamlit.app/" target="_blank" rel="noopener noreferrer">Go to DDEA</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="Rictusempra.png" alt="Rictusempra" />
+                    <div class="tool-entry-description">
+                        <h3><i>Rictusempra</i></h3>
+                        <p>Rictusempra is a web-based cheminformatics tool for interactively visualizing small molecules and calculating their most likely protonation state at a given physiological pH. It provides a simple interface to generate 2D and 3D molecular structures and prepare them for further computational chemistry tasks like molecular docking or simulation.</p>
+                        <p><a href="https://rictusempra.streamlit.app" target="_blank" rel="noopener noreferrer">Go to Rictusempra</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="MaraudersGenoMap.png" alt="MaraudersGenoMap" />
+                    <div class="tool-entry-description">
+                        <h3>Marauder's GenoMap</h3>
+                        <p>A comprehensive pipeline for the discovery of protein families in de novo assembled genomes and transcriptomes.</p>
+                        <p><a href="https://github.com/evomol-lab/MaraudersGenoMap" target="_blank" rel="noopener noreferrer">Go to Marauder's GenoMap (GitHub)</a></p>
+                    </div>
+                </div>
+
+                <div class="tool-entry">
+                    <img src="PensievePlotter.png" alt="PensievePlotter" />
+                    <div class="tool-entry-description">
+                        <h3>The Pensieve Plotter</h3>
+                        <p>An interactive tool for visualizing Extended Bayesian Skyline Plots (EBSP) from BEAST log files.</p>
+                        <p><a href="httpss://pensieveplotter.streamlit.app/" target="_blank" rel="noopener noreferrer">Go to The Pensieve Plotter</a></p>
+                    </div>
+                </div>
+            </div>
             <div id="people" class="tab-content">
                 <h2>People</h2>
                 <p>Add profiles of your lab members here. You can add sections for the PI, Post-docs, PhD students, Master's students, and alumni.</p>
@@ -245,7 +390,7 @@
                     <li>(Student Name 2)</li>
                 </ul>
                 
-                </div>
+            </div>
         </main>
 
         <footer>
@@ -311,8 +456,8 @@
                         const dateA = a['work-summary'][0]['publication-date'];
                         const dateB = b['work-summary'][0]['publication-date'];
                         // Handle potential null dates
-                        const yearA = dateA ? parseInt(dateA.year.value) : 0;
-                        const yearB = dateB ? parseInt(dateB.year.value) : 0;
+                        const yearA = dateA ? (dateA.year ? parseInt(dateA.year.value) : 0) : 0;
+                        const yearB = dateB ? (dateB.year ? parseInt(dateB.year.value) : 0) : 0;
                         return yearB - yearA;
                     });
 
@@ -325,7 +470,7 @@
                         
                         // Get publication year
                         let year = '';
-                        if (summary['publication-date']) {
+                        if (summary['publication-date'] && summary['publication-date'].year) {
                             year = summary['publication-date'].year.value;
                         }
 
