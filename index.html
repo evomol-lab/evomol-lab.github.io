@@ -195,11 +195,22 @@
         }
 
         /* --- Styles for People tab --- */
-        #people h3 {
+        #people h2 {
             color: #2c3e50;
             border-bottom: 2px solid #eee;
             padding-bottom: 5px;
-            margin-top: 10px;
+        }
+        #people h3 { /* Section titles: PI, M.Sc., etc. */
+            color: #2c3e50;
+            border-bottom: 2px solid #eee;
+            padding-bottom: 5px;
+            margin-top: 25px;
+        }
+        #people h4 { /* Person's Name */
+            color: #34495e;
+            margin-top: 0;
+            margin-bottom: 10px;
+            font-size: 1.3em;
         }
         #people .profile-entry {
             display: flex;
@@ -219,11 +230,12 @@
         #people .profile-description {
             flex: 1;
         }
-        #people .profile-description h3 { /* For "Personal Bio" etc. */
+        #people .profile-description h3 { /* For "Personal Bio", "House" */
             margin-top: 15px;
             margin-bottom: 5px;
             color: #34495e;
             border-bottom: none; /* Override main h3 style */
+            font-size: 1.1em;
         }
         #people .profile-description p {
             text-align: justify;
@@ -388,7 +400,7 @@
                     <div class="tool-entry-description">
                         <h3>The Room of Conformations (RoC)</h3>
                         <p>A user-friendly desktop tool for generating all-atom protein conformational ensembles using Normal Mode Analysis.</p>
-                        <p><a href="https://github.com/evomol-lab/RoC" target="_blank" rel="noopener noreferrer">Go to RoC (GitHub)</a></p>
+                        <p><a href="httpsD://github.com/evomol-lab/RoC" target="_blank" rel="noopener noreferrer">Go to RoC (GitHub)</a></p>
                         <p><a href="https://colab.research.google.com/drive/1jd3qgAZPF9bWxlcCjYURpFQAEYW102Y5?usp=sharing" target="_blank" rel="noopener noreferrer">Go to RoC (Google Colab)</a></p>
                     </div>
                 </div>
@@ -450,12 +462,13 @@
             </div>
             
             <div id="people" class="tab-content">
-                <h2>People</h2>
+                <h2>Our Scientists</h2>
                 
                 <h3>Principal Investigator</h3>
                 <div class="profile-entry">
                     <img src="JP.png" alt="João Paulo MS Lima" class="profile-img">
                     <div class="profile-description">
+                        <h4>João Paulo M S Lima</h4>
                         <p>Biologist, Bioinformatics specialist, Ph.D. in Biochemistry. My main research area is the Evolution of Molecules and Metabolic Pathways, using Bioinformatics/Structural Bioinformatics and Molecular Phylogeny approaches. At present, I am a Full Professor at the Biochemistry Department of the Universidade Federal do Rio Grande do Norte. Also, I am a faculty member of the Bioinformatics graduate program (PPg-Bioinfo-IMD/UFRN), a principal investigator at the Bioinformatics Multidisciplinary Environment (<a href="https://bioinfo.imd.ufrn.br" target="_blank" rel="noopener noreferrer">BioME</a>), and an associate researcher at the Institute of Tropical Medicine of Rio Grande do Norte (IMT-RN).</p>
                         
                         <ul>
@@ -478,13 +491,121 @@
                 
                 <hr>
                 
-                <p>Add profiles of your lab members here. You can add sections for Post-docs, PhD students, Master's students, and alumni.</p>
-                <h3>Students</h3>
-                <ul class="student-list">
-                    <li>(Student Name 1)</li>
-                    <li>(Student Name 2)</li>
-                </ul>
-                
+                <h3>M.Sc.</h3>
+                <div class="profile-entry">
+                    <img src="lais.jpeg" alt="Lais" class="profile-img">
+                    <div class="profile-description">
+                        <h4>Laís de Carvalho Gonçalves</h4>
+                        <p>
+                            Cat mom, origamist, and amateur musician (ukulele and cavaquinho). Biomedical scientist and scientist by vocation!
+                            <br><em>Mãe de gato, origamista e musicista amadora no ukulele e cavaquinho. Biomédica e cientista por vocação!</em>
+                        </p>
+                        <ul>
+                            <li><a href="https://lattes.cnpq.br/6541513579851095" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="mailto:lais.goncalves.034@ufrn.edu.br" target="_blank" rel="noopener noreferrer">Email</a></li>
+                        </ul>
+                        <h3>House</h3>
+                        <p>Ravenclaw</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3>Grad Students</h3>
+                <div class="profile-entry">
+                    <img src="DJ.jpg" alt="DJ" class="profile-img">
+                    <div class="profile-description">
+                        <h4>Djorkaeff Oliveira Fontinele</h4>
+                        <p>Biologist, Bioinformatics Masters' Degree Student.</p>
+                        <ul>
+                            <li><a href="http://lattes.cnpq.br/6052514253634998" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="mailto:djorkaeff.fontinele.604@ufrn.edu.br" target="_blank" rel="noopener noreferrer">Email</a></li>
+                        </ul>
+                        <h3>House</h3>
+                        <p>Hufflepuff</p>
+                    </div>
+                </div>
+
+                <div class="profile-entry">
+                    <img src="JV.jpg" alt="JV" class="profile-img">
+                    <div class="profile-description">
+                        <h4>João Vitor Santos de França</h4>
+                        <p>Biologist, Bioinformatics Masters' Degree Student.</p>
+                        <p>
+                            Flamengo fan, Handball goalkeeper, and Natural Sciences Teacher.
+                            <br><em>Flamenguista, Goleiro de Handball e Professor de Ciências Naturais.</em>
+                        </p>
+                        <ul>
+                            <li><a href="http://lattes.cnpq.br/7286686048350979" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="mailto:joao.vitor.santos.051@ufrn.edu.br" target="_blank" rel="noopener noreferrer">Email</a></li>
+                        </ul>
+                        <h3>House</h3>
+                        <p>Slytherin</p>
+                    </div>
+                </div>
+
+                <div class="profile-entry">
+                    <img src="Felix.gif" alt="Felix" class="profile-img">
+                    <div class="profile-description">
+                        <h4>Juliana Rayssa Barros Felix</h4>
+                        <p>Biologist, Bioinformatics Masters' Degree Student.</p>
+                        <ul>
+                            <li><a href="http://lattes.cnpq.br/3279922019273895" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="mailto:juliana.barros.703@ufrn.edu.br" target="_blank" rel="noopener noreferrer">Email</a></li>
+                        </ul>
+                        <h3>House</h3>
+                        <p>Gryffindor</p>
+                    </div>
+                </div>
+
+                <div class="profile-entry">
+                    <img src="Shimohara.jpg" alt="Shimohara" class="profile-img">
+                    <div class="profile-description">
+                        <h4>Laura Shimohara Bradaschia</h4>
+                        <p>Biotechnologist, Bioinformatics Masters' Degree Student.</p>
+                        <ul>
+                            <li><a href="http://lattes.cnpq.br/5307797438965920" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="mailto:laura.shimohara.041@ufrn.edu.br" target="_blank" rel="noopener noreferrer">Email</a></li>
+                        </ul>
+                        <h3>House</h3>
+                        <p>Hufflepuff</p>
+                    </div>
+                </div>
+
+                <div class="profile-entry">
+                    <img src="leo.jpg" alt="Leonardo" class="profile-img">
+                    <div class="profile-description">
+                        <h4>Leonardo Luiz de Sena Fernandes</h4>
+                        <p>Bachelor in Farmaceutical Sciences and Biomedical Sciences, Bioinformatics Masters' Degree Student.</p>
+                        <ul>
+                            <li><a href="http://lattes.cnpq.br/9545283697850276" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="mailto:leonardo.luiz.089@ufrn.edu.br" target="_blank" rel="noopener noreferrer">Email</a></li>
+                        </ul>
+                        <h3>House</h3>
+                        <p>Not a Harry Potter's Fan.</p>
+                    </div>
+                </div>
+
+                <hr>
+
+                <h3>Undergrad Students</h3>
+                <div class="profile-entry">
+                    <img src="arthur.jpg" alt="Arthur" class="profile-img">
+                    <div class="profile-description">
+                        <h4>Arthur Henrique Dantas de Azevedo</h4>
+                        <p>
+                            Biomedical Sciences undergraduate student at UFRN, undergraduate researcher at EvoMol-Lab, and Bioinformatics enthusiast.
+                            <br><em>Estudante de graduação em Biomedicina na UFRN, aluno de iniciação científica no EvoMol-Lab e entusiasta de Bioinformática.</em>
+                        </p>
+                        <ul>
+                            <li><a href="https://lattes.cnpq.br/6534445554074000" target="_blank" rel="noopener noreferrer">CV Lattes</a></li>
+                            <li><a href="mailto:arthur.henrique.079@ufrn.edu.br" target="_blank" rel="noopener noreferrer">Email</a></li>
+                        </ul>
+                        <h3>House</h3>
+                        <p>Slytherin</p>
+                    </div>
+                </div>
+
             </div>
             </main>
 
