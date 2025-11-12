@@ -1,0 +1,74 @@
+# .github/workflows/deploy.yml
+
+name: Deploy React Site to GitHub Pages
+
+on:
+  # Runs on pushes to the 'main' branch
+  push:
+    branches: [ "main" ]
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# Set permissions for the GITHUB_TOKEN to allow deployment
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  # Build job
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          fetch-depth: 0
+          submodules: false
+          lfs: true
+  
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          # Use the Node.js version your Vite project requires
+          node-version: 20 
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      # 1. Run the build command ONCE
+      - name: Build project
+        run: npm run build
+        
+      # 2. Verify the output (this is our debug step)
+      - name: Verify build output
+        run: ls -R ./dist
+        
+      # 3. Upload the artifact ONCE, with the correct path
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: ./dist/
+
+  # Deploy job
+  deploy:
+    # This job needs the 'build' job to finish first
+    needs: build
+    
+    # Grant permissions
+    permissions:
+      pages: write
+      id-token: write
+      
+    # Deploy to the 'github-pages' environment
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+      
+    runs-on: ubuntu-latest
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
