@@ -86,8 +86,8 @@ const PeopleTab = () => {
     {
       name: "Leonardo Luiz de Sena Fernandes",
       image: "leo.jpg",
-      bio: "Bachelor in Farmaceutical Sciences and Biomedical Sciences, Bioinformatics Masters' Degree Student.",
-      house: "Not a Harry Potter's Fan.",
+      bio: "Bachelor in Farmaceutical Sciences and Biomedical Sciences, Bioinformatics Masters' Degree Student. A curious mind. Passionate about questioning and exploring the secrets and mysteries of everything.",
+      house: "Ravenclaw",
       links: [
         { label: "CV Lattes", url: "http://lattes.cnpq.br/9545283697850276" },
         { label: "Email", url: "mailto:leonardo.luiz.089@ufrn.edu.br" }
