@@ -65,6 +65,15 @@ const tools: Tool[] = [
     links: [{ label: "Go to Marauder's GenoMap (GitHub)", url: "https://github.com/evomol-lab/MaraudersGenoMap" }]
   },
   {
+    name: "Protein Sneakoscope",
+    image: "protein-sneakoscope.png",
+    description: "Protein Sneakoscope is a comprehensive Streamlit-based web application designed for protein variant analysis, pathogenicity prediction, and 3D structural modeling. It integrates data from UniProt, AlphaMissense, and SWISS-MODEL to provide an interactive dashboard for researchers to explore how specific mutations might affect protein structure and function.",
+    links: [
+      { label: "Go to Protein Sneakoscope (GitHub)", url: "https://github.com/jpmslima/Sneakoscope" },
+      { label: "Go to Protein Sneakoscope (App)", url: "https://protein-sneakoscope.streamlit.app" }
+    ]
+  },
+  {
     name: "The Pensieve Plotter",
     image: "PensievePlotter.png",
     description: "An interactive tool for visualizing Extended Bayesian Skyline Plots (EBSP) from BEAST log files.",
@@ -82,9 +91,9 @@ const ToolsTab = () => {
             Our Bioinformatics tutorials page:
           </h2>
           <Button asChild className="bg-gradient-primary hover:opacity-90 transition-opacity text-white">
-            <a 
-              href="https://jpmslima.github.io" 
-              target="_blank" 
+            <a
+              href="https://jpmslima.github.io"
+              target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-2"
             >
@@ -105,18 +114,18 @@ const ToolsTab = () => {
 
           <div className="space-y-8">
             {tools.map((tool, index) => (
-              <div 
+              <div
                 key={index}
                 className="flex flex-col md:flex-row gap-6 pb-8 border-b border-border/50 last:border-0 group hover:bg-accent/30 transition-colors rounded-lg p-4 -mx-4"
               >
                 <div className="flex-shrink-0 mx-auto md:mx-0">
-                  <img 
-                    src={tool.image} 
+                  <img
+                    src={tool.image}
                     alt={tool.name}
                     className="w-28 h-28 object-contain rounded-lg bg-white p-2 shadow-subtle"
                   />
                 </div>
-                
+
                 <div className="flex-1 space-y-3">
                   <h3 className="text-2xl font-semibold text-secondary">{tool.name}</h3>
                   <p className="text-foreground/80 text-justify leading-relaxed">
@@ -124,15 +133,15 @@ const ToolsTab = () => {
                   </p>
                   <div className="flex flex-wrap gap-3">
                     {tool.links.map((link, linkIndex) => (
-                      <Button 
+                      <Button
                         key={linkIndex}
-                        asChild 
+                        asChild
                         variant="outline"
                         className="hover:bg-primary hover:text-primary-foreground transition-colors border-primary/30"
                       >
-                        <a 
-                          href={link.url} 
-                          target="_blank" 
+                        <a
+                          href={link.url}
+                          target="_blank"
                           rel="noopener noreferrer"
                           className="flex items-center gap-2"
                         >
