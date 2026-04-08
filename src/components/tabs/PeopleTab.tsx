@@ -177,19 +177,6 @@ const PeopleTab = () => {
           <Separator className="my-8" />
 
           <h3 className="text-2xl font-bold text-foreground mb-6 pb-2 border-b-2 border-border">
-            M.Sc.
-          </h3>
-          <div className="space-y-6">
-            {mscStudents.map((person, index) => (
-              <div key={index}>
-                {renderPerson(person)}
-              </div>
-            ))}
-          </div>
-
-          <Separator className="my-8" />
-
-          <h3 className="text-2xl font-bold text-foreground mb-6 pb-2 border-b-2 border-border">
             Grad Students
           </h3>
           <div className="space-y-8">

@@ -44,7 +44,7 @@ const tools: Tool[] = [
     name: "HufflePlots",
     image: "HufflePlots.jpg",
     description: "HufflePlots is a simple and interactive tool to visualize, analyze and compare RMSD and RMSF plots of protein structural trajectories data from Molecular Dynamics or Normal mode-based geometric simulations.",
-    links: [{ label: "Go to HufflePlots", url: "https://protplots.streamlit.app" }]
+    links: [{ label: "Go to HufflePlots", url: "https://huffleplots.streamlit.app/" }]
   },
   {
     name: "Differential Expression Diagonal Alley (DDEA)",
