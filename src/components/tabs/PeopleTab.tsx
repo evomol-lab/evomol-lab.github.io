@@ -28,20 +28,6 @@ const PeopleTab = () => {
       { label: "LinkTree", url: "https://linktr.ee/jpmslima" }
     ]
   };
-
-  const mscStudents: Person[] = [
-    {
-      name: "Laís de Carvalho Gonçalves",
-      image: "lais.jpeg",
-      bio: "Cat mom, origamist, and amateur musician (ukulele and cavaquinho). Biomedical scientist and scientist by vocation!",
-      house: "Ravenclaw",
-      links: [
-        { label: "CV Lattes", url: "https://lattes.cnpq.br/6541513579851095" },
-        { label: "Email", url: "mailto:lais.goncalves.034@ufrn.edu.br" }
-      ]
-    }
-  ];
-
   const gradStudents: Person[] = [
     {
       name: "Djorkaeff Oliveira Fontinele",
@@ -71,6 +57,16 @@ const PeopleTab = () => {
       links: [
         { label: "CV Lattes", url: "http://lattes.cnpq.br/3279922019273895" },
         { label: "Email", url: "mailto:juliana.barros.703@ufrn.edu.br" }
+      ]
+    },
+    {
+      name: "Laís de Carvalho Gonçalves",
+      image: "lais.jpeg",
+      bio: "Cat mom, origamist, and amateur musician (ukulele and cavaquinho). Biomedical scientist and scientist by vocation!",
+      house: "Ravenclaw",
+      links: [
+        { label: "CV Lattes", url: "https://lattes.cnpq.br/6541513579851095" },
+        { label: "Email", url: "mailto:lais.goncalves.034@ufrn.edu.br" }
       ]
     },
     {
@@ -111,25 +107,25 @@ const PeopleTab = () => {
   const renderPerson = (person: Person) => (
     <div className="flex flex-col md:flex-row gap-6 items-start group hover:bg-accent/30 transition-colors rounded-lg p-4 -mx-4">
       <div className="flex-shrink-0 mx-auto md:mx-0">
-        <img 
-          src={person.image} 
+        <img
+          src={person.image}
           alt={person.name}
           className="w-40 h-40 rounded-full object-cover border-4 border-border shadow-medium"
         />
       </div>
-      
+
       <div className="flex-1 space-y-4">
         <h4 className="text-2xl font-semibold text-secondary">{person.name}</h4>
-        
+
         {person.bio && (
           <p className="text-foreground/80 text-justify leading-relaxed">{person.bio}</p>
         )}
-        
+
         {person.links && person.links.length > 0 && (
           <ul className="space-y-2">
             {person.links.map((link, index) => (
               <li key={index}>
-                <a 
+                <a
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
@@ -142,14 +138,14 @@ const PeopleTab = () => {
             ))}
           </ul>
         )}
-        
+
         {person.personalBio && (
           <div className="space-y-2">
             <h5 className="text-lg font-semibold text-secondary">Personal Bio</h5>
             <p className="text-foreground/80">{person.personalBio}</p>
           </div>
         )}
-        
+
         {person.house && (
           <div className="space-y-2">
             <h5 className="text-lg font-semibold text-secondary">House</h5>
@@ -166,9 +162,9 @@ const PeopleTab = () => {
         <div className="h-2 bg-gradient-primary" />
         <CardContent className="p-8">
           <h2 className="text-3xl font-bold text-foreground mb-6">Our Scientists</h2>
-          
-          <img 
-            src="EvoMol-Lab-Nov2025.jpeg" 
+
+          <img
+            src="EvoMol-Lab-Nov2025.jpeg"
             alt="EvoMol-Lab Team - November 2025"
             className="w-full h-auto rounded-xl shadow-medium mb-8"
           />
@@ -177,9 +173,9 @@ const PeopleTab = () => {
             Principal Investigator
           </h3>
           {renderPerson(pi)}
-          
+
           <Separator className="my-8" />
-          
+
           <h3 className="text-2xl font-bold text-foreground mb-6 pb-2 border-b-2 border-border">
             M.Sc.
           </h3>
@@ -190,9 +186,9 @@ const PeopleTab = () => {
               </div>
             ))}
           </div>
-          
+
           <Separator className="my-8" />
-          
+
           <h3 className="text-2xl font-bold text-foreground mb-6 pb-2 border-b-2 border-border">
             Grad Students
           </h3>
@@ -203,9 +199,9 @@ const PeopleTab = () => {
               </div>
             ))}
           </div>
-          
+
           <Separator className="my-8" />
-          
+
           <h3 className="text-2xl font-bold text-foreground mb-6 pb-2 border-b-2 border-border">
             Undergrad Students
           </h3>
