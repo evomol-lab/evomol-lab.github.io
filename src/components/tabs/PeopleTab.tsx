@@ -105,7 +105,7 @@ const PeopleTab = () => {
     {
       name: "Ana Vivia Dos Santos Chacon Da Silva",
       image: "Chacon.jpeg",
-      bio: "Biotechnologist, Bioinformatics Masters' Degree Student.",
+      bio: "Biomedical Science student at UFRN with a growing interest in bioinformatics.",
       house: "Hufflepuff",
       links: [
         { label: "CV Lattes", url: "http://lattes.cnpq.br/5423063535263946" },
