@@ -101,6 +101,16 @@ const PeopleTab = () => {
         { label: "CV Lattes", url: "https://lattes.cnpq.br/6534445554074000" },
         { label: "Email", url: "mailto:arthur.henrique.079@ufrn.edu.br" }
       ]
+    },
+    {
+      name: "Ana Vivia Dos Santos Chacon Da Silva",
+      image: "Chacon.jpeg",
+      bio: "Biotechnologist, Bioinformatics Masters' Degree Student.",
+      house: "Hufflepuff",
+      links: [
+        { label: "CV Lattes", url: "http://lattes.cnpq.br/5423063535263946" },
+        { label: "Email", url: "mailto:ana.vivia.chacon.144@ufrn.edu.br " }
+      ]
     }
   ];
 
