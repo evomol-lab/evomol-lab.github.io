@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="EvoMol-Lab" /><link rel="canonical" href="https://evomol-lab.github.io/tutorials/satsub-ptbr/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Análise de Saturação de Substituições - Tutoriais EvoMol-Lab's Teaching Resources</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "An\u00e1lise de Satura\u00e7\u00e3o de Substitui\u00e7\u00f5es";
+        var mkdocs_page_input_path = "satsub-ptbr.md";
+        var mkdocs_page_url = "/tutorials/satsub-ptbr/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Tutoriais EvoMol-Lab's Teaching Resources
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Página Inicial</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demo/">Representação Computacional de Biomoléculas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../aboutus/">Sobre o grupo</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriais Iniciais de Bioinformática</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic1/">Inicial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../101/">Introdução a linha de comando UNIX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../102/">Manipulando dados na CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CLI-Colab/">Introdução a CLI e ao Google Colab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../103/">Introdução ao GenBank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../104/">Buscas de Similaridade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../105/">Alinhamento entre pares de sequências</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../106-MSA/">Alinhamento Múltiplo de Sequências</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../107-NCBI-CLI/">NCBI/GenBank via CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../108-BLAST-CLI/">BLAST via CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../109-SQL/">Comandos Básicos em SQL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r-colab/">Introdução ao R usando o Google Colab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../enzima-annot/">Integração de Bancos - Exemplo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dbsnp/">Bancos de dados de Mutações e Polimorfismos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KEGG/">Explorando Vias Metabólicas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../110-BDs/">Bancos de Dados de Informação Proteica</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../111-Modelagem/">Modelagem Computacional de Proteínas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../112-MEGAX/">Primeiros Passos no MEGA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../113-Genomes/">Navegando por Genomas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video/">Videoaulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Bioinformática Estrutural</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic2/">Inicial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../slides/">Slides de Acompanhamento</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/">Programas e Ferramentas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR1-Visualizacao/">Visualização Computacional de Moléculas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR2-pred/">Informações a partir da estrutura primária</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR22-Epitopos/">Predição de Epítopos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR3-Model1/">Modelagem 101</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR4-Model2/">Modelagem 102</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../STR5-Model3.mkdocs gh-deploy --forcemd">Modeller-CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR6-AlphaFold/">Métodos baseados em IA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR7-MDA/">MDA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR8-Aval/">Avaliação dos Modelos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR9-EM/">EM/CryoEM fitting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR10-RINs/">RINs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR11-APBS/">APBS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR12-Memb/">Proteínas de Membrana</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR13-Dock1/">Autodock (básico)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR14-Dock2/">Docking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR15-VS1/">Virtual Screening</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR23-MDIntro/">Introdução a Dinâmica Molecular</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR16-EGB1/">Modelos de Pequenas Moléculas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR17-EGB2/">Análise conformacional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR18-EGB3/">Docking Automático</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR19-EGB4/">Posicionamento Manual</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR20-EGB5/">Dinâmica Molecular</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR21-EGB6/">VS-2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comps/">Complements</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Análise Evolucionária de Sequências (Evolução Molecular)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Análise de Saturação de Substituições</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#metodo-qualitativo">Método Qualitativo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#o-metodo-quantitativo">O Método Quantitativo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#influencia-da-posicao-no-codon">Influência da Posição no Códon</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#consideracoes-finais">Considerações Finais</a>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bestfit-ptbr/">Escolha do Modelo de Substituição</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BEAST_ptbr/">Usando o BEAST</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Diplomado - UChile</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../Presentation.md">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../UC_slides.md">Slides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../Material.md">Files and References</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../First_Tutorial_ENG.md">First Tutorial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Substitution_saturation_ENG/">Analysis of Substitution Saturation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ModelTest_ENG/">Test of the Best-Fit Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../MEGAX_ENG.md">Using MEGAX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1st_BEAST/">Using BEAST</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../BEAST+EBSP_ENG.md">Phylodynamics using EBSP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../IQTree.md">Using IQ-Tree</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Tutoriais EvoMol-Lab's Teaching Resources</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Análise Evolucionária de Sequências (Evolução Molecular)</li>
+      <li class="breadcrumb-item active">Análise de Saturação de Substituições</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estimativa-da-saturacao-de-substituicoes-em-sequencias-nucleotidicas">Estimativa da Saturação de Substituições em Sequências Nucleotídicas</h1>
+<p>A estimativa de saturação por substituição é uma análise essencial para verificar se os alinhamentos de sequências ainda mantêm um sinal filogenético. A saturação é muito mais comum em sequências de nucleotídeos. Existem dois métodos para essa estimativa: um extremamente simples e qualitativo, e outro quantitativo, com probabilidade associada (o método de Xia, 2009). Ambos estão implementados no programa <a href="http://dambe.bio.uottawa.ca/DAMBE/dambe.aspx">DAMBE</a> (<a href="https://www.ncbi.nlm.nih.gov/pubmed/29669107">Xia, 2018</a>)</p>
+<p>O <strong>DAMBE</strong> (Xia, 2018) é um pacote de programas com diversas aplicações para análise de sequências e filogenia. Além disso, é multiplataforma (com exceção de sistemas com macOS Catalina, que não é completamente compatível com programas de 64 bits – atualização de fevereiro de 2020) e possui uma interface simples de usar. Até onde se sabe, é o único programa de análise filogenética que realiza esses testes.</p>
+<h2 id="metodo-qualitativo">Método Qualitativo</h2>
+<p>O método qualitativo para análise de saturação por substituição consiste na visualização de um gráfico chamado “transições e transversões versus divergência” (<em>transitions and transversions versus divergence</em>). Esse método assume que a distância calculada entre as sequências é diretamente proporcional ao tempo de divergência entre elas, qualquer que seja a escala utilizada.</p>
+<p>Os passos para gerar esse gráfico são:</p>
+<p>Abra o programa DAMBE. Clique em <strong><em>File</em></strong> e depois em <strong><em>Open Standard Sequence File</em></strong>:</p>
+<p><img alt="DAMBE 1" src="../SS-fig1.png" /></p>
+<p>Selecione o arquivo de dados (<em>dataset</em>) <a href="https://drive.google.com/uc?export=download&amp;id=1sPodmXGkPCxWu7t8CIZzHmumYS_0kX18">VertCOI.fas</a> e clique em <strong><em>Open</em></strong> (Abrir).</p>
+<p><img alt="DAMBE 2" src="../SS-fig2.png" /></p>
+<p>Na caixa de diálogo que será exibida, chamada <em>SequenceInfo</em>, marque a opção <strong>Protein-coding Nuc-Seq</strong> (Sequência de nucleotídeos codificadora de proteína).
+Ainda nessa mesma janela, na seção Genetic Code (Código Genético), selecione o número <strong>2</strong>, que corresponde ao mitocondrial de vertebrados (<em>Vertebrate mitochondria</em>).</p>
+<p><img alt="DAMBE 3" src="../SS-fig3.png" /></p>
+<p>Na janela principal, o alinhamento será exibido no formato <strong>Clustal</strong>.</p>
+<p><img alt="DAMBE 4" src="../SS-fig4.png" /></p>
+<p>No menu principal do <strong>DAMBE</strong>, vá até <strong><em>Graphics</em></strong> e clique em <strong><em>transition and transversion versus divergence</em></strong> (transições e transversões versus divergência).</p>
+<p><img alt="DAMBE 5" src="../SS-fig5.png" /></p>
+<p>Uma nova janela de diálogo será exibida. Nela, os valores padrão podem ser mantidos. No entanto, vamos alterar a distância genética (campo <strong><em>Genetic distance</em></strong>) para <strong>TN93</strong>, conforme mostrado na figura abaixo:</p>
+<p><img alt="DAMBE 6" src="../SS-fig6.png" /></p>
+<p>Clique em <code>Go</code> e observe o gráfico gerado. Para facilitar a visualização, mantenha as opções conforme ilustrado abaixo:</p>
+<p><img alt="Figure3-3 - DAMBE7" src="../SS-fig7.png" /></p>
+<blockquote>
+<p><em>A letra </em>s<em> se refere às transições, e a letra </em>v<em> às transversões.</em></p>
+</blockquote>
+<p>Compare o gráfico obtido com a figura de referência abaixo e tire suas próprias conclusões sobre o nível de saturação dessas sequências.</p>
+<h2 id="o-metodo-quantitativo">O Método Quantitativo</h2>
+<p>O método de Xia é um método quantitativo, baseado em entropia, que atribui um valor significativo à saturação por substituição. Ele retorna dois critérios: <strong><em>Iss</em></strong> e <strong><em>Iss.c</em></strong>.
+- O primeiro (<strong><em>Iss</em></strong>) é o índice de saturação por substituição observado.
+- O segundo (<strong><em>Iss.c</em></strong>) é o índice de saturação crítica — o valor a partir do qual as sequências não conseguem mais recuperar uma árvore filogenética correta.</p>
+<p>Quando o <em>valor observado</em> de <strong><em>Iss</em></strong> é significativamente <em>menor</em> que o valor crítico <strong><em>Iss.c</em></strong> (<strong><em>Iss &lt; Iss.c</em></strong>), a saturação por substituição <strong>não</strong> é um problema para o conjunto de dados analisado.</p>
+<p>Os passos para realizar esse método são:</p>
+<ul>
+<li>Abra o programa DAMBE. Clique em <strong><em>File</em></strong> e depois em <strong><em>Open Standard Sequence File</em></strong>.</li>
+<li>Selecione o mesmo arquivo acima utilizado <code>VertCOI.fas</code> e clique em <strong><em>Open</em></strong>.</li>
+<li>Na caixa de diálogo que aparece (<strong><em>SequenceInfo</em></strong>), marque a opção <strong><em>Protein-coding Nuc-Seq</em></strong>. Ainda nesta janela, em <strong><em>Genetic Code</em></strong>, selecione o número <strong><em>2</em></strong> (relativo ao código genético mitocondrial de vertebrados).</li>
+<li>Na janela principal, o alinhamento será exibido no formato <strong>Clustal</strong>. </li>
+<li>Antes de continuar, é necessário calcular a <strong>proporção de sítios invariantes (Pinvar)</strong> para este conjunto de dados. Esse parâmetro é fundamental quando há taxas de substituição muito diferentes entre os sítios da sequência.</li>
+<li>Para isso, siga o caminho: <em>Seq.Analysis &gt; Substitution rates over site &gt; Estimate proportion of invariant sites.</em></li>
+</ul>
+<p><img alt="DAMBE 7" src="../SS-fig8.png" /></p>
+<ul>
+<li>Na janela que se abrirá - Marque a opção <strong><em>Use a new tree</em></strong>.</li>
+<li>
+<p>Em seguida, selecione o método <strong><em>Neighbor-Joining</em></strong>, escolha o grupo externo apropriado (<em>outgroup</em>) — neste exemplo, utilizaremos <em>Alligator mississippis</em> — e mantenha o restante das opções como estão.</p>
+</li>
+<li>
+<p>Clique em <code>Run</code> e depois em <code>Go</code>.</p>
+</li>
+<li>
+<p>No final da saída de texto, o valor de <strong>Pinvar</strong> será exibido, como no exemplo abaixo:</p>
+</li>
+</ul>
+<pre><code>Estimation based on tree:
+(AlligatorMississippiensis:0.13730,(MasturusLanceolatus:0.15730,(((HomoSapiens:0.04522,PanTroglodytes:0.04795):0.02113,PongoPygmaeus:0.08982):0.05970,(BosTaurus:0.09378,BalaenopteraMusculus:0.10744):0.01982):0.01484):0.01673,GallusGallus:0.12297);
+
+Estimating the proportion of invariant sites by iteration.
+(Poisson+I)
+ Iter       Phi      Pinv
+-------------------------------------
+    0   0.85377   0.28746
+    1   0.85377   0.25871
+    2   0.85377   0.31960
+    3   0.73189   0.42154
+    4   0.62860   0.47955
+    5   0.57154   0.51389
+    6   0.56361   0.52394
+    7   0.56361   0.53330
+    8   0.56361   0.52737
+    9   0.56361   0.52462
+   10   0.56361   0.52224
+   11   0.56361   0.52258
+   12   0.56361   0.52122
+   13   0.56361   0.52089
+   14   0.56361   0.51988
+   15   0.56361   0.51954
+   16   0.56361   0.51887
+   17   0.56361   0.51821
+   18   0.56361   0.51754
+   19   0.56361   0.51688
+   20   0.56361   0.51621
+   21   0.56361   0.51555
+-------------------------------------
+P(invariant) = 0.51555
+</code></pre>
+<ul>
+<li>Salve ou anote o valor de Pinvar (0.51555).</li>
+</ul>
+<blockquote>
+<p>⚠️ <em>Dependendo das configurações de idioma do sistema operacional, pode ser necessário usar ponto (.) como separador decimal, e não vírgula (,). Fique atento(a)!</em></p>
+</blockquote>
+<p>Agora, vamos estimar a saturação por substituições (o programa pode apresentar alguns problemas, em alguns casos, o artigo the sequencia deve ser aberto novamente):</p>
+<ul>
+<li>Clique em <strong><em>Seq.Analysis &gt; Measure substitution saturation &gt; Test by Xia et al</em></strong>.</li>
+</ul>
+<p><img alt="DAMBE 8" src="../SS-fig9.png" /></p>
+<ul>
+<li>Na janela que abrir, insira o valor de <strong>Pinvar</strong> calculado e clique em <code>Go</code>.</li>
+</ul>
+<p><img alt="DAMBE 9" src="../SS-fig10.png" /></p>
+<ul>
+<li>Analise os resultados (Comentários adicionais serão feitos durante a prática).</li>
+</ul>
+<pre><code>Test of substitution saturation (Xia et al. 2003; Xia and Lemey 2009)
+
+Testing whether the observed Iss is significantly
+lower than Iss.c.
+
+Part I. For a symmetrical tree.
+========================================================
+Prop. invar. sites                0.5156
+Mean H                            0.9205
+Standard Error                    0.0183
+Hmax                              1.6517
+Iss                               0.5573
+Iss.c                             0.8093
+T                                13.7506
+DF                              731
+Prob (Two-tailed)                 0.0000
+95% Lower Limit                   0.5214
+95% Upper Limit                   0.5933
+
+========================================================
+Part II. For an extreme asymmetrical (and generally very
+unlikely) tree.
+========================================================
+Iss.c                             0.7095
+T                                 8.3050
+DF                              731
+Prob (Two-tailed)                 0.0000
+
+95% Lower Limit                   0.5214
+95% Upper Limit                   0.5933
+
+========================================================
+
+Interpretation of results:
+               Significant Difference
+               ----------------------
+               Yes                 No
+-------------------------------------------------------
+Iss &lt; Iss.c    Little             Substantial
+               saturation         saturation
+-------------------------------------------------------
+Iss &gt; Iss.c    Useless            Very poor
+               sequences          for phylogenetics
+-------------------------------------------------------
+
+Please cite:
+
+Xia, X., Z. Xie, M. Salemi, L. Chen, Y. Wang. 2003. An index of substitution saturation and its application. Molecular Phylogenetics and Evolution 26:1-7.
+
+Xia, X. and Lemey, P. 2009. Assessing substitution saturation with DAMBE. Pp. 615-630 in Philippe Lemey, Marco Salemi and Anne-Mieke Vandamme, eds. The Phylogenetic Handbook: A Practical Approach to DNA and Protein Phylogeny. 2nd edition Cambridge University Press.
+</code></pre>
+<blockquote>
+<p>Pode-se verificar que em ambos os cenários <strong><em>Iss &lt; Iss.c</em></strong>. Portanto, essas sequências <strong>não apresentam saturação por substituição</strong> e podem ser utilizadas para análise filogenética.</p>
+</blockquote>
+<h2 id="influencia-da-posicao-no-codon">Influência da Posição no Códon</h2>
+<p>Devido às características do código genético, as sequências de nucleotídeos codificadoras de proteínas tendem a apresentar um número maior de substituições na <strong>3ª posição do códon</strong> do que nas <strong>1ª e 2ª posições</strong>. Por isso, o ideal é realizar <strong>ambos os métodos para cada posição do códon separadamente</strong> (essa opção será mostrada durante a prática).</p>
+<p>A tabela abaixo deve conter os valores de <strong>Pinvar</strong>, <strong>Iss</strong> e <strong>Iss.c</strong> para todas as posições do códon.</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Positions</th>
+<th style="text-align: center;">Pinvar</th>
+<th style="text-align: center;"><em>Iss</em></th>
+<th style="text-align: center;"><em>Iss.c</em></th>
+<th style="text-align: center;">P</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>All</strong></td>
+<td style="text-align: center;">0.51555</td>
+<td style="text-align: center;">0.5573</td>
+<td style="text-align: center;">0.8093</td>
+<td style="text-align: center;">0.0000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1st position</strong></td>
+<td style="text-align: center;">0.64014</td>
+<td style="text-align: center;">0.3814</td>
+<td style="text-align: center;">0.7519</td>
+<td style="text-align: center;">0.0000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>2nd position</strong></td>
+<td style="text-align: center;">0.42518</td>
+<td style="text-align: center;">0.0655</td>
+<td style="text-align: center;">0.7519</td>
+<td style="text-align: center;">0.0000</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>3rd position</strong></td>
+<td style="text-align: center;">0.02485</td>
+<td style="text-align: center;">0.7340</td>
+<td style="text-align: center;">0.7519</td>
+<td style="text-align: center;">0.3540</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>1st e 2nd positions</strong></td>
+<td style="text-align: center;">0.37664</td>
+<td style="text-align: center;">0.1391</td>
+<td style="text-align: center;">0.7886</td>
+<td style="text-align: center;">0.0000</td>
+</tr>
+</tbody>
+</table>
+<h2 id="consideracoes-finais">Considerações Finais</h2>
+<p>Sempre que for trabalhar com um marcador novo ou pouco conhecido, <strong>a análise de saturação por substituição deve ser realizada</strong>. Se estiver utilizando genes ou proteínas já bem estabelecidos na literatura, esses testes são recomendados, mas não obrigatórios.</p>
+<p>No entanto, realizar essas análises pode confirmar se o marcador é adequado ao <strong>nível taxonômico</strong> com o qual você está trabalhando. Às vezes, uma análise qualitativa é suficiente, mas o ideal é sempre realizar o método quantitativo, especialmente se o gráfico apresentar interpretação ambígua.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../comps/" class="btn btn-neutral float-left" title="Complements"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../bestfit-ptbr/" class="btn btn-neutral float-right" title="Escolha do Modelo de Substituição">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../comps/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../bestfit-ptbr/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

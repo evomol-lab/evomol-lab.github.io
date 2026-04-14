@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="EvoMol-Lab" /><link rel="canonical" href="https://evomol-lab.github.io/tutorials/bestfit-ptbr/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Escolha do Modelo de Substituição - Tutoriais EvoMol-Lab's Teaching Resources</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Escolha do Modelo de Substitui\u00e7\u00e3o";
+        var mkdocs_page_input_path = "bestfit-ptbr.md";
+        var mkdocs_page_url = "/tutorials/bestfit-ptbr/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Tutoriais EvoMol-Lab's Teaching Resources
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Página Inicial</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demo/">Representação Computacional de Biomoléculas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../aboutus/">Sobre o grupo</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriais Iniciais de Bioinformática</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic1/">Inicial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../101/">Introdução a linha de comando UNIX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../102/">Manipulando dados na CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CLI-Colab/">Introdução a CLI e ao Google Colab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../103/">Introdução ao GenBank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../104/">Buscas de Similaridade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../105/">Alinhamento entre pares de sequências</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../106-MSA/">Alinhamento Múltiplo de Sequências</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../107-NCBI-CLI/">NCBI/GenBank via CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../108-BLAST-CLI/">BLAST via CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../109-SQL/">Comandos Básicos em SQL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r-colab/">Introdução ao R usando o Google Colab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../enzima-annot/">Integração de Bancos - Exemplo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dbsnp/">Bancos de dados de Mutações e Polimorfismos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KEGG/">Explorando Vias Metabólicas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../110-BDs/">Bancos de Dados de Informação Proteica</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../111-Modelagem/">Modelagem Computacional de Proteínas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../112-MEGAX/">Primeiros Passos no MEGA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../113-Genomes/">Navegando por Genomas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video/">Videoaulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Bioinformática Estrutural</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic2/">Inicial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../slides/">Slides de Acompanhamento</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/">Programas e Ferramentas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR1-Visualizacao/">Visualização Computacional de Moléculas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR2-pred/">Informações a partir da estrutura primária</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR22-Epitopos/">Predição de Epítopos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR3-Model1/">Modelagem 101</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR4-Model2/">Modelagem 102</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../STR5-Model3.mkdocs gh-deploy --forcemd">Modeller-CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR6-AlphaFold/">Métodos baseados em IA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR7-MDA/">MDA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR8-Aval/">Avaliação dos Modelos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR9-EM/">EM/CryoEM fitting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR10-RINs/">RINs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR11-APBS/">APBS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR12-Memb/">Proteínas de Membrana</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR13-Dock1/">Autodock (básico)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR14-Dock2/">Docking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR15-VS1/">Virtual Screening</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR23-MDIntro/">Introdução a Dinâmica Molecular</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR16-EGB1/">Modelos de Pequenas Moléculas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR17-EGB2/">Análise conformacional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR18-EGB3/">Docking Automático</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR19-EGB4/">Posicionamento Manual</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR20-EGB5/">Dinâmica Molecular</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR21-EGB6/">VS-2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comps/">Complements</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Análise Evolucionária de Sequências (Evolução Molecular)</span></p>
+              <ul class="current">
+                  <li class="toctree-l1"><a class="reference internal" href="../satsub-ptbr/">Análise de Saturação de Substituições</a>
+                  </li>
+                  <li class="toctree-l1 current"><a class="reference internal current" href="#">Escolha do Modelo de Substituição</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#introducao">Introdução</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usando-o-mega-x">Usando o MEGA X</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usando-o-jmodeltest">Usando o jModelTest</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#etapas">Etapas:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usando-o-prottest">Usando o ProtTest</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#comparacao-de-resultados">Comparação de resultados</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#usando-o-modeltest-ng">Usando o ModelTest-NG</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#etapas_1">Etapas:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#consideracoes-finais">Considerações Finais</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#que-criterios-devo-usar-para-escolher-o-modelo-de-substituicao">Que critérios devo usar para escolher o modelo de substituição?</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#o-modelo-escolhido-nao-existe-na-ferramenta-que-usarei">O modelo escolhido não existe na ferramenta que usarei</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#filogenia-media-de-todos-os-modelos">Filogenia média de todos os modelos</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BEAST_ptbr/">Usando o BEAST</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Diplomado - UChile</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../Presentation.md">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../UC_slides.md">Slides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../Material.md">Files and References</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../First_Tutorial_ENG.md">First Tutorial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Substitution_saturation_ENG/">Analysis of Substitution Saturation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ModelTest_ENG/">Test of the Best-Fit Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../MEGAX_ENG.md">Using MEGAX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1st_BEAST/">Using BEAST</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../BEAST+EBSP_ENG.md">Phylodynamics using EBSP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../IQTree.md">Using IQ-Tree</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Tutoriais EvoMol-Lab's Teaching Resources</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+          <li class="breadcrumb-item">Análise Evolucionária de Sequências (Evolução Molecular)</li>
+      <li class="breadcrumb-item active">Escolha do Modelo de Substituição</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="escolhendo-um-modelo-de-substituicao-apropriado">Escolhendo um Modelo de Substituição Apropriado</h1>
+<h2 id="introducao">Introdução</h2>
+<p>O objetivo deste tutorial é mostrar as diferentes formas de avaliar e estimar um modelo de substituição de nucleotídeos (e aminoácidos) adequado para seu <em>conjunto de dados</em>, com o intuito de realizar uma análise filogenética posterior.</p>
+<p>Como destacado durante a aula, a etapa de estimar um modelo de substituição <strong>não é obrigatória</strong> em toda análise filogenética. Quando as sequências em estudo e as características do alinhamento são bem conhecidas, o pesquisador pode escolher diretamente um modelo matemático. No entanto, como existem inúmeros modelos disponíveis, essa escolha pode ser desafiadora, principalmente para iniciantes. No pior cenário, o desconhecimento pode levar à escolha de um modelo que subestima características importantes do alinhamento, resultando em estimativas menos precisas. Por outro lado, incluir muitos parâmetros aumenta a variância e, consequentemente, a acurácia das análises (e, às vezes, o poder computacional necessário).</p>
+<p>A maioria das ferramentas utiliza o princípio estatístico da <strong>verossimilhança (<em>likelihood</em> - L)</strong>. Para isso, calcula-se <strong>L</strong> para todos os modelos disponíveis e depois faz-se uma classificação hierárquica (com ou sem critérios de informação). Esses cálculos são computacionalmente intensivos, mesmo em muitos computadores atuais.</p>
+<hr />
+<h2 id="usando-o-mega-x">Usando o MEGA X</h2>
+<p>Na sua primeira versão, o programa <strong>MEGA</strong> não possuía opções para testar o modelo de substituição. Ainda assim, foi um dos primeiros programas filogenéticos a incluir essa funcionalidade nativamente. O algoritmo é rápido, embora teste mais modelos do que estão disponíveis na própria ferramenta.</p>
+<ul>
+<li>Utilizaremos o arquivo de alinhamento múltiplo <a href="https://drive.google.com/uc?export=download&amp;id=1CKutTUK4aAH-yGyZ1fhVfzz07SVVo3dD">vert-aligned.fasta</a>:</li>
+<li>Execute o programa <strong>MEGA X</strong>.</li>
+<li>Abra o alinhamento clicando no botão <strong>TA</strong> e depois em <strong><em>Open a File/Session...</em></strong> de acordo com a foto abaixo:</li>
+</ul>
+<p><img alt="MegaX" src="../MTENG-fig1.png" /></p>
+<ul>
+<li>Na janela seguinte, clique em <strong><em>Analyze</em></strong> (as sequências já estão alinhadas).</li>
+</ul>
+<p><img alt="Analyze" src="../MTENG-fig2.png" /></p>
+<ul>
+<li>O MEGA perguntará se são sequências de nucleotídeos. Clique em <code>Ok</code>.</li>
+</ul>
+<p><img alt="Nucleotide sequences" src="../MTENG-fig3.png" /></p>
+<ul>
+<li>Perguntará se são <strong>sequências codificadoras de proteínas</strong> (<em>protein-coding sequences</em>). Clique em <code>Yes</code>.</li>
+</ul>
+<p><img alt="Coding sequences" src="../MTENG-fig4.png" /></p>
+<ul>
+<li>Escolha o código genético: <strong><em>Vertebrate Mitochondrial</em></strong>.</li>
+<li>Com o arquivo aberto, clique em <strong><em>Models</em></strong>,</li>
+</ul>
+<p><img alt="Models in MEGA X" src="../MTENG-fig6.png" /></p>
+<ul>
+<li>e selecione <strong><em>Find Best DNA/Protein Models (ML)...</em></strong>:</li>
+</ul>
+<p><img alt="best-fit model in Mega X" src="../MTENG-fig7.png" /></p>
+<ul>
+<li>Confirme o uso do conjunto de dados aberto clicando em <code>Yes</code>:</li>
+</ul>
+<p><img alt="" src="../MTENG-fig8.png" /></p>
+<ul>
+<li>Após confirmação, uma caixa irá aparecer. </li>
+</ul>
+<p><img alt="" src="../MTENG-fig9.png" /></p>
+<ul>
+<li>Defina as opções:</li>
+<li><em>Tree to use</em> / Árvore inicial: <em>Automatic</em> / automática (<em>Neighbor-Joining</em>).</li>
+<li><em>Substitutions Type</em> / Tipo de substituições: <em>Nucleotide</em> / nucleotídeos.</li>
+<li><em>Gap/Missing data treatment</em> / Subgrupos de dados: <em>Use all sites</em> / todos os sítios -&gt; todas as posições de códons, sem filtros (<em>Branch-swap filter</em>).</li>
+<li><em>Number of threads</em> / Número de threads: mantenha o padrão.</li>
+<li>Clique em <code>Ok</code> e aguarde.
+Os resultados irão aparecer em uma tabela:</li>
+</ul>
+<p><img alt="Best-fit models results" src="../MTENG-fig10.png" /></p>
+<p>Os modelos serão listados do mais adequado ao menos adequado, com base no critério <strong><em>BIC (Bayesiano)</em></strong>. Com isso, podemos verificar que o modelo <strong><em>GTR (General Time-reversible)</em></strong> com correção gama <strong>(+G)</strong> foi o modelo escolhido pelo critério Bayesiano. No entanto, não é o modelo com a menor verossimilhança (lnL). O restante das informações dessa tabela será discutido durante a reunião remota.
+Exemplo: modelo escolhido — <code>GTR+G</code>.</p>
+<blockquote>
+<p>📌 <strong>Dica:</strong> Não se esqueça de salvar essa tabela em um dos formatos que o MEGA X oferece, utilizando os ícones localizados no canto superior esquerdo da tela.
+O MEGA X também possui a função para calcular o melhor modelo de substituição de aminoácidos. Para isso, basta iniciar as análises com um alinhamento de aminoácidos e, na caixa de diálogo, escolher a opção correta.</p>
+</blockquote>
+<hr />
+<h2 id="usando-o-jmodeltest">Usando o jModelTest</h2>
+<p>O programa jModelTest (<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Darriba+D%2C+Taboada+GL%2C+Doallo+R%2C+Posada+D.+2012.+jModelTest+2%3A+more+models%2C+new+heuristics+and+parallel+computing.+Nature+Methods+9(8)%2C+772.">Darriba et al. 2012</a>) é uma versão estendida do popular programa ModelTest (que era uma rotina executada dentro do programa <em>PAUP</em>.) O programa agora é autônomo e muito mais rápido após a inclusão das ferramentas <code>PHYML</code>, <code>ReadSeq</code> e <code>Consense</code> do antigo pacote <a href="http://evolution.genetics.washington.edu/phylip.html">PHYLIP</a>. Além disso, o jModelTest permite a otimização de árvores de base para cada modelo, seleção de modelos de acordo com um novo critério de decisão teórico e filogenias médias de modelos. Recentemente, foi lançada uma nova versão aprimorada e mais rápida, que serve tanto para sequências de DNA quanto de proteínas, o ModelTest-NG (<a href="https://academic.oup.com/mbe/article/37/1/291/5552155">Darriba et al. 2019</a>).</p>
+<h3 id="etapas">Etapas:</h3>
+<ol>
+<li>Baixe e execute o <strong>jModelTest.jar</strong> (Java).  O programa é um aplicativo Java e é executado de duas maneiras distintas: linha de comando e GUI (Graphical User Interface).O programa depende da instalação de um JDK (Java Development Kit), seja ele o oficial da Oracle ou o OpenJDK.As etapas de instalação do JDK dependem do sistema operacional e, portanto, não serão detalhadas aqui neste tutorial. 📌 Versão recomendada: <strong>2.1.10</strong><ul>
+<li>Não confunda <em>JDK</em> com <em>JRE (Java Runtime Environment)</em>, o qual geralmente está presente na maioria dos computadores.</li>
+</ul>
+</li>
+</ol>
+<p>No Linux, abra o terminal, navegue até a pasta onde o jModelTest.jar está localizado e digite o comando abaixo:</p>
+<p><code>bash
+   java -jar jModelTest.jar</code>
+    A janela abaixo irá aparecer:
+2. Clique em <strong>File &gt; Load DNA alignment</strong> e abra <code>vert-aligned.fasta</code>.
+    - Usaremos o mesmo arquivo usado anteriormente: vert-aligned.fasta.
+3. Clique em <strong>Analysis &gt; Compute likelihood scores</strong> para iniciar a análise.
+4. Será exibida uma caixa de diálogo que permite especificar o número de configurações de probabilidade, incluindo o número de modelos a serem testados. As outras configurações são diferentes frequências de base (+F), a proporção de locais invariáveis (+I) e a distribuição gama (+G) (variação na taxa entre os locais). Nessa caixa de diálogo, deixe as opções como na figura abaixo.
+5. Clique em <strong>Compute Likelihoods</strong> e aguarde  (ou vá tomar um café, pois, dependendo do conjunto de dados, essa etapa levará mais tempo do que a executada no MEGA X). Para o alinhamento usado aqui e com essas opções, essa etapa levará de 1 a 4 minutos.</p>
+<pre><code>⚠️ Ás vezes, dependendo do sistema operacional, você terá de localizar novamente o executável do programa PhyML. Na janela principal, basta ir a **Edit &gt; Preferences** (Editar &gt; Preferências) e localizar novamente o executável correto para o sistema operacional do computador.
+
+📌 *Antes de continuar, verifique os dados que apareceram no console do jModelTest. Eles também serão discutidos na sala, mas são semelhantes aos encontrados no teste do modelo usando o MEGA X.*
+</code></pre>
+<ol>
+<li>Agora, clique novamente no menu <strong>Analysis</strong> (Análise). Você verá que os cálculos de <em>AIC, BIC e DT</em> agora estão disponíveis, enquanto os cálculos de hLRT estão esmaecidos (porque, na etapa anterior, optamos por ter topologias de árvore otimizadas). <ul>
+<li>A janela abaixo irá aparecer, mostrando as probabilidades calculadas para cada modelo.</li>
+</ul>
+</li>
+<li>Vá em <strong>Results &gt; Show results table</strong> e clique no topo da coluna <code>LnL</code> para ordenar os modelos, de acordo com o likehood. A tabela irá parecer com isso:</li>
+<li>
+<p>A tabela pode mostrar os esquemas de partição, o número de parâmetros incluídos, as frequências de base observadas e as taxas de transição e transversão. Observe que as tabelas dos resultados de AIC, AICc, BIC e DT estão em cinza. Para isso, a tabela pode ser fechada e, no menu <strong><em>Analysis</em></strong> (Análise), clique em <strong><em>Do BIC calculations...</em></strong> e em <strong><em>Do DT calculations...</em></strong>, confirmando cada caixa de diálogo que aparecerá posteriormente, como pode ser verificado na figura abaixo:</p>
+</li>
+<li>
+<p><em>Certifique-se de que as opções Calcular importações de parâmetros e Fazer média de modelos estejam sempre selecionadas</em></p>
+</li>
+<li>
+<p>Em seguida, vamos para <strong><em>Analysis &gt; Do AIC calculations...</em></strong>. Na caixa, marque a opção <strong><em>Use AICc correction (Usar correção AICc)</em></strong>, conforme mostrado na figura abaixo:</p>
+<ul>
+<li>Você também pode fazer o cálculo de Akaike sem a correção para fins de comparação. Apenas não selecione a opção acima.</li>
+</ul>
+</li>
+<li>
+<p>Volte em <strong>Results &gt; Show results table</strong>. Será exibida uma janela mostrando as probabilidades calculadas para cada modelo, com os critérios de informação. Os modelos escolhidos para cada critério serão marcados em vermelho.</p>
+</li>
+</ol>
+<p>📌  Para evitar a repetição das análises (o que desperdiça tempo de computação), faça screeshot da tabela com os resultados finais e salve todo o conteúdo do console no menu Editar &gt; Salvar console.</p>
+<p>Com base nos resultados obtidos, você observará que os resultados convergem, embora com algumas discrepâncias. O modelo GTR+G+I é o melhor para o critério de Akaike, mas não é o melhor para o critério bayesiano. Então, qual deles escolher? Vamos discutir.</p>
+<hr />
+<h2 id="usando-o-prottest">Usando o ProtTest</h2>
+<p>O programa <strong>ProtTest</strong> (Darriba et al. 2011) é um programa muito semelhante ao jModelTest, porém específico para a escolha dos melhores modelos de substituição para alinhamentos de sequências de proteínas.</p>
+<p>O Prottest 3 pode ser obtido AQUI e executado da mesma forma que o jModelTest (ele também é um aplicativo Java).</p>
+<ul>
+<li>O <em>MEGA X</em> também tem a função de calcular o melhor modelo de substituição de aminoácidos. Para isso, basta iniciar as análises com um alinhamento de aminoácidos e, na caixa de diálogo, escolher a opção correta.</li>
+</ul>
+<p>Para demonstrar o funcionamento do ProtTest, usaremos o alinhamento de aminoácidos <code>COX2_PF0016</code>, um dos exemplos fornecidos com o próprio programa.</p>
+<ol>
+<li>Baixe e abra o <strong>ProtTest.jar</strong>.</li>
+<li>Clique em <strong>File &gt; Load alignment</strong> e Carregue o arquivo <code>COX2_PF0016</code>.</li>
+<li>Vá em <strong>Analysis &gt; Compute likelihood scores</strong>.  Será exibida uma caixa de diálogo que permite especificar o número e os modelos a serem testados, além de algumas outras configurações.</li>
+<li>Em <strong>Starting Topology</strong> escolha como <strong>Maximum Likelihood</strong> ou deixe a escolha padrão <strong>Fixed BioNJ JTT</strong>.</li>
+<li>Clique em <strong>Compute</strong> e aguarde.</li>
+<li>
+<p>Agora você deve tomar um café. O cálculo da probabilidade para modelos de substituição de aminoácidos é consideravelmente mais intenso, principalmente devido ao número mais significativo de alterações possíveis e ao número de caracteres envolvidos (20 aminoácidos).</p>
+</li>
+<li>
+<p>Quando terminar, clique em <strong>Selection &gt; Results</strong> para visualizar os resultados.</p>
+<p>Uma diferença notável entre o ProtTest e o jModelTest é que os cálculos dos critérios de informação estão na tabela de resultados. Analise a tabela. Mais informações serão fornecidas em sala de aula.</p>
+</li>
+</ol>
+<h2 id="comparacao-de-resultados">Comparação de resultados</h2>
+<p>Compare os resultados obtidos para o alinhamento <code>COX2_PF0016</code> no ProtTest e no MEGA X. Para usar esse alinhamento no MEGA, use este arquivo. Abaixo está uma tabela com os resultados.</p>
+<p>📌 Os critérios (AIC, BIC, etc) já estão incluídos na tabela final.</p>
+<hr />
+<h2 id="usando-o-modeltest-ng">Usando o ModelTest-NG</h2>
+<p>O ModelTest-NG é uma nova versão aprimorada e mais rápida do jModelTest, que serve tanto para sequências de DNA quanto de proteínas (Darriba et al. 2019). Seu desempenho em conjuntos de dados maiores é muito melhor, e seus cálculos são mais otimizados. No entanto, sua instalação nos sistemas Windows e macOS ainda não é acessível, especialmente para iniciantes. No Linux, a instalação é relativamente rápida. Por esse motivo, veremos apenas uma rápida demonstração.</p>
+<p>Para isso, vamos usar o mesmo arquivo, usado anteriormente: <code>vert-aligned.fasta.</code></p>
+<h3 id="etapas_1">Etapas:</h3>
+<ol>
+<li>Abra o programa ModelTest-NG.</li>
+<li>Clique em <strong>Load MSA</strong> e selecione <code>vert-aligned.fasta</code>.  As características de alinhamento serão exibidas.</li>
+<li>Vá em <strong>Settings</strong> e você verá as opções de teste, semelhantes às dos programas anteriores.</li>
+<li>
+<p>Altere a Árvore inicial para <strong>Maximum likelihood</strong></p>
+</li>
+<li>
+<p>Clique em <strong>Run</strong>.
+Observe como o ModelTest-NG é mais rápido do que suas versões anteriores.
+Os resultados são quase os mesmos do jModelTest.</p>
+</li>
+<li>Agora vamos clicar em Reset e repetir as etapas anteriores para o alinhamento <code>COX2_PF0016</code>. Como esse alinhamento é de sequências de aminoácidos, não se esqueça de marcar na guia Settings a opção <em>Protein</em>, pois em nossos testes o ModelTest-NG nem sempre identifica corretamente o tipo de sequência. Veja abaixo uma prévia do resultado:</li>
+</ol>
+<hr />
+<h2 id="consideracoes-finais">Considerações Finais</h2>
+<h4 id="que-criterios-devo-usar-para-escolher-o-modelo-de-substituicao"><em>Que critérios devo usar para escolher o modelo de substituição?</em></h4>
+<p>Essa não é uma pergunta trivial. Para inferências bayesianas, o critério BIC tende a ser mais apropriado. O AICc é mais adequado para conjuntos de dados pequenos do que o AIC (sem correção); no entanto, os dois tendem a convergir em conjuntos de dados mais massivos, portanto, sempre recomendamos o uso do AICc. O critério DT (teoria da decisão) deve ser usado com cautela, como recomenda o próprio manual do jModelTest. Portanto, o AICc e o BIC são os critérios mais confiáveis. Quando eles convergem (e isso acontece com frequência), o problema está resolvido. Mesmo sem convergência, você estará seguro se fizer a análise filogenética tanto com o modelo escolhido pelo AICc quanto com o escolhido pelo BIC.</p>
+<h4 id="o-modelo-escolhido-nao-existe-na-ferramenta-que-usarei"><em>O modelo escolhido não existe na ferramenta que usarei</em></h4>
+<p>Isso não é o fim do mundo. Há muitos modelos, mas também há muitas sobreposições entre eles. Daí a importância de conhecer as características de alinhamento e as diferenças de parâmetros entre os diferentes modelos. Muitas vezes, os modelos selecionados por essas ferramentas têm pequenas diferenças. Basta procurar o modelo equivalente ou o mais próximo em termos de parâmetros. A execução do jModelTest apresenta outra vantagem significativa: o console fornece um resumo dos parâmetros avaliados em cada um dos modelos testados para que você faça uma escolha mais adequada. Mesmo assim, nada substituirá a compreensão dos modelos e de seus parâmetros. É por isso que alguns filogeneticistas não consideram o teste do modelo uma etapa indispensável.</p>
+<h4 id="filogenia-media-de-todos-os-modelos"><em>Filogenia média de todos os modelos</em></h4>
+<p>A filogenia média de todos os modelos é uma função que somente o ModelTest e suas variantes têm. Essa função calcula as filogenias médias dos modelos, que são árvores de consenso de todas as árvores basais otimizadas. No entanto, atualmente ele depende do pacote PHYLIP para essa função. Ela pode não funcionar se os nomes dos táxons tiverem mais de 10 caracteres (quem já usou o PHYLIP sabe como essa limitação é insuportável).</p>
+<p>Para obtê-la, no menu Analysis (Análise), clique em <em>Model-averaged Phylogeny</em> (Filogenia com média de modelo). Será aberta uma janela com as configurações, na qual você deixará todas as configurações no padrão e clicará em <code>Run</code> (Executar). O resultado listará algumas configurações, os modelos e a filogenia média desses modelos. Esse é um ótimo guia, mas deve ser usado com muita cautela.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../satsub-ptbr/" class="btn btn-neutral float-left" title="Análise de Saturação de Substituições"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../BEAST_ptbr/" class="btn btn-neutral float-right" title="Usando o BEAST">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../satsub-ptbr/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../BEAST_ptbr/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
