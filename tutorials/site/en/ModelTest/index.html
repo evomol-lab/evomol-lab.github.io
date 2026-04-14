@@ -1,0 +1,2758 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutoriais básicos de Bioinformática">
+      
+      
+        <meta name="author" content="EvoMol-Lab">
+      
+      
+        <link rel="canonical" href="https://evomol-lab.github.io/tutorials/en/ModelTest/">
+      
+      
+        <link rel="prev" href="../Substitution_saturation/">
+      
+      
+        <link rel="next" href="../MEGAX/">
+      
+      
+        
+          <link rel="alternate" href="../../ModelTest/" hreflang="pt">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../es/ModelTest/" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Test of the Best-Fit Models - Tutoriais EvoMol-Lab's Teaching Resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#choosing-an-appropriate-substitution-model" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-header__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutoriais EvoMol-Lab's Teaching Resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Test of the Best-Fit Models
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../ModelTest/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/ModelTest/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-nav__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutoriais EvoMol-Lab's Teaching Resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Computacional de Biomoléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aboutus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o grupo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a linha de comando UNIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manipulando dados na CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI-Colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a CLI e ao Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao GenBank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Buscas de Similaridade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento entre pares de sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-MSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento Múltiplo de Sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-NCBI-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCBI/GenBank via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-BLAST-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BLAST via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos Básicos em SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao R usando o Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enzima-annot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integração de Bancos - Exemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbsnp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de dados de Mutações e Polimorfismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KEGG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando Vias Metabólicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-BDs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de Dados de Informação Proteica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-Modelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem Computacional de Proteínas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeiros Passos no MEGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../113-Genomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navegando por Genomas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Videoaulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformática Estrutural
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformática Estrutural
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides de Acompanhamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programas e Ferramentas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR1-Visualizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualização Computacional de Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR2-pred/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informações a partir da estrutura primária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR22-Epitopos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predição de Epítopos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR3-Model1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR4-Model2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 102
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR5-Model3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeller-CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR6-AlphaFold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos baseados em IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR7-MDA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MDA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR8-Aval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação dos Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR9-EM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM/CryoEM fitting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR10-RINs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RINs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR11-APBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR12-Memb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proteínas de Membrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR13-Dock1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autodock (básico)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR14-Dock2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR15-VS1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Screening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR23-MDIntro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR16-EGB1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Pequenas Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR17-EGB2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise conformacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR18-EGB3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking Automático
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR19-EGB4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posicionamento Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR20-EGB5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR21-EGB6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Saturação de Substituições
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bestfit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escolha do Modelo de Substituição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usando o BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diplomado - UChile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diplomado - UChile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Presentation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UC_slides.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../First_Tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Substitution_saturation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis of Substitution Saturation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test of the Best-Fit Models
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test of the Best-Fit Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-mega-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using MEGA X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-jmodeltest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using jModelTest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using jModelTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-prottest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using ProtTest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using ProtTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeltest-ng" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ModelTest-NG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final remarks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MEGAX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1st_BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST%2BEBSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phylodynamics using EBSP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IQTree.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using IQ-Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introduction
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-mega-x" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using MEGA X
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-jmodeltest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using jModelTest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using jModelTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#steps" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Steps
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#using-prottest" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Using ProtTest
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Using ProtTest">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#comparing-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Comparing resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modeltest-ng" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ModelTest-NG
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#final-remarks" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Final remarks
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="choosing-an-appropriate-substitution-model">Choosing an appropriate substitution Model</h1>
+<h2 id="introduction">Introduction</h2>
+<p>The objective of this tutorial is to show the different ways to evaluate and estimate a nucleotide (and amino acid) replacement model suitable for your <em>dataset</em> for later phylogenetic analysis.</p>
+<p>As highlighted during the course, the step of estimating a replacement model is not necessarily mandatory in any phylogenetic analysis. When the working sequences and the characteristics of the obtained alignment are well known, the researcher can directly choose a single mathematical model. However, as there are numerous models available, such a choice can be challenging for beginners. In the worst case, ignorance can lead to the choice of a model that underestimates important alignment characteristics, leading to less accurate estimates. On the other hand, including many parameters increases the variance and consequently the accuracy of the analyses (and, sometimes, can also increase computational power requirements).</p>
+<p>Most tools use the statistical principle of likelihood (<em>L</em>). To do this, they calculate <em>L</em> for all available models and then make a hierarchical classification (using or not information criteria). These calculations are computationally intensive even for many current PCs.</p>
+<h2 id="using-mega-x">Using MEGA X</h2>
+<p>In its first version, the program <a href="www.megasoftware.net">MEGA</a> did not have a routine for testing the substitution model. Even so, it was one of the first phylogenetic programs to include this functionality natively. The algorithm is fast. However, it tests more models than are available in the tool itself.</p>
+<ul>
+<li>We will use the multiple alignment file <a href="https://drive.google.com/uc?export=download&amp;id=1CKutTUK4aAH-yGyZ1fhVfzz07SVVo3dD">vert-aligned.fasta</a>:</li>
+<li>Run the MEGAX program.</li>
+<li>Open the alignment by clicking on the <code>TA</code> button and then on <em>Open a File/Session...</em>, according to the picture below:</li>
+</ul>
+<p><img alt="MegaX" src="../../MTENG-fig1.png" /></p>
+<ul>
+<li>In the next pop-up window, click on <em>Analyze</em> (these sequences are already aligned):</li>
+</ul>
+<p><img alt="Analyze" src="../../MTENG-fig2.png" /></p>
+<ul>
+<li>MEGA will ask you the following questions: whether they are nucleotide sequences. Click Ok.</li>
+</ul>
+<p><img alt="Nucleotide sequences" src="../../MTENG-fig3.png" /></p>
+<ul>
+<li>They are protein-coding sequences. Answer <em>Yes</em>.</li>
+</ul>
+<p><img alt="Coding sequences" src="../../MTENG-fig4.png" /></p>
+<ul>
+<li>When answering, you will need to select the specific genetic code. Click <em>Vertebrate Mitochondrial</em>:</li>
+</ul>
+<p><img alt="Select genetic code" src="../../MTENG-fig5.png" /></p>
+<ul>
+<li>With the file open, click on <code>Models</code>,</li>
+</ul>
+<p><img alt="Models in MEGA X" src="../../MTENG-fig6.png" /></p>
+<ul>
+<li>And select the first item, <em>Find Best DNA/Protein Models (ML)...</em>:</li>
+</ul>
+<p><img alt="best-fit model in Mega X" src="../../MTENG-fig7.png" /></p>
+<ul>
+<li>Answer yes in the dialog box that appears right after, to use the open dataset:</li>
+</ul>
+<p><img alt="" src="../../MTENG-fig8.png" /></p>
+<ul>
+<li>After confirmation, the following box will appear:</li>
+</ul>
+<p><img alt="" src="../../MTENG-fig9.png" /></p>
+<ul>
+<li>Let us look at the options (as shown in the figure above):</li>
+<li>We will use an automatic <em>Neighbor-Joining</em> tree as the initial hypothesis for this data.</li>
+<li>Since the sequences of this alignment are nucleotides, we will use the appropriate type of substitutions.</li>
+<li>In the data subgroups options, we will use all sites, all codon positions, and we will not use filters for branch exchange (<em>Branch-swap filter</em>).</li>
+<li>Leave the number of <em>Threads</em> in the pattern that appeared on the computer you are using.</li>
+<li>Finally, click Ok. The process will take a while, depending on the available computing resources. The results will appear as the table below:</li>
+</ul>
+<p><img alt="Best-fit models results" src="../../MTENG-fig10.png" /></p>
+<p>The results appear in a list of the best model to the least suitable for the data used. In MEGA X the information criterion used is Bayesian (BIC). By it, we can verify that the GTR model (<em>General Time-reversible</em>) plus gamma correction (+G) was the model chosen by the Bayesian criterion. However, it is not the model with the least likelihood (<em>lnL</em>). The rest of the information in this table will be discussed during the remote meeting.</p>
+<blockquote>
+<p><em>Do not forget to save this table in one of the formats that MEGA X provides, from the icons present in the upper left corner of the screen.</em></p>
+<p><em>MEGA X also has the function to calculate the best amino acid substitution model. To do this, just start the analyses with an amino acid alignment and in the dialog box choose the correct option.</em>*</p>
+</blockquote>
+<h2 id="using-jmodeltest">Using jModelTest</h2>
+<p>The jModelTest program (<a href="https://www.ncbi.nlm.nih.gov/pubmed/?term=Darriba+D%2C+Taboada+GL%2C+Doallo+R%2C+Posada+D.+2012.+jModelTest+2%3A+more+models%2C+new+heuristics+and+parallel+computing.+Nature+Methods+9(8)%2C+772.">Darriba et al. 2012</a>) is an extended version of the popular ModelTest program (which was a routine run within the PAUP* program.) The program is now standalone and much faster after the inclusion of the <code>PHYML</code>, <code>ReadSeq</code> and <code>Consense</code> tools from the old <a href="http://evolution.genetics.washington.edu/phylip.html">PHYLIP</a> package. Additionally, jModelTest allows the optimization of base trees for each model, model selection according to a new theoretical decision criterion, and average model phylogenies. Recently, a new improved and faster version, which serves both DNA and protein sequences, ModelTest-NG (<a href="https://academic.oup.com/mbe/article/37/1/291/5552155">Darriba et al. 2019</a>) has been released.</p>
+<p><strong>Observation:</strong></p>
+<ul>
+<li>Some information on the steps below has been adapted from that described in <a href="http://evomics.org/learning/phylogenetics/jmodeltest/">http://evomics.org/learning/phylogenetics/jmodeltest/</a>, <strong><em>for teaching purposes only</em></strong>. <span style="color:red"><strong><em>Reproduction for any other purpose is not allowed or consented to by the course professor.</em></strong> </span></li>
+</ul>
+<h3 id="steps">Steps</h3>
+<p>Download version <a href="https://drive.google.com/drive/u/0/folders/0ByrkKOPtF_n_OUs3d0dNcnJPYXM">2.1.10</a> of jModelTest. The program is a java application and executes in distinct two ways: command line and GUI (<em>Graphical User Interface</em>). The program depends on the installation of a JDK (<em>Java Development Kit</em>), be it the official <a href="https://www.oracle.com/technetwork/pt/java/javase/downloads/jdk8-downloads-2133151.html">Oracle</a> or <a href="https://openjdk.java.net">OpenJDK</a>. The JDK installation steps depend on the operating system and therefore, will not be detailed here in this tutorial.</p>
+<blockquote>
+<p><em>Do not confuse JDK with JRE (Java Runtime Environment), which is usually present on most computers.</em></p>
+</blockquote>
+<ul>
+<li>
+<p>We will use the same file used previously:  <a href="https://drive.google.com/uc?export=download&amp;id=12-vfD16vil2cTmNM2VOMfuj48LGo9iT2">vert-aligned.fasta</a>.</p>
+</li>
+<li>
+<p>Go to the directory where you saved the jModelTest application and double click <code>jModelTest.jar</code> to open it. Using Linux, you may have to open a terminal, browse to the folder where this file is located and type the command below to open the program:</p>
+</li>
+</ul>
+<pre><code>$ java -jar jModelTest
+</code></pre>
+<ul>
+<li>The window below will appear:</li>
+</ul>
+<p><img alt="jmodeltest1" src="../../MTENG-fig11.png" /></p>
+<ul>
+<li>Click <em>File &gt; Load DNA alignment</em> and open the data set vert-aligned.fasta file.</li>
+<li>Click <em>Analysis &gt; Compute likelihood scores</em> to start the analysis.</li>
+<li>A dialog box will appear that allows you to specify the number of probability settings, including the number of models to be tested. The other settings are different base frequencies (+F); the proportion of invariable sites (+I), and gamma distribution (+G) (variation in rate across sites). In this dialog box, leave the options as in the figure below.</li>
+</ul>
+<p><img alt="jmodeltest2" src="../../MTENG-fig12.png" /></p>
+<ul>
+<li>Click on <code>Compute Likelihoods</code> and wait (or go for a coffee, because depending on the <em>dataset</em> this step will take longer than the one performed on MEGA X). For the alignment used here and with these options, this step will take between 1 and 4 min.</li>
+</ul>
+<blockquote>
+<p><em>Sometimes, depending on the operating system, you will have to locate the PhyML program executable again. In the main window, just go to Edit &gt; Preferences and find the correct executable again for the computer operating system.</em></p>
+</blockquote>
+<ul>
+<li>Before proceeding, check the data that appeared in the jModelTest console. They will also be discussed in the room, but are similar to those found in testing the model using MEGA X.</li>
+<li>Now click again on the <em>Analysis</em> menu. You will see that the AIC, BIC, and DT calculations are now available, while the hLRT calculations are grayed out (because in the previous step, we chose to have optimized tree topologies).</li>
+<li>Now click on <em>Results &gt; Show results table</em>. A window will appear, showing the calculated probabilities for each model.</li>
+</ul>
+<p><img alt="jmodeltest-table1" src="../../MTENG-fig13.png" /></p>
+<ul>
+<li>Now click on the top of the "LnL" column. This action will sort the models according to likelihood. The table will then look like this:</li>
+</ul>
+<p><img alt="jmodeltest-table2" src="../../MTENG-fig14.png" /></p>
+<ul>
+<li>It can show the partition schemes, the number of parameters included the observed base frequencies, and the transition and transversion rates. Note that the tables for AIC, AICc, BIC, and DT results are in grey. For that, the table can be closed, and from the <em>Analysis</em> menu click on <em>Do BIC calculations...</em> and on <em>Do DT calculations...</em>, confirming each dialog box that will appear later, as can be verified in the figure below:</li>
+</ul>
+<p><img alt="BIC and DT calculations" src="../../MTENG-fig15.png" /></p>
+<blockquote>
+<p><em>Make sure that the options Calculate parameter imports and Do model averaging are always selected</em></p>
+</blockquote>
+<ul>
+<li>Then, we will go to <em>Analysis</em> &gt; <em>Do AIC calculations...</em>. In the backbox, check the option <em>Use AICc correction</em>, as shown in the figure below:</li>
+</ul>
+<p><img alt="AICc correction" src="../../MTENG-fig16.png" /></p>
+<blockquote>
+<p><em>You can also do the Akaike calculation without the correction for comparison purposes. Just do not select the above option</em></p>
+</blockquote>
+<ul>
+<li>Now click again on <em>Results &gt; Show results table</em>. A window will appear showing the calculated probabilities for each model, with the information criteria. The chosen models for each criterion will be marked in red.</li>
+</ul>
+<blockquote>
+<p><em>To avoid repeating the analyses (which wastes computational time), screeshot the table with the final results and save the whole console content from the menu Edit &gt; Save console.</em> </p>
+</blockquote>
+<p>From the results obtained, you will observe that the results converge, although with some discrepancies. The GTR+G+I model is the best for Akaike's criterion, but not the best for Bayesian criterion. Which one to choose, then? Let us discuss.</p>
+<h2 id="using-prottest">Using ProtTest</h2>
+<p>The program <a href="https://github.com/ddarriba/prottest3">ProtTest</a> (<a href="https://www.ncbi.nlm.nih.gov/pubmed/21335321">Darriba et al. 2011</a>) is a very similar program to jModelTest, however specific for the choice of the best substitution models for protein sequence alignments.</p>
+<p>Prottest 3 can be obtained <a href="https://github.com/ddarriba/prottest3/releases">HERE</a> and run in the same way as jModelTest (it is also a Java application).</p>
+<blockquote>
+<p><em>MEGA X also has the function to calculate the best amino acid substitution model. To do this, just start the analyses with an amino acid alignment and in the dialog box choose the correct option.</em></p>
+</blockquote>
+<p>To demonstrate ProtTest's operation, we will use the amino acid alignment <a href="https://drive.google.com/uc?export=download&amp;id=1d1KpZNgn7atWSkc8_PQOh4zKJuu45rhY">COX2_PF0016</a>, one of the examples provided with the program itself.</p>
+<p><img alt="ProtTest" src="../../MTENG-fig17.png" /></p>
+<ul>
+<li>Click on <em>File &gt; Load alignment</em> and open the downloaded <a href="https://drive.google.com/uc?export=download&amp;id=1d1KpZNgn7atWSkc8_PQOh4zKJuu45rhY">COX2_PF0016</a> file above. See the information that appeared in the application console.</li>
+<li>Then go to <em>Analysis &gt; Compute likelihood scores</em> to start the analysis. A dialog will appear that allows you to specify the number and models to be tested in addition to some other settings.</li>
+<li>In <em>Starting Topology</em> choose <em>Maximum likelihood tree</em> or leave the default (<em>Fixed BioNJ JTT</em>).</li>
+</ul>
+<p><img alt="ProtTest" src="../../MTENG-fig17.png" /></p>
+<ul>
+<li>Click <em>Compute</em> and wait for the calculations to finish.</li>
+</ul>
+<blockquote>
+<p><em>Now you should have a coffee time. The likelihood calculation for amino acid replacement models is considerably more intensive, mainly due to the more significant possible number of changes and the number of characters involved (20 amino acids).</em></p>
+</blockquote>
+<ul>
+<li>When finished, just click the <em>Selection</em> menu and click <em>Results</em>. The results table will appear.</li>
+</ul>
+<p><img alt="ProtTest 3 Results" src="../../MTENG-fig18.png" /></p>
+<p>A notable difference between ProtTest and jModelTest is that the calculations of the information criteria are within the results table. Analyze the table. More information will be given in the classroom.</p>
+<h3 id="comparing-resultados">Comparing resultados</h3>
+<p>Compare the results obtained for the COX2_PF0016 alignment in both ProtTest and MEGA X. To use this alignment on MEGA, use <a href="https://drive.google.com/uc?export=download&amp;id=1UDI0QtUgUxnmTpvd3ulvWZ1Mz01M2sU1">this file</a>. Below is a table with the results.</p>
+<p><img alt="MEGAX" src="../../MTENG-fig19.png" /></p>
+<h2 id="modeltest-ng">ModelTest-NG</h2>
+<p>ModelTest-NG is a new improved and faster version of jModelTest, which serves both DNA and protein sequences (<a href="https://academic.oup.com/mbe/article/37/1/291/5552155">Darriba et al. 2019</a>). Its performance for larger <em>datasets</em> is much better, and its calculations are more optimized. However, its installation on Windows and macOS systems is not yet accessible, especially for beginners. On Linux, the installation is relatively fast. For this reason, we will see just a quick demonstration. </p>
+<p>For this we will use the same file used previously: <a href="https://drive.google.com/uc?export=download&amp;id=12-vfD16vil2cTmNM2VOMfuj48LGo9iT2">vert-aligned.fasta</a>.</p>
+<ul>
+<li>Run ModelTest-NG:</li>
+</ul>
+<p><img alt="ModelTest-NG" src="../../MTENG-fig20.png" /></p>
+<ul>
+<li>Click on <code>Load MSA</code> and choose the file above. The alignment characteristics will appear.</li>
+<li>Click the "Settings" tab, and you will see the test options, similar to previous programs.</li>
+</ul>
+<p><img alt="ModelTest-NG - Settings" src="../../MTENG-fig21.png" /></p>
+<ul>
+<li>Do not forget to change the initial tree to one of <em>Maximum likelihood</em>. Once you have done that, you can click on <code>Run</code>.</li>
+</ul>
+<blockquote>
+<p><em>Notice how ModelTest-NG is faster than its previous versions.</em></p>
+</blockquote>
+<ul>
+<li>The results are almost the same as in jModelTest.</li>
+</ul>
+<p><img alt="ModelTest-NG Results" src="../../MTENG-fig22.png" /></p>
+<ul>
+<li>We will now click on Reset and repeat the previous steps for the alignment <a href="https://drive.google.com/uc?export=download&amp;id=1d1KpZNgn7atWSkc8_PQOh4zKJuu45rhY">COX2_PF0016</a>. Since this alignment is of amino acid sequences, do not forget to mark in the <em>Settings</em> tab the option <em>Protein</em>, because in our tests ModelTest-NG does not always correctly identify the type of sequence. Below is a preview of the result:</li>
+</ul>
+<p><img alt="ModelTest-NG protein" src="../../MTENG-fig23.png" /></p>
+<h2 id="final-remarks">Final remarks</h2>
+<p><strong><em>What criteria do I use to choose the replacement model?</em></strong></p>
+<p>That is not a trivial question. For Bayesian inferences, the BIC criterion tends to be more appropriate. AICc is more suitable for small <em>datasets</em> than AIC (no correction), however, the two tend to converge on more massive <em>datasets</em>, so we always recommend using AICc. The DT criterion (<em>decision theory</em>) should be used with caution, as the jModelTest manual itself recommends. Thus, AICc and BIC are the most reliable criteria. When they converge (and this often happens), the problem is solved. Even without convergence, you will be safe if you do phylogenetic analysis with both the model chosen by AICc and the one chosen by BIC.</p>
+<p><strong><em>The chosen model does not exist in the tool I will use</em></strong></p>
+<p>It is not the end of the world. There are many models, but there are also many overlaps between them. Hence the importance of knowing the characteristics of alignment and the differences in parameters between the different models. Often the models selected by these tools have small differences. Just look for the equivalent model or the one closest in terms of parameters. The execution of jModelTest presents another significant advantage: the console gives a summary of the parameters evaluated in each of the models tested for you to make a more appropriate choice. Even so, nothing will replace understanding the models and their parameters. That is why some phylogeneticists do not consider testing the model an indispensable step.</p>
+<p><strong><em>Average phylogeny of all models</em></strong></p>
+<p>Average phylogeny of all models is a function that only ModelTest and its variants have. This function calculates the models' average phylogenies, which are consensus trees of all optimized basal trees. However, it currently depends on the <a href="http://evolution.genetics.washington.edu/phylip.html">PHYLIP</a> package for this function. It may not work if the taxon names are longer than 10 characters (anyone who has used PHYLIP ever knows how unbearable this limitation is). </p>
+<p>To get this, from the <em>Analysis</em> menu, click on <em>Model-averaged Phylogeny</em>. A window with the settings will open, in which you will leave all the settings in the default and click on <code>Run</code>. The output will list some configurations, the models, and the average phylogeny of these models. This is a great guide, however, it should be used with great caution.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

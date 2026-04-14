@@ -1,0 +1,3016 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutoriais básicos de Bioinformática">
+      
+      
+        <meta name="author" content="EvoMol-Lab">
+      
+      
+        <link rel="canonical" href="https://evomol-lab.github.io/tutorials/en/110-BDs/">
+      
+      
+        <link rel="prev" href="../KEGG/">
+      
+      
+        <link rel="next" href="../111-Modelagem/">
+      
+      
+        
+          <link rel="alternate" href="../../110-BDs/" hreflang="pt">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../es/110-BDs/" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Bancos de Dados de Informação Proteica - Tutoriais EvoMol-Lab's Teaching Resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bancos-de-dados-de-informacao-proteica" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-header__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutoriais EvoMol-Lab's Teaching Resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bancos de Dados de Informação Proteica
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../110-BDs/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/110-BDs/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-nav__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutoriais EvoMol-Lab's Teaching Resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Computacional de Biomoléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aboutus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o grupo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a linha de comando UNIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manipulando dados na CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI-Colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a CLI e ao Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao GenBank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Buscas de Similaridade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento entre pares de sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-MSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento Múltiplo de Sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-NCBI-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCBI/GenBank via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-BLAST-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BLAST via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos Básicos em SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao R usando o Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enzima-annot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integração de Bancos - Exemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbsnp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de dados de Mutações e Polimorfismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KEGG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando Vias Metabólicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de Dados de Informação Proteica
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de Dados de Informação Proteica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identificacao-de-proteinas-utilizando-o-uniprot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificação de Proteínas utilizando o UniPROT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificação de Proteínas utilizando o UniPROT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-utilizar-o-uniprot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando utilizar o Uniprot?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-informacoes-sobre-estrutura-proteica-no-uniprot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtendo informações sobre estrutura proteíca no UniProt:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtendo informações sobre estrutura proteíca no UniProt:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explorando-o-protein-data-bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorando o Protein Data Bank
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explorando o Protein Data Bank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-utilizar-o-pdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando utilizar o PDB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificando-os-dominios-de-uma-proteina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificando os domínios de uma proteína
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificando os domínios de uma proteína">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-o-cdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar o CDD?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-o-interpro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando o InterPro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usando o InterPro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-o-interpro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar o Interpro?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-o-prosite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando o PROSITE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usando o PROSITE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-o-usar-o-prosite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando o usar o PROSITE?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vamos-a-um-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vamos a um exemplo?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qual-banco-utilizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qual banco utilizar?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-Modelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem Computacional de Proteínas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeiros Passos no MEGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../113-Genomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navegando por Genomas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Videoaulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformática Estrutural
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformática Estrutural
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides de Acompanhamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programas e Ferramentas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR1-Visualizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualização Computacional de Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR2-pred/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informações a partir da estrutura primária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR22-Epitopos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predição de Epítopos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR3-Model1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR4-Model2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 102
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR5-Model3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeller-CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR6-AlphaFold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos baseados em IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR7-MDA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MDA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR8-Aval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação dos Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR9-EM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM/CryoEM fitting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR10-RINs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RINs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR11-APBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR12-Memb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proteínas de Membrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR13-Dock1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autodock (básico)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR14-Dock2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR15-VS1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Screening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR23-MDIntro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR16-EGB1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Pequenas Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR17-EGB2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise conformacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR18-EGB3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking Automático
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR19-EGB4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posicionamento Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR20-EGB5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR21-EGB6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Saturação de Substituições
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bestfit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escolha do Modelo de Substituição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usando o BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diplomado - UChile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diplomado - UChile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Presentation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UC_slides.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../First_Tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Substitution_saturation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis of Substitution Saturation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModelTest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test of the Best-Fit Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MEGAX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1st_BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST%2BEBSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phylodynamics using EBSP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IQTree.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using IQ-Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#identificacao-de-proteinas-utilizando-o-uniprot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificação de Proteínas utilizando o UniPROT
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificação de Proteínas utilizando o UniPROT">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-utilizar-o-uniprot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando utilizar o Uniprot?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#obtendo-informacoes-sobre-estrutura-proteica-no-uniprot" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Obtendo informações sobre estrutura proteíca no UniProt:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Obtendo informações sobre estrutura proteíca no UniProt:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#importante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Importante
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explorando-o-protein-data-bank" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Explorando o Protein Data Bank
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Explorando o Protein Data Bank">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-utilizar-o-pdb" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando utilizar o PDB?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#identificando-os-dominios-de-uma-proteina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Identificando os domínios de uma proteína
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Identificando os domínios de uma proteína">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-o-cdd" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar o CDD?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-o-interpro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando o InterPro
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usando o InterPro">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-usar-o-interpro" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando usar o Interpro?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#usando-o-prosite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Usando o PROSITE
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Usando o PROSITE">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#quando-o-usar-o-prosite" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Quando o usar o PROSITE?
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#passo-a-passo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passo a Passo
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vamos-a-um-exemplo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Vamos a um exemplo?
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#qual-banco-utilizar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Qual banco utilizar?
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bancos-de-dados-de-informacao-proteica">Bancos de dados de informação proteica</h1>
+<p><strong>Objetivos</strong></p>
+<ul>
+<li>Usar os diferentes bancos de dados de informação de proteínas.</li>
+<li>Caracterizar proteínas desconhecidas utilizando não apenas a sequência, mas perfis, motivos e domínios.</li>
+<li>Obter informações sobre a família de uma determinada proteína.</li>
+<li>Obter alinhamentos e matrizes de posicionamento específicas para uma família de proteínas.</li>
+<li>Verificar alergenicidade em proteínas.</li>
+<li>Verificar regiões de determinada proteína que podem ser epitopos para células B e T.</li>
+</ul>
+<p><strong>Observação:</strong></p>
+<ul>
+<li>Este tutorial foi construído <strong><em>apenas para fins didáticos</em></strong>. <span style="color:red"><strong>A reprodução dele para qualquer outro fim não é permitida e nem consentida.</strong></span></li>
+</ul>
+<h2 id="identificacao-de-proteinas-utilizando-o-uniprot">Identificação de Proteínas utilizando o UniPROT</h2>
+<p>O UniProt é uma base de conhecimento de referência para a obtenção de informação de proteínas, com <em>links</em> e informações cruzadas para diversos outros bancos de dados. É normalmente nele que as primeiras informações de uma determinada proteína são obtidas.</p>
+<h3 id="quando-utilizar-o-uniprot">Quando utilizar o Uniprot?</h3>
+<ul>
+<li>Para obter informações gerais sobre uma proteína.</li>
+<li>Registro de anotação mais completo para proteínas únicas.</li>
+<li>Swiss-Prot: proteínas anotadas e revisadas, com intervenção humana.</li>
+<li>Para realizar busca de similaridade com proteínas conhecidas.</li>
+<li>Encontrar homólogos curados e já confirmados experimentalmente.</li>
+<li>Encontrar dados relacionados a mutantes naturais e variações associadas a doenças ou fenótipos alterados.</li>
+<li>Obter informações sobre a estrutura e resíduos importantes para a atividade/função.</li>
+</ul>
+<p>Buscas de similiaridade utilizando o BLAST também poderão ser realizadas diretamente no site do UniProt. Vamos a um exemplo?</p>
+<ul>
+<li>
+<p>Abrir a Home Page do UNIPROT: <a href="https://www.uniprot.org">http://www.uniprot.org</a>.</p>
+</li>
+<li>
+<p>Clicar no link <strong>BLAST</strong> (Canto superior esquerdo).</p>
+</li>
+</ul>
+<p><img alt="Uniprot" src="../../uniprot-BLAST.png" /></p>
+<ul>
+<li>Copiar e colar a sequência abaixo no campo <em>Query</em>:</li>
+</ul>
+<pre><code class="language-shell">&gt;Seq5
+MASFTTTTAAAASRLLPSSSSSISRLSLSSSSSSSSSLKCLRSSPLVSHLFLRQRGGSAYVTKTRFSTKC
+YASDPAQLKNAREDIKELLQSKFCHPIMVRLGWHDAGTYNKDIKEWPQRGGANGSLSFDVELRHGANAGL
+VNALKLLQPIKDKYSGVTYADLFQLASATAIEEAGGPTIPMKYGRVDATGPEQCPEEGRLPDAGPPSPAQ
+HLRDVFYRMGLDDKDIVALSGAHTLGRSRPERSGWGKPETKYTKDGPGAPGGQSWTAEWLKFDNSYFKDI
+KEKRDADLLVLPTDAALFEDPSFKVYAEKYAADQEAFFKDYAEAHAKLSNQGAKFDPAEGITLNGTPAGA
+APEKFVAAKYSSNKRSELSDSMKEKIRAEYEGFGGSPNKPLPTNYFLNIMIVIGVLAVLSYLAGN
+</code></pre>
+<ul>
+<li>
+<p>Clicar em BLAST, e após o aparecimento dos resultados, analisar a tabela de hits (Sequências similares ou iguais presentes no banco de dados).</p>
+</li>
+<li>
+<p>Verificar os 6 primeiros <em>Hits</em>.</p>
+</li>
+<li>
+<p>Clique no primeiro <em>hit</em> e verifique a estrutura das informações contidas no Uniprot.</p>
+</li>
+</ul>
+<h2 id="obtendo-informacoes-sobre-estrutura-proteica-no-uniprot">Obtendo informações sobre estrutura proteíca no UniProt:</h2>
+<p>Abrir novamente o site do UniProt: <a href="https://www.uniprot.org">http://www.uniprot.org</a></p>
+<ul>
+<li>
+<p>No campo Query, inserir o termo <strong>PGH2_MOUSE</strong>.</p>
+</li>
+<li>
+<p>Observar os resultados.</p>
+</li>
+<li>
+<p>Em uma outra janela/aba do navegador, na mesma página acima, faça a busca pelo termo <strong>GYS2_HUMAN</strong>.</p>
+</li>
+<li>
+<p>Observe os resultados e veja a quantidade de informações presentes para estas proteínas.</p>
+</li>
+</ul>
+<h3 id="importante">Importante</h3>
+<p>O UniProt possui duas formas de especificar o registro de uma proteína: o <a href="https://www.uniprot.org/help/entry_name"><em>Entry name</em></a> e o <a href="https://www.uniprot.org/help/accession_numbers"><em>Accession number</em></a>. O primeiro é uma forma rápida para memorizar uma determinada entrada, mas não é estável. Já o segundo é estável e é o registro que deve ser utilizado em publicações ou trabalhos científicos. Utilizamos acima o <em>entry name</em>. Mais informações sobre como as informações de um registro do UniProt estão organizadas podem ser obtidas em seu <a href="https://www.uniprot.org/help/uniprotkb_manual">Manual</a>.</p>
+<h2 id="explorando-o-protein-data-bank">Explorando o <em>Protein Data Bank</em></h2>
+<p>O RCSB PDB é o principal banco de estruturas de proteínas resolvidas experimentalmente. É dele que retiramos as proteínas molde para realização de modelagem comparativa.</p>
+<p><img alt="Protein Data bank" src="../../rcsb-pdb.png" /></p>
+<h4 id="quando-utilizar-o-pdb">Quando utilizar o PDB?</h4>
+<ul>
+<li>Para obter estruturas de proteínas resolvidas experimentalmente.</li>
+<li>Para obter informações estruturais sobre uma proteína.</li>
+<li>Para verificar e encontrar estruturas proteicas homólogas.</li>
+<li>Para obter informações sobre sítios importantes para a atividade enzimática.</li>
+<li>Obter informações sobre os ligantes das proteínas.</li>
+</ul>
+<p>Vamos agora verificar o registro de uma entrada no banco PDB:</p>
+<ul>
+<li>Abrir a Home Page do Protein Data Bank (PDB): <a href="http://rcsb.org">http://rcsb.org</a></li>
+<li>No campo “PDB ID or Text” insira o termo: <a href="http://rcsb.org/structure/3HTB">3HTB</a></li>
+<li>
+<p>A partir da página aberta, obter as seguintes informações:</p>
+</li>
+<li>
+<p>Identificação da Proteína.</p>
+</li>
+<li>Organismo Fonte.</li>
+<li>Número de Cadeias Polipeptídicas.</li>
+<li>Método Experimental pelo qual o modelo foi obtido.</li>
+<li>Outras estruturas relacionadas.</li>
+<li>Mutações encontradas (se existirem).</li>
+<li>Clicar na estrutura e observar o modelo 3D utilizando a ferramenta Jmol.</li>
+</ul>
+<p>O registro de uma estrutura no banco PDB está sempre vinculado a um <em>Accession number</em> desta proteína no UniProt. Portanto, ao abrir o registro a partir do código PDB, um link direto para o registro no UniProt estará descrito abaixo da parte <em>Macromolecules</em>.</p>
+<blockquote>
+<p><em>Existe um arquivo que é frequentemente atualizado que faz a indexação entre os Uniprot Accession number e o código PDB de uma proteína no Protein Databank.</em> <em>Utilizando linguagens de script ou até mesmo comandos "Localizar/Buscar" em programas de edição de texto, você rapidamente faz um levantamento das estruturas experimentalmente resolvidas de uma proteína com o Accession number do Uniprot.</em></p>
+</blockquote>
+<h2 id="identificando-os-dominios-de-uma-proteina">Identificando os domínios de uma proteína</h2>
+<p>Vamos agora identificar a arquitetura dos domínios que esta proteína abaixo possui e a família a qual pertence. </p>
+<pre><code class="language-shell">&gt;1smd
+GRTSIVHLFEWRWVDIALECERYLAPKGFGGVQVSPPNENVAIHNPFRPWWERYQPVSYK
+LCTRSGNEDEFRNMVTRCNNVGVRIYVDAVINHMCGNAVSAGTSSTCGSYFNPGSRDFPA
+VPYSGWDFNDGKCKTGSGDIENYNDATQVRDCRLSGLLDLALGKDYVRSKIAEYMNHLID
+IGVAGFRIDASKHMWPGDIKAILDKLHNLNSNWFPEGSKPFIYQEVIDLGGEPIKSSDYF
+GNGRVTEFKYGAKLGTVIRKWNGEKMSYLKNWGEGWGFMPSDRALVFVDNHDNQRGHGAG
+GASILTFWDARLYKMAVGFMLAHPYGFTRVMSSYRWPRYFENGKDVNDWVGPPNDNGVTK
+EVTINPDTTCGNDWVCEHRWRQIRNMVNFRNVVDGQPFTNWYDNGSNQVAFGRGNRGFIV
+FNNDDWTFSLTLQTGLPAGTYCDVISGDKINGNCTGIKIYVSDDGKAHFSISNSAEDPFI
+AIHAESKL
+</code></pre>
+<p>Para isto, iremos utilizar primeiramente o banco <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/cdd.shtml">CDD</a> (<em>Conserved Domain Databases</em>), o qual é vinculado ao NCBI. A ferramenta que faz esta identificação é o <a href="https://www.ncbi.nlm.nih.gov/sparcle">SPARCLE</a> (<em>Subfamily Protein Architecture Labeling Engine</em>), que é um recurso que caracteriza funcionalmente e rotula sequências de proteínas que foram agrupadas por sua arquitetura de domínio conservado. Uma arquitetura de domínio é definida como a ordem sequencial de domínios conservados numa sequência de proteínas (CDD-NCBI).</p>
+<h3 id="quando-usar-o-cdd">Quando usar o CDD?</h3>
+<ul>
+<li>Para procurar domínios conservados de proteínas.</li>
+<li>Encontrar informações sobre famílias de proteínas.</li>
+<li>Inclusive superfamílias e subfamílias.</li>
+<li>Para obter matrizes PSSM específicas para cada família de proteína.</li>
+<li>Para obter alinhamentos entre representantes de cada família.</li>
+<li>Entre os mais distantes e os mais representativos.</li>
+<li>Verificar relações de proximidade entre as famílias proteicas.</li>
+</ul>
+<p>A utilização do SPARCLE pode ser realizada de duas maneiras: a partir de uma sequência de aminoácidos ou por uma palavra-chave. Para utilizar a partir da sequência, utilizaremos o <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi">CD-Search</a>:</p>
+<p>Abra o <a href="https://www.ncbi.nlm.nih.gov/Structure/cdd/wrpsb.cgi">CD-Search</a>.
+Copie a sequência fasta <code>1smd</code> na caixa de consulta, como indicado na figura abaixo:</p>
+<p><img alt="CD-Search" src="../../CD-SEARCH.png" /></p>
+<p>Deixe as opções já marcadas no campo <strong><em>Options</em></strong>.
+Clique em <strong><em>Submit</em></strong>.</p>
+<p>O primeiro resultado que é retornado é uma tela como a seguinte:</p>
+<p><img alt="CD-Search" src="../../1smd-CDD.png" /></p>
+<p>Nesta, podem ser identificados:</p>
+<ul>
+<li>A classificação da proteína (<em>Protein Classification</em>), com o link para o ID da arquitetura do domínio (do SPARCLE).</li>
+<li>A superfamília (<em>Superfamilies</em>) e os hits específicos (<em>Specific hits</em>) dentro desta superfamília.</li>
+<li>Os domínios identificados (<em>Domain hits</em>).</li>
+</ul>
+<blockquote>
+<p><strong>Pergunta</strong>: <em>Quantos domínios esta proteína apresenta?</em></p>
+</blockquote>
+<p>Na lista de domínios clique no primeiro e veja a descrição da família que contém este domínio. É uma tela como a representada abaixo:</p>
+<p><img alt="Domínio cd11317" src="../../1smd-2.png" /></p>
+<p>Role esta página até que o alinhamento de proteínas pertencentes a este CD seja mostrado. A opção padrão é o alinhamento dos membros mais diversos (<em>most diverse members</em>), ou seja, aqueles que apresentam sequências menos similares.</p>
+<p>Três resíduos (tríade DED) são importantes para a atividade catalítica desta proteína e podem ser evidenciados ao clicar na aba <em>Catalytic Site</em>. Eles serão destacados no alinhamento obtido mais abaixo nesta página.</p>
+<blockquote>
+<p><strong><em>Podemos afirmar que os resíduos marcados são realmente característicos desta família?</em></strong></p>
+<p><em>Sim. Isto pode ser verificado ao clicar em</em> <strong><em>catalytic site</em></strong>, na caixa <strong><em>Conserved Features/Sites</em></strong>.</p>
+</blockquote>
+<p>O código da matriz de escores de posicionamento específico (PSSM) para esta família pode ser obtida na caixa <strong><em>Statistics</em></strong>, presente na lateral esquerda. </p>
+<h2 id="usando-o-interpro">Usando o InterPro</h2>
+<p>O <a href="http://pfam-legacy.xfam.org/">Pfam</a> era banco para obtenção de informações, funcionais, de famílias proteicas e domínios. No entanto, ele deixou de ser atualizado e suas funcionalidades (ainda que não completamente) e dados alimentam agora o <a href="https://www.ebi.ac.uk/interpro/">Interpro</a>. Além da classificação das proteínas em famílias, você poderá também obter modelos HMMs (<em>Hidden Markov Models</em>) para classificação dessas famílias.</p>
+<blockquote>
+<p><strong><em>HMMs:</em></strong> <em>É um modelo estatístico para qualquer sistema que pode ser representado como uma sucessão de transições entre estados discretos.</em></p>
+</blockquote>
+<h3 id="quando-usar-o-interpro">Quando usar o Interpro?</h3>
+<ul>
+<li>Obter informações de famílias proteicas e domínios.</li>
+<li>Obter informações funcionais.</li>
+<li>Obter alinhamentos múltiplos de sequências de proteínas de uma mesma família.</li>
+<li>Obter perfis (profiles) <em>Hidden Markov Models</em>.</li>
+<li>Obter informações sobre a estrutura e resíduos importantes para a atividade.</li>
+<li>Obter informações ligadas com outros bancos de dados biológicos.</li>
+</ul>
+<p>Nesta parte, também utilizaremos a sequência <code>1smd</code>. Para isso siga os passos abaixo:</p>
+<p><img alt="Realizando uma consulta no InterPro" src="../../interpro2.png" /></p>
+<ul>
+<li>Abra a página do <a href="https://www.ebi.ac.uk/interpro/">Interpro</a>.</li>
+<li>Clique em <strong><em>Sequence Search</em></strong>.</li>
+<li>Copie a sequência da proteína <code>1smd</code> no campo indicado.</li>
+<li>Espere os resultados.</li>
+</ul>
+<p>A primeira página de resultados será a seguinte:</p>
+<p><img alt="Resultados InterPro - 1smd" src="../../interpro3.png" /></p>
+<ul>
+<li>Clique agora no link correspondente a família das alfa-amilases.</li>
+<li>Observe todos os resultados, clicando no menu de navegação a direita.</li>
+<li>O código <a href="http://www.ebi.ac.uk/interpro/"><strong>InterPro</strong></a> para esta família proteica, que é <a href="https://www.ebi.ac.uk/interpro/entry/InterPro/IPR006046/">IPR006046</a>.</li>
+</ul>
+<p><img alt="Família proteica IPR006064" src="../../interpro4.png" /></p>
+<h2 id="usando-o-prosite">Usando o PROSITE</h2>
+<p>O banco de dados <a href="http://prosite.expasy.org">PROSITE</a> é um outro banco muito útil para obter informações funcionais e de famílias proteicas e domínios. </p>
+<h3 id="quando-o-usar-o-prosite">Quando o usar o PROSITE?</h3>
+<ul>
+<li>Para obter informações de famílias proteicas e domínios.</li>
+<li>Para obtenção de informações funcionais.</li>
+<li>Obter as assinaturas de sequência que caracterizam as famílias de proteínas.</li>
+<li>Usar para buscas de similaridade utilizando o PHI-BLAST.</li>
+</ul>
+<p>Para este exemplo, iremos utilizar a sequência abaixo:</p>
+<pre><code>&gt;Enzyme_Test_1
+MVKIVTVKTQAYQDQKPGTSGLRKRVKVFQSSANYAENFIQSIISTVEPAQRQEATLVVGGDGRFYMKEAIQLIARIA
+AANGIGRLVIGQNGILSTPAVSCIIRKIKAIGGIILTASHNPGGPNGDFGIKFNISNGGPAPEAITDKIFQISKTIEE
+YAVCPDLKVDLGVLGKQQFDLENKFKPFTVEIVDSVEAYATMLRSIFDFSALKELLSGPNRLKIRIDAMHGVVGPYVK
+KILCEELGAPANSAVNCVPLEDFGGHHPDPNLTYAADLVETMKSGEHDFGAAFDGDGDRNMILGKHGFFVNPSDSVAV
+IAANIFSIPYFQQTGVRGFARSMPTSGALDRVASATKIALYETPTGWKFFGNLMDASKLSLCGEESFGTGSDHIREKD
+GLWAVLAWLSILATRKQSVEDILKDHWQKYGRNFFTRYDYEEVEAEGANKMMKDLEALMFDRSFVGKQFSANDKVYTV
+EKADNFEYSDPVDGSISRNQGLRLIFTDGSRIVFRLSGTGSAGATIRLYIDSYEKDVAKINQDPQVMLAPLISIALKV
+SQLQERTGRTAPTVIT
+</code></pre>
+<h3 id="passo-a-passo">Passo a Passo</h3>
+<ul>
+<li>Abra a página inicial do <a href="http://prosite.expasy.org">PROSITE</a>.</li>
+<li>Na caixa <strong><em>Quick Scan mode of ScanProsite</em></strong>, cole a sequência acima.</li>
+</ul>
+<p><img alt="Prosite 1" src="../../prosite1.png" /></p>
+<ul>
+<li>Marque a opção <strong><em>Exclude motifs with a high probability of occurrence from the scan</em></strong>.</li>
+</ul>
+<blockquote>
+<p><em>Esta opção serve para excluir motivos lineares na sequência proteica que são muito comuns, em inúmeras proteínas.</em></p>
+</blockquote>
+<ul>
+<li>Clique em <strong><em>Scan</em></strong>.</li>
+<li>Observe os resultados, que devem estar de acordo com a figura abaixo:</li>
+</ul>
+<p><img alt="Resultados do PROSITE" src="../../prosite2.png" /></p>
+<p>Os resultados mostram que entre as posições 111 e 120 há a assinatura de enzimas do tipo fosfoglucomutase e fosfomannomutase fosfoserine. Clique no link indicado acima (<a href="http://prosite.expasy.org/cgi-bin/prosite/nicedoc.pl?PS00710">PS00710</a>) e veja as informações deste motivo.</p>
+<p>Nesta mesma página, mais abaixo, temos um quadro denominado <strong><em>PGM_PMM, PS00710; Phosphoglucomutase and phosphomannomutase phosphoserine signature  (PATTERN)</em></strong>. Nele temos o seguinte consenso padrão:</p>
+<pre><code class="language-shell">Consensus pattern:
+[GSA]-[LIVMF]-x-[LIVM]-[ST]-[PGA]-S-H-[NIC]-P
+</code></pre>
+<p>Esta é assinatura PROSITE deste tipo de proteínas. Ela pode ser usada em uma busca PHI-BLAST (<a href="../104/">ver tutorial Buscas de Similaridade</a>) para identificar proteínas que tenham esta assinatura em buscas de similaridade utilizando o BLAST. </p>
+<h3 id="vamos-a-um-exemplo">Vamos a um exemplo?</h3>
+<p>Você quer verificar quais proteínas obtidas a partir de amostras ambientais de metagenomas possuem esta assinatura de fosfoglicomutase, para uma possível aplicação biotecnológica. Para isso, siga os passos abaixo (acompanhe também pela figura):</p>
+<p><img alt="PHI-BLAST" src="../../phi-blast110.png" /></p>
+<ul>
+<li>Utilize o <a href="https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastp&amp;PAGE_TYPE=BlastSearch&amp;LINK_LOC=blasthome">BLASTp</a>, para executar uma busca contra o banco <strong>env_nr</strong> (<em>Metagenomic proteins</em>). Não esqueça de colar a sequência <code>Enzyme_Test_1</code> no campo de busca.</li>
+<li>Na seção <strong><em>Program Selection</em></strong> selecione PHI-BLAST. Ao clicar em PSI-BLAST, uma caixa abaixo é aberta. Nela você insere a assinatura PROSITE acima. </li>
+<li>Clique em BLAST e espere os resultados (Pode demorar!!!).</li>
+<li>Verifique os resultados.</li>
+</ul>
+<blockquote>
+<p><em>Pelos resultados, há algo promissor para aplicação?</em></p>
+</blockquote>
+<h2 id="qual-banco-utilizar">Qual banco utilizar?</h2>
+<p>Esta não é uma pergunta trivial. É importante que você explore as informações disponíveis em cada banco e extraia o máximo de informações sobre a proteína de interesse. Como pode ser notado, embora exista uma redundância nas informações disponíveis, cada banco tem sua especificidade e particularidade.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -57,23 +57,55 @@ nav:
     - VS-2: STR21-EGB6.md
     - Complements: comps.md
   - Análise Evolucionária de Sequências (Evolução Molecular):
-    - Análise de Saturação de Substituições: satsub-ptbr.md
-    - Escolha do Modelo de Substituição: bestfit-ptbr.md
-    - Usando o BEAST: BEAST_ptbr.md
+    - Análise de Saturação de Substituições: satsub.md
+    - Escolha do Modelo de Substituição: bestfit.md
+    - Usando o BEAST: BEAST.md
   - Diplomado - UChile: 
     - Home: Presentation.md
     - Slides: UC_slides.md
     - Files and References: Material.md
-    - First Tutorial: First_Tutorial_ENG.md
-    - Analysis of Substitution Saturation: Substitution_saturation_ENG.md
-    - Test of the Best-Fit Models: ModelTest_ENG.md
-    - Using MEGAX: MEGAX_ENG.md
+    - First Tutorial: First_Tutorial.md
+    - Analysis of Substitution Saturation: Substitution_saturation.md
+    - Test of the Best-Fit Models: ModelTest.md
+    - Using MEGAX: MEGAX.md
     - Using BEAST: 1st_BEAST.md
-    - Phylodynamics using EBSP: BEAST+EBSP_ENG.md
+    - Phylodynamics using EBSP: BEAST+EBSP.md
     - Using IQ-Tree: IQTree.md
 
 theme:
-  name: readthedocs
-  highlightjs: true
-  hljs_languages:
-    - yaml
+  name: material
+  font:
+    text: Roboto
+    code: Roboto Mono
+  palette:
+    scheme: slate
+
+extra:
+  alternate:
+    - name: Português
+      link: /tutorials/
+      lang: pt
+    - name: English
+      link: /tutorials/en/
+      lang: en
+    - name: Español
+      link: /tutorials/es/
+      lang: es
+
+plugins:
+  - search
+  - i18n:
+      default_language: pt
+      docs_structure: suffix
+      fallback_to_default: true
+      languages:
+        - locale: pt
+          name: Português
+          build: true
+          default: true
+        - locale: en
+          name: English
+          build: true
+        - locale: es
+          name: Español
+          build: true

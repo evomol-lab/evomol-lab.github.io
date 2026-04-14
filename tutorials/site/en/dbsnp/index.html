@@ -1,0 +1,3098 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutoriais básicos de Bioinformática">
+      
+      
+        <meta name="author" content="EvoMol-Lab">
+      
+      
+        <link rel="canonical" href="https://evomol-lab.github.io/tutorials/en/dbsnp/">
+      
+      
+        <link rel="prev" href="../enzima-annot/">
+      
+      
+        <link rel="next" href="../KEGG/">
+      
+      
+        
+          <link rel="alternate" href="../../dbsnp/" hreflang="pt">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../es/dbsnp/" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Bancos de dados de Mutações e Polimorfismos - Tutoriais EvoMol-Lab's Teaching Resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#bancos-de-dados-de-mutacoes-e-polimorfismos" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-header__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutoriais EvoMol-Lab's Teaching Resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Bancos de dados de Mutações e Polimorfismos
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../dbsnp/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/dbsnp/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-nav__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutoriais EvoMol-Lab's Teaching Resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Computacional de Biomoléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aboutus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o grupo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a linha de comando UNIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manipulando dados na CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI-Colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a CLI e ao Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao GenBank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Buscas de Similaridade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento entre pares de sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-MSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento Múltiplo de Sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-NCBI-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCBI/GenBank via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-BLAST-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BLAST via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos Básicos em SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao R usando o Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enzima-annot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integração de Bancos - Exemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de dados de Mutações e Polimorfismos
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de dados de Mutações e Polimorfismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-e-conceitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução e Conceitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introdução e Conceitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mutacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mutações
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polimorfismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polimorfismos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variacao-no-numero-de-copias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variação no número de cópias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbsnp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dbSNP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dbSNP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-para-buscar-o-rs6275-no-dbsnp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos para buscar o rs6275 no dbSNP:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clinvar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClinVar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ClinVar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OMIM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OMIM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCGA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCGA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os Apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cbioportal-for-cancer-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CBioPortal for Cancer Genomics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CBioPortal for Cancer Genomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosmic-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COSMIC-3D
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COSMIC-3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KEGG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando Vias Metabólicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-BDs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de Dados de Informação Proteica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-Modelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem Computacional de Proteínas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeiros Passos no MEGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../113-Genomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navegando por Genomas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Videoaulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformática Estrutural
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformática Estrutural
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides de Acompanhamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programas e Ferramentas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR1-Visualizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualização Computacional de Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR2-pred/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informações a partir da estrutura primária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR22-Epitopos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predição de Epítopos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR3-Model1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR4-Model2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 102
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR5-Model3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeller-CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR6-AlphaFold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos baseados em IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR7-MDA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MDA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR8-Aval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação dos Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR9-EM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM/CryoEM fitting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR10-RINs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RINs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR11-APBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR12-Memb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proteínas de Membrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR13-Dock1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autodock (básico)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR14-Dock2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR15-VS1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Screening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR23-MDIntro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR16-EGB1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Pequenas Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR17-EGB2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise conformacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR18-EGB3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking Automático
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR19-EGB4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posicionamento Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR20-EGB5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR21-EGB6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Saturação de Substituições
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bestfit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escolha do Modelo de Substituição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usando o BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diplomado - UChile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diplomado - UChile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Presentation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UC_slides.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../First_Tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Substitution_saturation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis of Substitution Saturation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModelTest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test of the Best-Fit Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MEGAX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1st_BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST%2BEBSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phylodynamics using EBSP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IQTree.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using IQ-Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#introducao-e-conceitos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução e Conceitos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Introdução e Conceitos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#mutacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Mutações
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#polimorfismos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Polimorfismos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variacao-no-numero-de-copias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variação no número de cópias
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#dbsnp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        dbSNP
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="dbSNP">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#passos-para-buscar-o-rs6275-no-dbsnp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Passos para buscar o rs6275 no dbSNP:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clinvar" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        ClinVar
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="ClinVar">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#omim" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        OMIM
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="OMIM">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Exemplo de uso:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados_2" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#tcga" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        TCGA
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="TCGA">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#para-os-apressados_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Para os Apressados:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cbioportal-for-cancer-genomics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        CBioPortal for Cancer Genomics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="CBioPortal for Cancer Genomics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_3" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#cosmic-3d" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        COSMIC-3D
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="COSMIC-3D">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#exemplo-de-uso_4" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exemplo de uso:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="bancos-de-dados-de-mutacoes-e-polimorfismos">Bancos de dados de Mutações e Polimorfismos</h1>
+<p><strong><em>"Mutation, then, is a feature, not a bug in DNA"</em></strong></p>
+<p>Sean B. Carroll​, <a href="https://press.princeton.edu/books/hardcover/9780691201757/a-series-of-fortunate-events?srsltid=AfmBOorz9DA37jnIUzhXSU7rgLw5QQ3WaXWFsHrWD6Kj39fCmejIF-On">"A series of fortunate events: Chance and the Making of the Planet, Life, and You."</a>​</p>
+<p><strong>Observações:</strong></p>
+<ul>
+<li>Este tutorial foi construído <strong><em>apenas para fins didáticos para a disciplina de Bioinformática, do curso de Biomedicina da UFRN</em></strong>. <strong>A reprodução dele para qualquer outro fim não é permitida e nem consentida pelos professores do curso.</strong></li>
+</ul>
+<p><span style="color:red"><strong>ATENÇÃO:</strong></span></p>
+<ul>
+<li>O tutorial usa exemplos de doenças genéticas, neurológicas e comportamentais.</li>
+</ul>
+<h2 id="introducao-e-conceitos">Introdução e Conceitos</h2>
+<p>O avanço da genômica nas últimas décadas tem levado ao descobrimento de um número cada vez maior de variantes estruturais 
+e de sequência do genoma humano. Informações como SNVs, MNVs, mutações associadas ao câncer e suas respectivas correlações 
+com dados clínicos e síndromes genéticas/erros inatos do metabolismo estão catalogadas em diversos bancos de dados primários 
+e secundários. Apesar da inerente redundância, cada banco apresenta particularidades na forma como o dado está organizado e 
+nas informações relacionadas a cada mudança encontrada.</p>
+<p>Antes de começarmos a explorar alguns desses bancos (acredite, são muitos!), precisamos revisar alguns conceitos importantes.</p>
+<h3 id="mutacoes">Mutações</h3>
+<p>Qualquer alteração encontrada na sequência de nucleotídeos de uma molécula de DNA de um organismo.​ Não estão presentes na maioria dos indivíduos de uma espécie.​ São raras, com frequência alélica menor que 1%.​</p>
+<h3 id="polimorfismos">Polimorfismos</h3>
+<p>Diferenças na sequência de DNA entre indivíduos, grupos, ou populações.​ Presentes em pelo menos 2% de uma amostra populacional aleatória, com frequência alélica maior que 1%.​</p>
+<h3 id="variacao-no-numero-de-copias">Variação no número de cópias</h3>
+<p>A variação no número de cópias (CNV) é um termo geral usado para descrever um fenômeno molecular em que sequências do genoma são repetidas, e o número de repetições varia entre indivíduos da mesma espécie.​</p>
+<h2 id="dbsnp">dbSNP</h2>
+<p>O <strong>dbSNP</strong> contém informações sobre variações genéticas, incluindo SNPs e pequenas inserções/deleções.</p>
+<h3 id="exemplo-de-uso">Exemplo de uso:</h3>
+<p>O <a href="https://www.ncbi.nlm.nih.gov/snp/rs6275">rs6275</a> é um SNP no gene <strong><em>DRD2</em></strong>, que está associado a diferenças na resposta dopaminérgica, mas não é considerado patogênico.</p>
+<h4 id="passos-para-buscar-o-rs6275-no-dbsnp">Passos para buscar o rs6275 no dbSNP:</h4>
+<ul>
+<li>Acesse o site do <a href="https://www.ncbi.nlm.nih.gov/snp/">dbSNP</a>.</li>
+<li>Na barra de pesquisa, digite <strong>rs6275</strong> e pressione <strong>Enter</strong>.</li>
+</ul>
+<p><img alt="Página Principal do dbSNP" src="../../dbsnp1.png" /></p>
+<ul>
+<li>A página inicial de resultados trará um resumo de cada <em>rs</em> relacionado a sua busca.</li>
+</ul>
+<p><img alt="Página de resultados da busca do dbSNP" src="../../dbsnp2.png" /></p>
+<ul>
+<li>O resultado resumido mostrará informações como:</li>
+<li><strong>Localização genômica</strong> (cromossomo e posição exata).</li>
+<li><strong>Consequência funcional</strong>.</li>
+<li><strong>Frequência alélica</strong> em diferentes populações.</li>
+<li>
+<p><strong>Estudos associados</strong> que analisaram sua influência em características humanas.</p>
+</li>
+<li>
+<p>Você pode explorar os detalhes clicando no primeiro resultado, obtendo assim a página abaixo:</p>
+</li>
+</ul>
+<p><img alt="Página do dbSNP rs6275" src="../../dbsnp3.png" /></p>
+<ul>
+<li>Nas abas abaixo você terá informações mais detalhadas sobre essa variante.</li>
+</ul>
+<p>Esse SNP é um ótimo exemplo de como variações genéticas podem influenciar características sem necessariamente causar doenças. Vamos agora verificar um patogênico?</p>
+<p>Repita os passos acima com o SNP de código <a href="https://www.ncbi.nlm.nih.gov/snp/rs121913529">rs121913529</a> e responda:
+- Em qual gene esse SNP é relatado?
+- Qual o seu efeito?
+- Qual a sua frequência alélica na população </p>
+<h3 id="para-os-apressados">Para os apressados:</h3>
+<ul>
+<li>Acesse o site oficial do dbSNP <a href="https://www.ncbi.nlm.nih.gov/snp/">aqui</a>.</li>
+<li>Utilize a barra de pesquisa para buscar um SNP específico usando um <strong>RefSNP ID (rsID)</strong> ou um <strong>gene</strong>.</li>
+<li>Filtre os resultados por <strong>significância clínica</strong>, <strong>frequência alélica</strong> e <strong>localização genômica</strong>.</li>
+<li>Para baixar os dados, vá até a seção <strong>FTP Download</strong>.</li>
+</ul>
+<h2 id="clinvar">ClinVar</h2>
+<p>O <a href="https://www.ncbi.nlm.nih.gov/clinvar">ClinVar</a> é um banco de dados que relaciona variações genéticas com condições médicas.</p>
+<h3 id="exemplo-de-uso_1">Exemplo de uso:</h3>
+<p>O exemplo para uso do ClinVar será um pouco diferente do anterior, embora você também possa procurar códigos <strong>rs</strong> diretamente nele. Aqui iremos iniciar a busca com uma condição. A condição é a esquizofrenia (em inglês, <em>Schizophrenia</em>).</p>
+<ul>
+<li>Acesse o site do <a href="https://www.ncbi.nlm.nih.gov/clinvar">ClinVar</a>.</li>
+<li>Coloque o termo <em>Schizophrenia</em> no campo de busca.</li>
+</ul>
+<p><img alt="Página Inicial do ClinVar" src="../../dbsnp-clinvar1.png" /></p>
+<ul>
+<li>Observe a página inicial dos resultados:</li>
+</ul>
+<p><img alt="Página de resultados de uma busca no ClinVar" src="../../dbsnp-clinvar2.png" /></p>
+<ul>
+<li>No menu lateral esquerdo, vamos filtrar os resultados por:</li>
+<li><em>Germline classification: Pathogenic.</em></li>
+<li><em>Molecular consequence: UTR.</em></li>
+</ul>
+<p><img alt="Página de resultados de uma busca no ClinVar" src="../../dbsnp-clinvar3.png" /></p>
+<ul>
+<li>Clique no resultado único e explore a página seguinte de descrição dessa variante.</li>
+</ul>
+<p><img alt="Página de descrição de uma variante no ClinVar" src="../../dbsnp-clinvar4.png" /></p>
+<ul>
+<li>Verifique todas as informações nessa página e principalmente os links para outros bancos de dados.</li>
+</ul>
+<h4 id="para-os-apressados_1">Para os apressados:</h4>
+<ul>
+<li>Acesse o site do <a href="https://www.ncbi.nlm.nih.gov/clinvar">ClinVar</a>.</li>
+<li>Use a barra de pesquisa para buscar variantes associadas a doenças específicas: códigos do dbSNP, variante, condição, etc.</li>
+<li>Explore os detalhes de cada variante, incluindo <strong>significância clínica</strong>, <strong>publicações científicas</strong> e <strong>frequência populacional</strong>.</li>
+</ul>
+<h2 id="omim">OMIM</h2>
+<p>O <a href="https://www.omim.org/"><strong>OMIM</strong></a> (<em>Online Mendelian Inheritance in Man</em>) é um banco de dados que contém informações sobre doenças genéticas e genes associados.</p>
+<h3 id="exemplo-de-uso_2">Exemplo de uso:</h3>
+<p>No OMIM também iremos procurar por uma condição genética, a <em>Mucoviscidosis</em>, que é um outro nome para a Fibrose Cística.</p>
+<ul>
+<li>Abra a página do <a href="https://www.omim.org/"><strong>OMIM</strong></a>.</li>
+</ul>
+<p><img alt="Página Inicial do OMIM" src="../../dbsnp-omim1.png" /></p>
+<ul>
+<li>No campo de busca, coloque o termo Mucoviscidosis.</li>
+<li>Clique no único resultado que aparece, <em>Cystic fibrosis</em>.</li>
+<li>Veja a página de resultados, com a descrição completa da doença.</li>
+</ul>
+<p><img alt="Resultado do OMIM para uma condição" src="../../dbsnp-omim2.png" /></p>
+<ul>
+<li>Verifique a tabela e clique no link da última coluna na segunda linha da tabela (onde tem <a href="https://www.omim.org/entry/602421">602421</a>).</li>
+<li>Além de registros para doenças, o OMIM tem também registros para cada gene. Nessa página temos o registro do gene CFTR. Na coluna à esquerda da página temos várias informações textuais sobre o gene.</li>
+</ul>
+<p><img alt="Resultado do OMIM para o gene CFTR" src="../../dbsnp-omim-3.png" />.</p>
+<ul>
+<li>Ainda na coluna à esquerda existe um menu chamado <em>Allelic Variants</em>. Clique no link logo abaixo, chamado <em>Table View</em>. Uma nova página irá abrir:</li>
+</ul>
+<p><img alt="Table View do OMIM para o gene CFTR" src="../../dbsnp-omim4.png" />.</p>
+<ul>
+<li>Na tabela acima você encontra:</li>
+<li>O número da mutação/polimorfismo no formato <strong>602421#0001</strong> (Registro do Gene # Número da mutação).</li>
+<li>O fenótipo (<em>phenotype</em>).</li>
+<li>A descrição da mutação (<em>Mutation</em>), no formato PHE508DEL (XNY).</li>
+<li>O código dela no dbSNP (<em>SNP</em> - código com início em <em>rs</em>).</li>
+<li>A frequência alélica descrita no banco de genomas/exomas <a href="https://gnomad.broadinstitute.org/">gnomAD™</a> (<em>Genome Aggregation Database</em>, antes conhecido como ExAC).</li>
+<li>O código dela no <a href="https://www.ncbi.nlm.nih.gov/clinvar">ClinVar</a>.</li>
+</ul>
+<p>Esse exemplo demonstra a integração que existe entre os diversos bancos de dados. Em todos os bancos acima, existem links que direcionam uma determinada variante aos outros bancos de dados em que ela é descrita.</p>
+<h4 id="para-os-apressados_2">Para os apressados:</h4>
+<ol>
+<li>Acesse o site do OMIM <a href="https://www.omim.org/">aqui</a>.</li>
+<li>Utilize a barra de pesquisa para buscar um gene ou uma doença específica.</li>
+<li>Leia as descrições detalhadas sobre a condição genética e suas variantes associadas.</li>
+</ol>
+<h2 id="tcga">TCGA</h2>
+<p>O <a href="https://www.cancer.gov/ccg/research/genome-sequencing/tcga">TCGA</a> (<em>The Cancer Genome Atlas</em>) contém dados genômicos de diversos tipos de câncer.</p>
+<p><img alt="Página Inicial do TCGA" src="../../dbsnp-tcga1.png" /></p>
+<p>Para acessar diretamente os dados, você pode ir diretamente para o link <a href="https://portal.gdc.cancer.gov/">Access TCGA Data</a>.</p>
+<p><img alt="Página de acesso aos dados do TCGA" src="../../dbsnp-tcga2.png" />.</p>
+<p>No campo de busca à direita, vamos procurar por um gene, o BRCA1, que está relacionado a diversos tipos de câncer, especialmente o de mama. Ao acessar a página de resultados, uma série de informações serão mostradas para o gene, assim como suas associações à doenças.</p>
+<p><img alt="Página do TCGA para o gene BRCA1" src="../../dbsnp-tcga3.png" /></p>
+<p>Nela você também encontrará integração com diversos outros bancos de dados biológicos.</p>
+<p>Na página anterior você pode também analisar diretamente os dados presente no TCGA. Existem links para demonstrações para cada tipo de análise.</p>
+<h4 id="para-os-apressados_3">Para os Apressados:</h4>
+<ol>
+<li>Acesse o portal do TCGA <a href="https://www.cancer.gov/ccg/research/genome-sequencing/tcga">aqui</a>.</li>
+<li>Utilize a ferramenta de busca para encontrar dados genômicos de diferentes tipos de câncer.</li>
+<li>Explore os dados de expressão gênica, mutações e análises clínicas.</li>
+<li>Para baixar os dados, é necessário criar uma conta no <strong>Genomic Data Commons (GDC)</strong>.</li>
+</ol>
+<h2 id="cbioportal-for-cancer-genomics"><em>CBioPortal for Cancer Genomics</em></h2>
+<p>O <a href="https://www.cbioportal.org/">CBioPortal</a> é uma base de conhecimento que apresenta dados complexos de diversos coortes e projetos genoma de câncer de uma forma interativa e de fácil análise para profissionais de saúde.</p>
+<h3 id="exemplo-de-uso_3">Exemplo de uso:</h3>
+<p>Vamos obter uma visão geral de um conjunto de dados de câncer de mama (<em>Breast cancer</em>). Na coluna à direita no site inicial do CBioPortal, selecione <strong>Breast</strong>. Em seguida, à esquerda, selecione a segunda caixa (<em>MSK Cancer Cell 2018</em>). Após isso, clique na caixa azul na parte inferior da página <code>Explore Selected Studies</code>.</p>
+<p><img alt="CBioPortal" src="../../dbsnp-cbioportal1.png" /></p>
+<p>Verifique a página com o sumário dos resultados:</p>
+<p><img alt="CBioPortal - Breast Cancer" src="../../dbsnp-cbioportal2.png" /></p>
+<p>Quais dos dados lhe chama mais atenção nessa análise?</p>
+<h2 id="cosmic-3d">COSMIC-3D</h2>
+<p>O <a href="https://cancer.sanger.ac.uk/cosmic3d/">COSMIC-3D</a> é um banco de dados que integra mutações associadas ao câncer com estruturas tridimensionais do proteoma humano. É uma base muito interessante para visualizar o efeito de mutações na estrutura das proteínas.</p>
+<p><img alt="Cosmic-3D" src="../../dbsnp-cosmic3d-1.png" /></p>
+<h3 id="exemplo-de-uso_4">Exemplo de uso:</h3>
+<p>Vamos continuar utilizando o gene BRCA1, colocando sua sigla (na verdade, seu <em>GeneSymbol</em>) no campo de busca. Logo abaixo uma caixa com o código Uniprot da proteína e o número de estruturas disponíveis aparece embaixo. Aperte <code>ENTER</code>.</p>
+<p>Na página seguinte você verá a estrutura da proteína e um gráfico que resume as mutações reportadas, a sua cobertura estrutural e a sua frequência de ocorrência. Ao clicar na mutação, a mudança de aminoácido é visualizada na estrutura.</p>
+<p>O vídeo abaixo demonstra a procura pelo gene EGFR:</p>
+<iframe src="https://drive.google.com/file/d/1pFc1kVYLBHkjd4zQZOcx61kXjuIapBVP/preview" width="640" height="480" allow="autoplay"></iframe>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

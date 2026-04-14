@@ -1,0 +1,3095 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutoriais básicos de Bioinformática">
+      
+      
+        <meta name="author" content="EvoMol-Lab">
+      
+      
+        <link rel="canonical" href="https://evomol-lab.github.io/tutorials/es/STR3-Model1/">
+      
+      
+        <link rel="prev" href="../STR22-Epitopos/">
+      
+      
+        <link rel="next" href="../STR4-Model2/">
+      
+      
+        
+          <link rel="alternate" href="../../STR3-Model1/" hreflang="pt">
+        
+          <link rel="alternate" href="../../en/STR3-Model1/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Modelagem 101 - Tutoriais EvoMol-Lab's Teaching Resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelagem-comparativa-de-proteinas-1" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-header__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutoriais EvoMol-Lab's Teaching Resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Modelagem 101
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../STR3-Model1/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/STR3-Model1/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-nav__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutoriais EvoMol-Lab's Teaching Resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Computacional de Biomoléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aboutus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o grupo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a linha de comando UNIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manipulando dados na CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI-Colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a CLI e ao Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao GenBank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Buscas de Similaridade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento entre pares de sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-MSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento Múltiplo de Sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-NCBI-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCBI/GenBank via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-BLAST-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BLAST via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos Básicos em SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao R usando o Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enzima-annot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integração de Bancos - Exemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbsnp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de dados de Mutações e Polimorfismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KEGG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando Vias Metabólicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-BDs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de Dados de Informação Proteica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-Modelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem Computacional de Proteínas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeiros Passos no MEGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../113-Genomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navegando por Genomas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Videoaulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformática Estrutural
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformática Estrutural
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides de Acompanhamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programas e Ferramentas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR1-Visualizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualização Computacional de Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR2-pred/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informações a partir da estrutura primária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR22-Epitopos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predição de Epítopos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 101
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indicações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-1-obtendo-informacoes-da-sequencia-alvo-target-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTE 1: Obtendo informações da Sequência Alvo (Target Sequence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-procurando-por-moldes-templates-e-modelando-no-swiss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTE 2: Procurando por moldes (Templates) e Modelando no Swiss-Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PARTE 2: Procurando por moldes (Templates) e Modelando no Swiss-Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perguntas-de-direcionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perguntas de direcionamento:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busca-de-moldes-templates-com-homologia-distante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Busca de moldes (templates) com homologia distante
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Busca de moldes (templates) com homologia distante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-uma-conta-no-swiss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criando uma conta no Swiss-Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buscando-os-moldes-usando-o-swiss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buscando os moldes usando o Swiss-Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-more-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two more things
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two more things">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robetta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robetta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MUSTER
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-modelando-por-homologia-uma-proteina-utilizando-o-chimeramodeller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTE 3: Modelando por homologia uma proteína utilizando o Chimera/Modeller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PARTE 3: Modelando por homologia uma proteína utilizando o Chimera/Modeller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perguntas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salvando-os-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salvando os Modelos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outros-exemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outros exemplos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR4-Model2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 102
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR5-Model3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeller-CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR6-AlphaFold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos baseados em IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR7-MDA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MDA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR8-Aval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação dos Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR9-EM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM/CryoEM fitting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR10-RINs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RINs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR11-APBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR12-Memb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proteínas de Membrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR13-Dock1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autodock (básico)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR14-Dock2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR15-VS1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Screening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR23-MDIntro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR16-EGB1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Pequenas Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR17-EGB2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise conformacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR18-EGB3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking Automático
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR19-EGB4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posicionamento Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR20-EGB5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR21-EGB6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Saturação de Substituições
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bestfit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escolha do Modelo de Substituição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usando o BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diplomado - UChile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diplomado - UChile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Presentation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UC_slides.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../First_Tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Substitution_saturation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis of Substitution Saturation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModelTest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test of the Best-Fit Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MEGAX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1st_BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST%2BEBSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phylodynamics using EBSP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IQTree.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using IQ-Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#objetivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Objetivos
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Objetivos">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#indicacoes" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Indicações
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-1-obtendo-informacoes-da-sequencia-alvo-target-sequence" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTE 1: Obtendo informações da Sequência Alvo (Target Sequence)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-2-procurando-por-moldes-templates-e-modelando-no-swiss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTE 2: Procurando por moldes (Templates) e Modelando no Swiss-Model
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PARTE 2: Procurando por moldes (Templates) e Modelando no Swiss-Model">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perguntas-de-direcionamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perguntas de direcionamento:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#busca-de-moldes-templates-com-homologia-distante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Busca de moldes (templates) com homologia distante
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Busca de moldes (templates) com homologia distante">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#criando-uma-conta-no-swiss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Criando uma conta no Swiss-Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#buscando-os-moldes-usando-o-swiss-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Buscando os moldes usando o Swiss-Model
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#two-more-things" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Two more things
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Two more things">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#robetta" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Robetta
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#muster" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        MUSTER
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#parte-3-modelando-por-homologia-uma-proteina-utilizando-o-chimeramodeller" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        PARTE 3: Modelando por homologia uma proteína utilizando o Chimera/Modeller
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="PARTE 3: Modelando por homologia uma proteína utilizando o Chimera/Modeller">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#perguntas" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Perguntas:
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#salvando-os-modelos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salvando os Modelos
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outros-exemplos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Outros exemplos:
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modelagem-comparativa-de-proteinas-1">Modelagem Comparativa de Proteínas 1</h1>
+<h2 id="objetivos">Objetivos</h2>
+<p><strong><em>Geral</em></strong></p>
+<p>Entender os princípios e etapas necessárias para a modelagem comparativa básica de uma proteína.</p>
+<p><strong><em>Específicos</em></strong></p>
+<ul>
+<li>Obter informações sobre uma proteína a partir da sequência.</li>
+<li>Identificar a partir de buscas de similaridade contra o banco <em>pdb</em> possíveis <em>templates</em> (moldes) para serem utilizados para uma modelagem comparativa.</li>
+<li>Realizar uma modelagem comparativa utilizando o programa Modeller (1), a partir de uma interface com o UCSF Chimera (2).</li>
+<li>Fazer uma primeira inspeção dos modelos obtidos e avaliar a sua qualidade.</li>
+</ul>
+<h3 id="indicacoes">Indicações</h3>
+<p>Este tutorial é indicado para a modelagem básica de uma proteína, levando em conta as seguintes considerações:</p>
+<ul>
+<li>Utilize equências-alvo com mais de 60% de similaridade com proteínas molde (<em>templates</em>) retiradas do banco PDB.</li>
+<li>Proteínas abaixo do limiar de similaridade, desde que tenham um único domínio conservado.</li>
+<li>Proteínas que não apresentem baixa similaridade com os possíveis <em>templates</em> em suas regiões N ou C-terminal.</li>
+</ul>
+<p><strong>Observações:</strong></p>
+<ul>
+<li>Este tutorial foi construído <strong><em>apenas para fins didáticos</em></strong>. <span style="color:red"><strong>A reprodução dele para qualquer outro fim não é permitida e nem consentida.</strong></span></li>
+<li>Este tutorial pode ser realizando tanto com o Modeller instalado, quanto via <em>Web service</em>, onde não necessidade de instalação do Modeller (Indicado para quem utilizar sistemas Windows).</li>
+</ul>
+<h2 id="parte-1-obtendo-informacoes-da-sequencia-alvo-target-sequence">PARTE 1: Obtendo informações da Sequência Alvo (<em>Target Sequence</em>)</h2>
+<p>Iremos modelar uma das proteínas que trabalhamos anteriormente, a 
+<a href="https://www.uniprot.org/uniprot/Q7GDV4">Q7GDV4_SPIOL</a>, cuja sequência segue abaixo:</p>
+<pre><code>&gt;Q7GDV4_SPIOL
+MASFTTTTAAAASRLLPSSSSSISRLSLSSSSSSSSSLKCLRSSPLVSHLFLRQRGGSAY
+VTKTRFSTKCYASDPAQLKNAREDIKELLQSKFCHPIMVRLGWHDAGTYNKDIKEWPQRG
+GANGSLSFDVELRHGANAGLVNALKLLQPIKDKYSGVTYADLFQLASATAIEEAGGPTIP
+MKYGRVDATGPEQCPEEGRLPDAGPPSPAQHLRDVFYRMGLDDKDIVALSGAHTLGRSRP
+ERSGWGKPETKYTKDGPGAPGGQSWTAEWLKFDNSYFKDIKEKRDADLLVLPTDAALFED
+PSFKVYAEKYAADQEAFFKDYAEAHAKLSNQGAKFDPAEGITLNGTPAGAAPEKFVAAKY
+SSNKD
+</code></pre>
+<blockquote>
+<p><em>Salve esta sequência em um arquivo de texto puro, com a terminação .fasta., pois ele será necessário depois.</em></p>
+</blockquote>
+<p>Lembre-se de que já realizamos uma predição com o servidor PSIPRED para esta proteína. Os resultados estão listados abaixo:</p>
+<p><a href="https://drive.google.com/uc?export=download&amp;id=1t6X2Y61mgWtj9l1V-1eUk6RnBgU3-Gf6">Resultados PSIPRED - Q7GDV4_SPIOL</a></p>
+<blockquote>
+<p><em>Os resultados contidos no arquivo zip acima foram obtidos ainda com a versão antiga do PSIPRED Workbench. Não há diferenças na interpretação dos resultados em relação a versão mais recente.</em></p>
+</blockquote>
+<p>Esta será a nossa proteína alvo (<em>Target</em>). Caso nenhuma informação <em>a priori</em> tivesse sido fornecida para esta proteína, os passos vistos anteriormente deverão ser realizados:</p>
+<ul>
+<li>Busca de similaridade.</li>
+<li>Bancos de Informação Proteica.</li>
+<li>Informações a partir da sequência (PSIPRED)</li>
+</ul>
+<p>Evite modelar uma proteína sem ter informações adicionais. As informações abaixo são essenciais para a modelagem de uma proteína:</p>
+<ul>
+<li>Qual o organismo fonte?</li>
+<li>Qual a função desta proteína?</li>
+<li>Como ela desempenha sua função? (Ex.: a atividade catalítica no caso de enzimas).</li>
+<li>Como sua função é regulada?</li>
+<li>Qual a Via Metabólica?</li>
+<li>Quais os sítios importantes e os seus ligantes?</li>
+<li>Qual a localização subcelular?</li>
+<li>Ela interage com outras proteínas?</li>
+<li>Obtenção das informações sobre as proteínas:<ul>
+<li>Predição de Estrutura Secundária (análises do PSIPRED Workbench)</li>
+<li>Regiões clivadas e transmembranas.</li>
+</ul>
+</li>
+<li>Realizar um BLASTP contra o pdb para identificar os prováveis moldes (<em>templates</em>).<ul>
+<li>Categorizar os prováveis <em>templates</em> de acordo com os seguintes critérios: <ul>
+<li>Identidade/similaridade entre a proteína alvo (a que você irá modelar) e a proteína molde (a proteína cuja estrutura já está resolvida, a que tem o arquivo pdb).</li>
+<li>Cobertura da sequência.</li>
+<li>Resolução da estrutura.</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em>Observações:</em></p>
+<ul>
+<li><em>Preste bem atenção em regiões não-alinhadas entre a proteína alvo e o molde.  Elas podem ser indicativos de regiões clivadas ou de regiões transmembrana que não possuem moldes.</em></li>
+<li><em>Lembre-se que modelos com menor número são os que possuem maior resolução. Por exemplo: uma proteína resolvida a 1.5 Å tem uma resolução maior do que uma resolvida com 2.5 Å. Portanto, estruturas de maior resolução são aquelas que preferencialmente têm resolução ≤ 2.5 Å. Na presença de mais de uma possibilidade de proteína molde para um determinado alvo, evite usar estruturas de resolução menor, ou seja, ≥ 2.8 Å.</em></li>
+<li><em>Todas a informações acima foram demonstradas/requisitadas nas aulas anteriores.</em></li>
+<li><em>A procura por moldes também pode ser realizada em muitos servidores de modelagem, como veremos abaixo.</em></li>
+</ul>
+</blockquote>
+<h2 id="parte-2-procurando-por-moldes-templates-e-modelando-no-swiss-model">PARTE 2: Procurando por moldes (<em>Templates</em>) e Modelando no Swiss-Model</h2>
+<p>Para obter informações sobre prováveis moldes para a proteína, temos de fazer uma busca de similaridade usando o BLAST, contra o banco de dados do pdb. A primeira pergunta a ser respondida é se existem proteínas com estruturas tridimensionais resolvidas experimentalmente (cristalografia, RMN, etc.) que apresentam similaridade suficiente para que a modelagem da <code>Q7GDV4_SPIOL</code> seja realizada.</p>
+<blockquote>
+<p><em>Os passos abaixo nem sempre são necessários, principalmente se a tarefa de obtenção de informações foi realizada com sucesso.</em></p>
+</blockquote>
+<p>Siga os passos:</p>
+<ol>
+<li>
+<p>Abrir a Home Page do NCBI: <a href="http://www.ncbi.nlm.nih.gov">http://www.ncbi.nlm.nih.gov</a></p>
+</li>
+<li>
+<p>Clicar no link <strong>BLAST</strong> (Na lateral direita ou ir diretamente em <a href="http://www.ncbi.nlm.nih.gov/blast">http://www.ncbi.nlm.nih.gov/blast</a>).</p>
+</li>
+<li>
+<p>Clicar em <em>protein BLAST</em> (BLASTP).</p>
+</li>
+<li>
+<p>Copiar e colar a sequência alvo no campo <em>Query</em>.</p>
+</li>
+<li>
+<p>Não esqueça de selecionar o banco pdb.</p>
+</li>
+</ol>
+<blockquote>
+<p><em>Se dúvidas surgirem durante a busca de similaridade, os tutoriais anteriores apresentam maiores detalhes.</em></p>
+</blockquote>
+<h3 id="perguntas-de-direcionamento">Perguntas de direcionamento:</h3>
+<p>Na busca por moldes, as seguintes perguntas devem ser sempre respondidas (veja também as informações da PARTE 1):</p>
+<p>a) Existem moldes (<em>templates</em>) para esta proteína? Observe sempre a similaridade e a cobertura da sequência.</p>
+<p>b) Os moldes presentes são adequados para o processo de modelagem comparativa? Veja a resolução e o método experimental usado para resolver a estrutura do molde.</p>
+<p>c) Quais dos possíveis moldes você utilizará? Ou seja, a partir das informações acima, qual(is) molde(s) você escolheria?</p>
+<p>É comum também fazermos exaustivas buscas de informações sobre as proteínas molde que iremos utilizar.</p>
+<blockquote>
+<p><em>Achou repetitivo? É proposital. O objetivo de tanta repetição e ênfase nesta parte é mostrar o quão importante é entender e ter informações sobre a proteína alvo.</em></p>
+</blockquote>
+<h3 id="busca-de-moldes-templates-com-homologia-distante">Busca de moldes (<em>templates</em>) com homologia distante</h3>
+<p>Quando o alinhamento <strong>proteína alvo-proteína molde</strong> retorna valores acima de 40% de identidade e cobertura maior que 70% da proteína <strong>alvot</strong>, <strong>moldes</strong> adequados são encontrados em buscas simples com o BLASTp contra o banco PDB. Em valores distantes dos acima relatados, <strong>moldes</strong> para a modelagem só serão encontrados em buscas com o PSI-BLAST ou em buscas específicas por domínios ou <em>folds</em>.</p>
+<blockquote>
+<p><em>É por isso que sempre recomendamos a utilização das ferramentas pGenThreader e PDomThreader na análise do PSIPRED Workbench. Eles usam PSI-BLAST e já dão um indicativo de moldes com homologia distante. Em muitos casos os resultados destas ferramentas pode até excluir a necessidade de realizar estas buscas adicionais.</em></p>
+</blockquote>
+<h4 id="criando-uma-conta-no-swiss-model">Criando uma conta no Swiss-Model</h4>
+<p>O <a href="https://swissmodel.expasy.org">Swiss-Model</a> possui um módulo de busca por <strong>moldes</strong>, que pode ser utilizado para ajudar nesta tarefa. Iremos também utilizar o Swiss-Model para modelar e avaliar diferentes estruturas. Podemos fazer isto sem uma conta específica, mas recomendamos que você crie sua própria conta para ter registros dos seus trabalhos submetidos ao servidor. A conta é <strong><em>Free</em></strong> e não requer e-mail institucional.</p>
+<ul>
+<li>Vá ao site do <a href="https://swissmodel.expasy.org">Swiss-Model</a> e clique em <strong>Create Account</strong> no canto superior direito.</li>
+</ul>
+<p><img alt="Swiss-Model" src="../../str3-fig1.png" /></p>
+<ul>
+<li>Insira seu e-mail, e depois verifique-o, pois a senha para entrada é enviada logo após o cadastro.</li>
+</ul>
+<h4 id="buscando-os-moldes-usando-o-swiss-model">Buscando os moldes usando o Swiss-Model</h4>
+<p>Depois de sua conta criada, seguiremos a busca por moldes a partir da execução dos seguintes passos:</p>
+<ul>
+<li>Abra a página do <a href="https://swissmodel.expasy.org">Swiss-Model</a>.</li>
+<li>Clique em <code>Log in</code> no canto superior direito e entre com suas credenciais. (criadas na etapa acima).</li>
+<li>Você verá a seguinte página:</li>
+</ul>
+<p><img alt="Swiss-Model" src="../../str3-fig2.png" /></p>
+<ul>
+<li>Clique em <code>Modelling</code> e no menu que aparece, clique em <code>myWorkspace</code>.</li>
+<li>Cole a sequência no espaço indicado, e ela deverá ser imediatamente reconhecida.</li>
+</ul>
+<p><img alt="Swiss-Model" src="../../str3-fig3.png" /></p>
+<ul>
+<li>Dê um nome ao seu projeto e clique em <code>Search for Templates</code>.</li>
+</ul>
+<p>A grande vantagem deste módulo do Swiss-Model é a quantidade de informações que ele retorna sobre os <strong>moldes</strong> possíveis. Como pode ser observado na figura abaixo:</p>
+<p><img alt="Busca de templates do Swiss-Model" src="../../str3-fig4.png" /></p>
+<p>Cada aba (logo abaixo de <strong><em>Template Results</em></strong>) possui informações relevantes sobre sua busca.</p>
+<p><strong>Condições para a escolha do <em>molde</em>:</strong></p>
+<ul>
+<li>Seja uma proteína que tenha função similar a da proteína alvo. Em alguns casos isso pode ser ignorado, principalmente se o <em>fold</em> de alguma região seja conhecido.</li>
+<li>Melhor identidade e similaridade.</li>
+<li>Maior cobertura possível.</li>
+<li>No caso de modelos obtidos a partir de cristalografia de raios-X, dê preferência a modelos com maior resolução (lembre-se, de preferência os que possuem resolução ≤2.5 Å).</li>
+<li>Se ligantes são importantes para o seu problema, escolha moldes que possuam ligantes.</li>
+</ul>
+<p>Avaliando a lista de moldes, verificamos que o pdb <a href="https://www.rcsb.org/structure/1iyn">1iyn</a> está dentro dos critérios acima. Caso você queira continuar com a modelagem no próprio Swiss-Model, basta selecionar aqueles <strong><em>templates</em></strong> que você acredita serem mais adequados e clicar em <code>Build Models</code>, para iniciar uma modelagem por homologia, no próprio Swiss-Model.</p>
+<blockquote>
+<p><em>Observe que na lista de templates, a parte inicial da Q7GDV4_SPIOL não apresenta similaridade com nenhuma estrutura conhecida. Esta região é clivada e possui um peptídeo sinal, como visto no tutorial anterior. A modelagem com o Swiss-Model tem esta desvantagem: ele não modelará qualquer região da proteína alvo que não esteja alinhada com a proteína molde ou que tenha molde, pois apenas usa a abordagem de homologia. Ele também irá ser menos efetivo em modelagem de loops e regiões de coil.</em></p>
+</blockquote>
+<p>Ao final da modelagem, você obterá uma tela como a seguinte:</p>
+<p><img alt="Modelagem no Swiss-Model" src="../../str3-fig5.png" /></p>
+<p>Nesta página você verificar o alinhamento, os escores de avaliação, e gráficos da cobertura e da própria estrutura.</p>
+<p><strong>Algumas observações sobre a modelagem no Swiss-Model:</strong></p>
+<ul>
+<li>Retorna modelos excelentes com proteínas <em>target</em> que apresentam alta identidade com proteínas no banco PDB.</li>
+<li>Caso sejam proteínas com múltipas cadeias, o Swiss-Model já pode retornar modelos simulando a estrutura quaternária da proteína <em>target</em>.</li>
+<li>Os modelos gerados já podem ser diretamente avaliados. Será a mesma avaliação que faremos com os modelos gerados por outras plataformas.</li>
+<li>Ele só modela regiões que apresentam similaridade com os <em>templates</em>. Não há etapas de refinamento de <em>loops</em> ou modelagem por <em>ab initio</em> de regiões desordenadas sem similaridade com estruturas conhecidas (Ver nota acima).</li>
+</ul>
+<h4 id="two-more-things"><em>Two more things</em></h4>
+<h5 id="robetta">Robetta</h5>
+<p>O servidor <a href="http://robetta.bakerlab.org">Robetta</a> também possui um módulo bem completo de busca por <strong>moldes</strong>, utilizando o PSI-BLAST.</p>
+<p><img alt="Robetta" src="../../str3-fig6.png" /></p>
+<p>O Robetta é baseado na suite de programas para modelagem <em>ab initio</em> <a href="https://www.rosettacommons.org/software">Rosetta</a>. No entanto, devido a sua necessidade de conhecimentos mais avançados de programação, tal suite não será abordada nesta disciplina. Mesmo sua versão mais amigável, o <a href="http://www.pyrosetta.org">PyRosetta</a> ainda requer conhecimentos computacionais acima do nível iniciante. A utilização do Robetta é livre para usuários acadêmicos, mas requer um e-mail institucional.</p>
+<p>Fizemos um exemplo de modelagem utilizando o Robetta, com a proteína O46921_SPIOL (a APX ligada a membrana do tilacóide). Tais arquivos podem ser obtidos <a href="https://drive.google.com/uc?export=download&amp;id=1Ud2shqUwajDz3zR7BA66IIe6PlrIZrM1">AQUI</a>.</p>
+<h5 id="muster">MUSTER</h5>
+<p>O programa <a href="https://zhanglab.ccmb.med.umich.edu/MUSTER/">MUSTER</a> também é uma ótima ferramenta para procura de moldes no banco pdb. Tal ferramenta é do mesmo grupo do i-TASSER (Zhang Lab da University of Michigan) e utiliza a abordagem de <em>Threading</em> para procurar moldes e ainda produz modelos rápidos utilizando em <em>background</em> o programa Modeller. </p>
+<p>O MUSTER (<strong>MU</strong>lti-<strong>S</strong>ource <strong>T</strong>hread<strong>ER</strong>) considera seis fontes diferentes de dados: (1) perfis derivados de sequência; (2) estruturas secundárias; (3) perfis derivados de estrutura; (4) acessibilidade do solvente; (5) ângulos de torção (ângulos psi e phi); (6) matriz de pontuação hidrofóbica. A <strong>segmentação otimizada</strong> (<em>optimized threading</em>) é encontrada utilizando programação dinâmica global.</p>
+<p>Basta abrir a página, colar a sequência alvo, colocar um e-mail para receber os resultados.</p>
+<h2 id="parte-3-modelando-por-homologia-uma-proteina-utilizando-o-chimeramodeller">PARTE 3: Modelando por homologia uma proteína utilizando o Chimera/Modeller</h2>
+<p>Para a modelagem da <code>Q7GDV4_SPIOL</code> utilizaremos o programa MODELLER (2) a partir de uma interface com a suíte UCSF Chimera (2). É uma abordagem bem simples para obter um modelo proteico para trabalho inicial, mas que te dá mais liberdade de trabalho do que a interface completamente automatizada do Swiss-Model.</p>
+<p>O programa MODELLER utiliza Pyhton pode ser obtido em <a href="https://salilab.org/modeller/">https://salilab.org/modeller/</a>. É um dos programas mais citados e utilizados para a modelagem por homologia de proteínas. É baseado em um método chamado <em>satisfação de restrições espaciais</em>. Para isso ele precisa de uma proteína molde (que você escolheu nos passos anteriores) resolvida experimentalmente, alinhada com a proteína alvo (que no nosso caso é <code>Q7GDV4_SPIOL</code>). O programa é um <em>freeware</em> apenas para uso didático-acadêmico.</p>
+<p>A suíte UCSF Chimera pode ser obtida em <a href="https://www.cgl.ucsf.edu/chimera/">https://www.cgl.ucsf.edu/chimera/</a>. É um excelente programa de visuzalização, edição e construção de moléculas <em>In silico</em>. Ele possui uma grande diversidade de funções, que permite trabalhar desde níveis atômicos até complexos supramoleculares. As fontes de informações e tutoriais para uso deste programa são vastos na internet e na própria literatura científica.</p>
+<p>O primeiro passo é instalar o UCSF Chimera (que já foi realizado anteriormente).</p>
+<ul>
+<li>Salve a sequência fasta abaixo em um arquivo de texto puro.</li>
+</ul>
+<pre><code class="language-fasta">&gt;Q7GDV4_SPIOL
+YASDPAQLKNAREDIKELLQSKFCHPIMVRLGWHDAGTYNKDIKEWPQRGGANGSLSFDV
+ELRHGANAGLVNALKLLQPIKDKYSGVTYADLFQLASATAIEEAGGPTIPMKYGRVDATG
+PEQCPEEGRLPDAGPPSPAQHLRDVFYRMGLDDKDIVALSGAHTLGRSRPERSGWGKPET
+KYTKDGPGAPGGQSWTAEWLKFDNSYFKDIKEKRDADLLVLPTDAALFEDPSFKVYAEKY
+AADQEAFFKDYAEAHAKLSNQGAKFDPAEGITLNG
+</code></pre>
+<blockquote>
+<p><em>Na sequência acima, as regiões N e C-terminal não alinhadas (incluindo o peptídeo sinal foram retiradas apenas para facilitar o processo de modelagem.</em></p>
+</blockquote>
+<ul>
+<li>Ao abrir o Chimera, clicar em <em>Open</em> e abra o arquivo fasta da sequência alvo (Parte 1).</li>
+<li>Uma janela adicional como a seguinte irá ser aberta:</li>
+</ul>
+<p><img alt="sequence-chimera" src="../../str3-fig7.png" /></p>
+<ul>
+<li>Nesta janela, ir em: Info &gt; Blast Protein. </li>
+</ul>
+<p><img alt="blast-chimera" src="../../str3-fig8.png" /></p>
+<ul>
+<li>O seguinte diálogo irá aparecer:</li>
+</ul>
+<p><img alt="blast-chimera" src="../../str3-fig9.png" /></p>
+<ul>
+<li>Clicar em Ok no diálogo.</li>
+<li>Revisar e confirmar os parâmetros na caixa <em>Blast Parameters</em>.</li>
+</ul>
+<p><img alt="blast-chimera" src="../../str3-fig10.png" /></p>
+<ul>
+<li>Na janela <em>BLAST Query</em>, selecionar (pressionando control) até 3 <em>hits</em>, com <em>E values</em> adequados:</li>
+</ul>
+<p><img alt="blast-chimera" src="../../str3-fig11.png" /></p>
+<blockquote>
+<p><em>A similaridade não é mostrada nesta janela, então a escolha é baseada nos menores</em> <em>E-values</em> <em>e maiores</em> <em>scores</em>.</p>
+</blockquote>
+<ul>
+<li>Nesta janela, clicar em “Show in MAV”. O alinhamento múltiplo da proteína alvo, com os prováveis moldes será mostrado.</li>
+</ul>
+<p><img alt="chimera-MAV" src="../../str3-fig12.png" /></p>
+<ul>
+<li>Na janela do alinhamento múltiplo (MAV), ir em: <em>Structure &gt; Modeller (Homology)</em>.</li>
+</ul>
+<p><img alt="chimera-MAV" src="../../str3-fig13.png" /></p>
+<ul>
+<li>Na caixa de diálogo aberta, estarão os parâmetros que serão utilizados como entrada para o programa Modeller:</li>
+</ul>
+<p><img alt="chimera-MAV" src="../../str3-fig14.png" /></p>
+<ul>
+<li>Selecione a primeira estrutura, <a href="https://www.rcsb.org/structure/1iyn">1IYN</a> na listagem.</li>
+<li>Aqui temos duas opções:<ul>
+<li><strong>Opção 1 -</strong> <em>Run Modeller via web service</em>:<ul>
+<li>Rodar o Modeller pela internet, para não termos que instalar em todos os computadores. Clique em <em>Run Modeller via web service</em>. </li>
+<li>Inserir a chave (será dada em sala de aula).</li>
+<li>Recomendada para sistemas Windows.</li>
+</ul>
+</li>
+<li><strong>Opção 2 -</strong> <em>Run Modeller locally</em><ul>
+<li>Se você tiver uma instalação local do Modeller é a opção mais recomendada.</li>
+<li>Na caixa <code>Location of Modeller executable:</code> insira o caminho do executável do programa Modeller. Se foi instalado de acordo com o tutorial do curso, ele estará em <code>/usr/bin/mod9.20</code>. Digite este caminho na caixa e prossiga.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>Verificar as <em>Advanced Options</em>. Selecione a opção <code>Include non-water HETATM residues from template</code>.</li>
+<li>Clicar em OK ou Apply.</li>
+<li>Esperar a construção dos Modelos. Quando estiverem prontos, uma nova janela com os escores de cada modelo gerado irá aparecer. </li>
+</ul>
+<p><img alt="chimera-Models" src="../../str3-fig15.png" /></p>
+<ul>
+<li>Cada modelo construído (aqui estão sendo mostrados 5, mas depende de quantos você instruiu para o programa construir) vem acompanhado de escores de avaliação. Antes de continuarmos na avaliação dos escores, faremos o cálculo de mais alguns escores de avaliação. Clicar em <em>Fetch Scores</em> &gt; <em>zDOPE and estimated RMSD/Overlap</em>.</li>
+</ul>
+<p><img alt="chimera-Models" src="../../str3-fig16.png" /></p>
+<ul>
+<li>Após o cálculo dos escores, você deverá ter uma janela como a seguinte:</li>
+</ul>
+<p><img alt="chimera-Models" src="../../str3-fig17.png" /></p>
+<blockquote>
+<p><em>Alguns escores poderão estar ligeiramente diferentes.</em></p>
+</blockquote>
+<p>Para avaliar os modelos obtidos com base nos escores retornados, é importante que o significado de cada escore seja entendido. Segue, um resumo dos escores obtidos (traduzido do <em>Help</em> do Chimera):</p>
+<ul>
+<li><strong>DOPE</strong> - <em>Discrete Optimized Protein Energy</em>. É um potencial estatístico utilizado para avaliar modelos construídos por homologia. É baseado em um estado de referência que corresponde a átomos que não interagem em uma esfera homogênea, com o raio dependente de uma estrutura nativa de amostra. Portanto, é relativo a forma nativa e esférica das estruturas nativas. Escores menores são mais favoráveis. No Modeller-Chimera ou no ModEval é representado como um escore Z (z-DOPE). Escores positivos provavelmente representam modelos pobres, enquanto escores menores do que -1 estão relacionados a estruturas nativas.</li>
+<li><strong>RMSD</strong> - <em>Root-mean-square deviation</em>. É a medida distância média entre os átomos de duas proteínas superpostas. Em relação as coordenadas atômicas do C-α ou em relação a todos os átomos (depende da forma como ele é computado).</li>
+<li><strong><em>Predicted Native Overlap</em></strong>: Fração dos átomos Cα que estão preditos a estar dentro de 3.5 Å das suas posições na estrutura nativa (ou do molde utilizado).</li>
+<li><strong>GA341</strong>: Escore para a confiabilidade de um modelo, derivado de potenciais estatísticos. Um modelo é considerado confiável quando o escore de modelagem é maior que um valor de corte pré-especificado (0.7). Um modelo confiável tem a probabilidade de ter assumindo um <em>fold</em> correto maior do que 95%. Um fold é correto quando pelo menos 30% dos seus Cα estão sobrepostos dentro de 3.5 Å de suas posições corretas.</li>
+</ul>
+<h3 id="perguntas">Perguntas:</h3>
+<p>a) Dos modelos construídos, qual você considera melhor? Explique em termos dos escores obtidos, pois os modelos podem variar entre diferentes execuções do programa.</p>
+<p>b) Houve alguma região dos modelos construídos que apresentou diferenças significativas em relação ao seu molde? Estas regiões estão associadas a diferenças na estrutura primária?</p>
+<h3 id="salvando-os-modelos">Salvando os Modelos</h3>
+<p>Para salvar siga os passos abaixo:</p>
+<ul>
+<li>Vá em <strong>Tools &gt; General Controls &gt; Model Panel.</strong></li>
+<li>Uma nova janela irá aparecer, chamada <strong><em>Model Panel</em></strong>.</li>
+<li>Selecione as estruturas dos modelos que você deseja salvar (Não precisa salvar os <em>templates</em>.</li>
+<li>Clique em <code>write PDB</code>. Na janela seguinte, dê um nome aos arquivos e salve os PDBs.</li>
+</ul>
+<h3 id="outros-exemplos">Outros exemplos:</h3>
+<p>Siga os passos acima e modele as proteínas abaixo:</p>
+<ul>
+<li>Enzima <a href="https://www.uniprot.org/uniprot/P61851">Cu/Zn Superóxido dismutase de <em>Drosophila melanogaster</em></a>:</li>
+</ul>
+<pre><code>&gt;SODC_DROME
+MVVKAVCVINGDAKGTVFFEQESSGTPVKVSGEVCGLAKGLHGFHVHEFGDNTNGCMSSG
+PHFNPYGKEHGAPVDENRHLGDLGNIEATGDCPTKVNITDSKITLFGADSIIGRTVVVHA
+DADDLGQGGHELSKSTGNAGARIGCGVIGIAKV
+</code></pre>
+<ul>
+<li>Enzima O46921_SPIOL (esta ligada a membrana do tilacóide):</li>
+</ul>
+<pre><code>&gt;O46921_SPIOL
+YASDPAQLKNAREDIKELLQSKFCHPIMVRLGWHDAGTYNKDIKEWPQRGGANGSLSFDV
+ELRHGANAGLVNALKLLQPIKDKYSGVTYADLFQLASATAIEEAGGPTIPMKYGRVDATG
+PEQCPEEGRLPDAGPPSPAQHLRDVFYRMGLDDKDIVALSGAHTLGRSRPERSGWGKPET
+KYTKDGPGAPGGQSWTAEWLKFDNSYFKDIKEKRDADLLVLPTDAALFEDPSFKVYAEKY
+AADQEAFFKDYAEAHAKLSNQGAKFDPAEGITLNGTPAGAAPEKFVAAKYSSNKRSELSD
+SMKEKIRAEYEGFGGSPNKPLPTNYFLNIMIVIGVLAVLSYLAGN
+</code></pre>
+<h2 id="referencias">Referências</h2>
+<p>(1) B. Webb, A. Sali. Comparative Protein Structure Modeling Using Modeller. Current Protocols in Bioinformatics, John Wiley &amp; Sons, Inc., 5.6.1-5.6.32, 2014.</p>
+<p>(2) Yang Z, Lasker K, Schneidman-Duhovny D, et al. UCSF Chimera, MODELLER, and IMP: An integrated modeling system. Journal of Structural Biology. 2012;179(3):269-278. doi:10.1016/j.jsb.2011.09.006.</p>
+<p><strong>Vídeo-tutorial</strong>:</p>
+<p><a href="http://www.rbvi.ucsf.edu/chimera/videodoc/Modeller">http://www.rbvi.ucsf.edu/chimera/videodoc/Modeller</a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

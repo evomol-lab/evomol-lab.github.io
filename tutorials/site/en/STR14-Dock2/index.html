@@ -1,0 +1,2886 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutoriais básicos de Bioinformática">
+      
+      
+        <meta name="author" content="EvoMol-Lab">
+      
+      
+        <link rel="canonical" href="https://evomol-lab.github.io/tutorials/en/STR14-Dock2/">
+      
+      
+        <link rel="prev" href="../STR13-Dock1/">
+      
+      
+        <link rel="next" href="../STR15-VS1/">
+      
+      
+        
+          <link rel="alternate" href="../../STR14-Dock2/" hreflang="pt">
+        
+          <link rel="alternate" href="./" hreflang="en">
+        
+          <link rel="alternate" href="../../es/STR14-Dock2/" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>Docking - Tutoriais EvoMol-Lab's Teaching Resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#atracamento-molecular-molecular-docking" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-header__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutoriais EvoMol-Lab's Teaching Resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Docking
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Select language">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../STR14-Dock2/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../es/STR14-Dock2/" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-nav__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutoriais EvoMol-Lab's Teaching Resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Computacional de Biomoléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aboutus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o grupo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a linha de comando UNIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manipulando dados na CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI-Colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a CLI e ao Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao GenBank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Buscas de Similaridade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento entre pares de sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-MSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento Múltiplo de Sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-NCBI-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCBI/GenBank via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-BLAST-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BLAST via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos Básicos em SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao R usando o Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enzima-annot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integração de Bancos - Exemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbsnp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de dados de Mutações e Polimorfismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KEGG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando Vias Metabólicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-BDs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de Dados de Informação Proteica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-Modelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem Computacional de Proteínas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeiros Passos no MEGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../113-Genomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navegando por Genomas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Videoaulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformática Estrutural
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformática Estrutural
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides de Acompanhamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programas e Ferramentas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR1-Visualizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualização Computacional de Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR2-pred/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informações a partir da estrutura primária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR22-Epitopos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predição de Epítopos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR3-Model1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR4-Model2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 102
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR5-Model3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeller-CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR6-AlphaFold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos baseados em IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR7-MDA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MDA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR8-Aval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação dos Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR9-EM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM/CryoEM fitting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR10-RINs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RINs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR11-APBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR12-Memb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proteínas de Membrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR13-Dock1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autodock (básico)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docking-com-o-autodock-vina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docking com o AutoDock Vina
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docking com o AutoDock Vina">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacao-do-receptor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Preparação do receptor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preparando-o-ligante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preparando o ligante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-preparacao-e-execucao-do-atracamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparação e execução do atracamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-avaliando-os-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Avaliando os resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-com-o-swissdock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docking com o SwissDock
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docking com o SwissDock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submissao-do-atracamento-na-plataforma-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submissão do atracamento na plataforma web:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submissão do atracamento na plataforma web:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salvando-os-formatos-no-ucsf-chimera-etapas-opcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salvando os formatos no UCSF Chimera (etapas opcionais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise dos resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercício
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR15-VS1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Screening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR23-MDIntro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR16-EGB1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Pequenas Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR17-EGB2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise conformacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR18-EGB3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking Automático
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR19-EGB4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posicionamento Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR20-EGB5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR21-EGB6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Saturação de Substituições
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bestfit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escolha do Modelo de Substituição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usando o BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diplomado - UChile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diplomado - UChile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Presentation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UC_slides.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../First_Tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Substitution_saturation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis of Substitution Saturation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModelTest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test of the Best-Fit Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MEGAX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1st_BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST%2BEBSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phylodynamics using EBSP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IQTree.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using IQ-Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#docking-com-o-autodock-vina" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docking com o AutoDock Vina
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docking com o AutoDock Vina">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducao" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#1-preparacao-do-receptor" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        1. Preparação do receptor
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-preparando-o-ligante" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2. Preparando o ligante
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-preparacao-e-execucao-do-atracamento" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        3. Preparação e execução do atracamento
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-avaliando-os-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        4. Avaliando os resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#docking-com-o-swissdock" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Docking com o SwissDock
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Docking com o SwissDock">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#introducao_1" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Introdução
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#submissao-do-atracamento-na-plataforma-web" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Submissão do atracamento na plataforma web:
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Submissão do atracamento na plataforma web:">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#salvando-os-formatos-no-ucsf-chimera-etapas-opcionais" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salvando os formatos no UCSF Chimera (etapas opcionais)
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#analise-dos-resultados" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Análise dos resultados
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercicio" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Exercício
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#referencias" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Referências
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="atracamento-molecular-molecular-docking">Atracamento Molecular (<em>Molecular Docking</em>)</h1>
+<p><strong><em>Observações:</em></strong></p>
+<ul>
+<li>Este tutorial foi construído pela Dra. Jéssika Viana (na época como discente de doutorado em Estágio em Docência) e revisado pelo Prof. João Paulo MS Lima (PPg-Bioinfo/BioME). Este tutorial foi construído <strong><em>apenas para fins didáticos</em></strong>. <span style="color:red"><strong>A reprodução dele para qualquer outro fim não é permitida e nem consentida.</strong></span> </li>
+</ul>
+<h2 id="docking-com-o-autodock-vina"><em>Docking</em> com o AutoDock Vina</h2>
+<h3 id="introducao">Introdução</h3>
+<p>Neste tutorial iremos aprender a realizar a análise de atracamento molecular (<em>molecular docking</em>). Iremos utilizar o Autodock Vina [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041641/">1</a>], um programa de código aberto que realiza o <em>docking</em> molecular. Ele foi projetado e implementado pelo Dr. Oleg Trott no Laboratório de Gráficos Moleculares do <em>The Scripps Research Institute</em>. Este programa pode ser utilizado dentro do <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a> [<a href="https://pubmed.ncbi.nlm.nih.gov/15264254/">2</a>] ou por linha de comando em <em>shell</em>, sendo disponível nos sistemas operacionais (S.O.) Windows, Linux e Mac.</p>
+<p>Para sua instalação, siga o padrão solicitado pelo programa, disponível no <a href="http://vina.scripps.edu/manual.html#installation">site do desenvolvedor</a>. A instalação será regida pelo S.O. utilizado em seu computador. </p>
+<p>Iremos dividir este tutorial em 4 partes: preparação do receptor, preparação do ligante, preparação e execução do atracamento, e analisando os resultados. Os 4 passos a seguir serão realizados utilizando o programa <a href="https://www.cgl.ucsf.edu/chimera/">UCSF Chimera</a>. Vamos lá?</p>
+<h3 id="1-preparacao-do-receptor">1. Preparação do receptor</h3>
+<p>No programa UCSF Chimera clique em <code>Fetch</code>. </p>
+<p><img alt="dock1" src="../../str14-fig1.png" /></p>
+<p>Na nova aba selecione pdb e escreva o código <code>6M2Q</code> e clique novamente em <code>Fetch</code>. Em seguida a estrutura será aberta e visualizada. </p>
+<p><img alt="dock2" src="../../str14-fig2.png" /></p>
+<p>Agora que a proteína foi localizada com sua estrutura tridimensional, seguiremos para a preparação da proteína para o <em>docking</em>. Esta etapa consiste em remover solventes (como moléculas de água), adicionar hidrogênios à estrutura, minimizar a estrutura e adicionar cargas. Inicialmente vá ao menu  presente na barra superior do Chimera até a seleção <em>Tools</em> e siga os passos: </p>
+<ul>
+<li>Vá em <em>Tools &gt; Surface/Binding Analysis &gt; Dock Prep</em>.</li>
+</ul>
+<p><img alt="dock3" src="../../str14-fig3.png" /></p>
+<ul>
+<li>Na janela aberta escolha as opções abaixo (veja a figura abaixo): </li>
+<li><em>Delete solvent</em>;</li>
+<li><em>If alternate locations, keep only highest occupancy</em>;</li>
+<li>No submenu <em>Change</em>, marque todas as seleções;</li>
+<li><em>Incomplete side chains</em>;</li>
+<li><em>Add Hydrogens</em>;</li>
+<li><em>Add Charges</em>;</li>
+<li><em>Write Mol2 file</em>.</li>
+</ul>
+<p><img alt="dock4" src="../../str14-fig4.png" /></p>
+<ul>
+<li>Após isto, pressione <code>Ok</code>.</li>
+</ul>
+<p>Em seguida uma janela será aberta sobre a adição de hidrogênios na proteína. Nas alternativas, deixe as opções padrão (<strong><em>also consider H—bonds; histidine e Residue-name-based</em></strong>). Após marcação, pressione <code>Ok</code>.</p>
+<p><img alt="dock5" src="../../str14-fig5.png" /></p>
+<p>Após isto, uma terceira aba será aberta, denominada <strong><em>Assign charges for Dock Prep</em></strong>. Deixe a opção de cargas <strong><em>AMBER ff14SB</em></strong> e <strong><em>AM1-BCC</em></strong> (um campo de força baseado em mecânica quântica, semi-empírico).</p>
+<p><img alt="dock6" src="../../str14-fig6.png" /></p>
+<blockquote>
+<p><em>Em estruturas que possuem outros ligantes (que não seja o que estás utilizando) após pressionar <code>Ok</code> uma nova janela será aberta para especificarmos as cargas líquidas destas moléculas químicas, sendo denominada de </em><strong>Specify Net Charges</strong><em>. Nesta nova janela escolha o método </em><strong>AM1-BCC</strong><em> e pressione <code>Ok</code>.</em> <em>Esta opção não irá aparecer com o pdb 6MQ2.</em></p>
+</blockquote>
+<p>Uma nova caixa de diálogo será aberta para que o arquivo da proteína preparada seja salvo em formato .mol2. Salve o arquivo com o nome <code>recep.mol2</code>.</p>
+<h3 id="2-preparando-o-ligante">2. Preparando o ligante</h3>
+<p>Iremos trabalhar com um inibidor relatado em literatura para esta enzima: o inibidor <strong><em>Baicalein</em></strong>. Ele é um composto natural pertencente a classe das flavonas, um tipo específico de flavonoide. Estudos de Su e colaboradores (2020) [<a href="https://pubmed.ncbi.nlm.nih.gov/32737471/">3</a>] identificaram a inibição de forma dose-dependente a proteína 3CLpro de SARS-CoV-2, bem como a replicação do SARS-CoV-2 em células Vero E6.</p>
+<p>O ligante está disponível no PDB sob o código <a href="https://www.rcsb.org/ligand/3WL">3WL</a>. O arquivo do ligante pode ser construído e salvo por meio do software UCSF Chimera usando o código SMILES (<em>Simplified-Molecular Input-Entry System</em>) que está disponível no site PDB. </p>
+<p><img alt="dock7" src="../../str14-fig7.png" /></p>
+<p>Após copiar o código SMILES, siga as instruções abaixo no Chimera:</p>
+<ul>
+<li>Vá em <em>Tools &gt; Structure Editing &gt; Build Structure</em>.</li>
+<li>Na nova caixa de diálogo selecione a opção “<em>Smile string</em>” e na caixa de texto cole o código. Depois, dê um nome ao seu ligante (em <em>residue name</em>) de 3WL e clique em <code>Apply</code>.</li>
+</ul>
+<blockquote>
+<p><em>Os passos para construir uma molécula no UCSF Chimera a partir do seu SMILES podem ser vistos nos tutoriais anteriores.</em></p>
+</blockquote>
+<p>Após realizado, o ligante aparecerá na área de trabalho do Chimera. Selecionaremos apenas o ligante para realizar a minimização de energia sob o método <strong>AM1</strong>. Para isso, siga os seguintes passos:</p>
+<ul>
+<li>
+<p><em>Select &gt; residue &gt; 3WL</em>;</p>
+</li>
+<li>
+<p>Tools &gt; Structure editing &gt; Minimize structure;</p>
+</li>
+<li>
+<p>Na nova janela, clique em <code>Minimize</code>; </p>
+</li>
+</ul>
+<p><img alt="dock8" src="../../str14-fig8.png" /></p>
+<ul>
+<li>Teremos novamente a janela de Dock Prep. Pode seguir da mesma forma como na preparação da proteína acima.</li>
+</ul>
+<p><img alt="dock9" src="../../str14-fig9.png" /></p>
+<ul>
+<li>Na próxima janela escolha <em>AM1-BCC</em> e clique em <code>Ok</code>.</li>
+<li>Na janela <strong><em>Assign Charges</em></strong> (que agora aparece), você deixa o ligante como não carregado.</li>
+</ul>
+<p><img alt="dock10" src="../../str14-fig10.png" /></p>
+<p>A minimização irá iniciar para os compostos estudados.</p>
+<h3 id="3-preparacao-e-execucao-do-atracamento">3. Preparação e execução do atracamento</h3>
+<p>Após preparar o ligante e o receptor, vamos realizar o <em>docking</em> das duas moléculas pelo programa AutoDock Vina. No Chimera siga os passos abaixo: </p>
+<ul>
+<li><em>Tools &gt; Surface/Binding Analysis &gt; AutoDock Vina</em>.</li>
+</ul>
+<p>Uma nova janela será aberta e nela haverá várias opções para preenchermos. </p>
+<p>Na opção <strong><em>Output file</em></strong> iremos indicar o diretório e o nome dos arquivos que serão gerados. Clique em <em>Browse</em> e escolha a pasta e o nome do arquivo a ser salvo (insira <em>dock</em>). Não se esqueça de marcar a opção: <strong><em>Add .pdbqt suffix if none given</em></strong>. Após isto, pressione <strong><em>Set Output Location</em></strong>.</p>
+<ul>
+<li>Na opção <strong><em>Receptor</em></strong> escolha a proteína <code>6M2Q</code>. </li>
+<li>Na opção <strong><em>Ligand</em></strong> escolha o ligante <code>c1ccc(cc1)C2=CC(=O)c3c(cc(c(c3O)O)O)O2</code>.</li>
+</ul>
+<p>As seguintes opções referem-se as coordenadas do sítio ativo e o tamanho da caixa que delimitará a busca por interações. </p>
+<blockquote>
+<p><em>Neste tutorial iremos dar as coordenadas, no entanto, para outras proteínas você deverá procurar na literatura e nas estruturas resolvidas a região a qual pretendes realizar o dock. O UCSF Chimera também permite a utilização do mouse para escolha manual da região.</em></p>
+</blockquote>
+<ul>
+<li>Insira as coordenadas abaixo e perceba que aparecerá uma caixa na coloração verde em sua tela:</li>
+<li>Na opção <strong><em>Center</em></strong> insira: 116.777 -15.5687 67.3585.</li>
+<li>Na opção <strong><em>Size</em></strong> insira: 18.2199 18.7237 17.4398.</li>
+</ul>
+<p>Para este tutorial, você pode deixar as demais opções de <em>Receptor options</em> e <em>Ligand options</em>, nas opções padrão. Em <em>Advanced options</em> escolha: </p>
+<ul>
+<li><em>Number of binding modes</em> = 9; </li>
+<li><em>exhaustiveness of search</em> = 8; </li>
+<li><em>maximum energy difference (Kcal/mol)</em> = 3.</li>
+</ul>
+<p>Na opção “<em>Executable location</em>” escolha Local para que o <em>docking</em> seja processado na sua máquina local. O PATH de instalação seguirá o caminho do diretório até o arquivo <strong>vina.exe</strong> .Vá em <em>Browse</em> e procure esse caminho até encontrar o arquivo vina.exe e selecione-o. </p>
+<blockquote>
+<p><em>Observação: o site autodock vina destaca que, se seguido o tutorial de instruções do programa corretamente, o arquivo vina.exe estará no seguinte caminho: 
+C:\Program Files (x86)\The Scripps Research Institute\Vina\vina.exe</em></p>
+</blockquote>
+<p>Ao final clique em <code>OK</code> e o <em>docking</em> iniciará. Acompanhe o processamento pela barra de comandos no canto inferior do Chimera.</p>
+<h3 id="4-avaliando-os-resultados">4. Avaliando os resultados</h3>
+<p>Após terminar o processo o Chimera será aberto uma caixa de diálogo chamada de <strong><em>View Dock</em></strong>. Nesta janela aparecerá os valores de pontuação de acordo com as conformações de maior interação (valores menores - mais negativos) aos de menor interação (valores maiores - menos negativos ou positivos). Também identifique a forma que o ligante se posicionou no sítio ativo.</p>
+<p>Também podemos verificar as ligações de hidrogênio existentes entre o ligante 3WL e a proteína. Na mesma janela de diálogo vá em:</p>
+<ul>
+<li><em>HBonds &gt; Add counter to entire receptor</em>.</li>
+<li>Na nova janela aberta selecione as opções:  </li>
+<li><em>Inter-model</em>. </li>
+<li><em>Relax H-bond constraints</em>.</li>
+<li><em>Color H bonds not meeting precise criteria differently</em> </li>
+<li><em>If endpoint atom hidden, show endpoint residue</em>.</li>
+</ul>
+<p>Ao final, pressione <code>OK</code> e observe as ligações de hidrogênio existentes entre o ligante e a proteína do nosso estudo.</p>
+<h2 id="docking-com-o-swissdock"><em>Docking</em> com o SwissDock</h2>
+<h3 id="introducao_1">Introdução</h3>
+<p>Além deste programa, o <a href="http://www.swissdock.ch">SwissDock</a> [<a href="https://pubmed.ncbi.nlm.nih.gov/21624888/#:~:text=This%20article%20presents%20SwissDock%2C%20a,and%20the%20ligand%20input%20files.">4</a>] é uma plataforma onde é possível realizar o docking molecular via Web.</p>
+<p>O docking realizado no SwissDock também se baseia em 4 etapas. As duas primeiras etapas, as de Preparação do ligante e do receptor, serão realizados da mesma forma que aplicamos para o tutorial do AutoDock Vina, é só repetir as etapas 1 e 2 acima descritas. Portanto, iremos iniciar já nas etapas 3 e 4, descritas abaixo.</p>
+<h3 id="submissao-do-atracamento-na-plataforma-web">Submissão do atracamento na plataforma <em>web</em>:</h3>
+<p>O SwissDock é bem intuitivo para submissão de um processo de <em>docking</em>. Siga as etapas abaixo:</p>
+<ul>
+<li>Na página do <a href="http://www.swissdock.ch">SwissDock</a> vá na aba <strong><em>Submit Docking</em></strong>. </li>
+<li>No campo <strong><em>Target selection</em></strong> insira a proteína 6M2Q em formato .pdb. </li>
+<li>No campo <strong><em>Ligand selection</em></strong> insira o ligante 3WL em formato .mol2. </li>
+</ul>
+<p>No campo <strong><em>Description</em></strong> insira o nome do seu trabalho a ser submetido (Vamos chamar de DockSwiss) e o seu endereço de e-mail. </p>
+<p>Na opção “<strong><em>Show extra parameters</em></strong>” é possível definir o tipo de <em>docking</em> e a região do sítio ativo da proteína. Em “D<em>ocking type</em>” escolha <em>Accurate</em> e na definição do sítio escreva:</p>
+<ul>
+<li>Na opção <strong><em>Center</em></strong> insira: 116.777 -15.5687 67.3585.</li>
+<li>Na opção <strong><em>Size</em></strong> insira: 18.2199 18.7237 17.4398.</li>
+</ul>
+<p>Em seguida pressione <code>Start Docking</code>. </p>
+<hr />
+<blockquote>
+<p><em>Atenção: os formatos MOL2 e PDB podem ser convertidos no próprio UCSF Chimera. Veja as etapas opcionais abaixo.</em></p>
+</blockquote>
+<h4 id="salvando-os-formatos-no-ucsf-chimera-etapas-opcionais">Salvando os formatos no UCSF Chimera (etapas opcionais)</h4>
+<ul>
+<li>
+<p>Abra o arquivo desejado e em <em>File</em> salve o arquivo de acordo com o formato desejado. </p>
+</li>
+<li>
+<p>Lembre-se: se houver uma proteína e um ligante na área de trabalho do Chimera:</p>
+</li>
+<li>
+<p>primeiro salve apenas o ligante:</p>
+<ul>
+<li><em>select &gt; residue &gt; 3WL</em>.</li>
+<li><em>File &gt; save mol2 &gt;</em>.</li>
+<li>Na nova janela, insira o nome do ligante em <strong><em>File name</em></strong> (inserir ligante) e na opção <em>save models</em> marque o nome do ligante. Ao final, chique em <code>Save</code>.</li>
+</ul>
+</li>
+<li>
+<p>Depois, salve apenas a proteína. </p>
+</li>
+<li>
+<p><em>select &gt; chain &gt; A</em>.</p>
+</li>
+<li><em>File &gt; save PDB &gt;</em>.</li>
+<li>Na nova janela, insira o nome da proteína em <strong>File name</strong> (inserir receptor) e na opção <em>save models</em> marque o nome da proteina. Ao final, chique em <code>Save</code>.</li>
+</ul>
+<hr />
+<h3 id="analise-dos-resultados">Análise dos resultados</h3>
+<p>O servidor avisará por e-mail quando o resultado do processamento finalizar. Neste e-mail você será redirecionado ao site do SwissDock e poderá baixar os resultados e visualizar no Chimera. </p>
+<p>Para isso, no Chimera abra o arquivo <strong>target.pdb</strong> (o SwissDock altera o nome <strong>receptor.pdb</strong> para <strong>target.pdb</strong>). Siga os passos abaixo:</p>
+<ul>
+<li><em>File &gt; Open &gt; target.pdb</em></li>
+</ul>
+<p>Em seguida, vá na aba <strong>Tools</strong> para abrirmos o resultado do <strong>docking</strong>:</p>
+<ul>
+<li><em>Tools &gt; Surface/Binding Analysis &gt; View Dock</em>. </li>
+</ul>
+<p>Quando uma janela for aberta, selecione o arquivo <strong>clusters.dock4.pdb</strong> e abra-o.</p>
+<p>Uma nova janela será aberta, intitulada <strong><em>Type Selection</em></strong>. Nesta janela escolha a opção:</p>
+<ul>
+<li><em>Dock 4, 5, or 6</em> e pressione OK. </li>
+</ul>
+<p>Uma nova janela será aberta, desta vez contendo os resultados do <em>docking</em> realizado no SwissDock. A visualização é similar ao vina, porém observe que os valores da pontuação do Swiss não ficam visíveis nas colunas dos confôrmeros e sim nas anotações da janela, na linha <strong><em>REMARK  deltaG: "Valor X”</em></strong>.</p>
+<p>Podemos observar que o SwissDock calcula muitos confôrmeros, abrangendo um maior número de posicionamentos no sítio ativo. Compare o posicionamento do composto de melhor interação do Autodock Vina com o composto de melhor interação do SwissDock.</p>
+<h2 id="exercicio">Exercício</h2>
+<p>Compare os melhores posicionamentos de <em>docking</em> alcançados com o AutoDock Vina e com o SwissDock com o posicionamento do pdb <code>6M2N</code>.</p>
+<h2 id="referencias">Referências</h2>
+<ol>
+<li>TROTT, Oleg; OLSON, Arthur J. AutoDock Vina: improving the speed and accuracy of docking with a new scoring function, efficient optimization, and multithreading. Journal of computational chemistry, v. 31, n. 2, p. 455-461, 2010. [<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3041641/">Pubmed</a>)]</li>
+<li>PETTERSEN, Eric F. et al. UCSF Chimera—a visualization system for exploratory research and analysis. Journal of computational chemistry, v. 25, n. 13, p. 1605-1612, 2004. [<a href="https://pubmed.ncbi.nlm.nih.gov/15264254/">Pubmed</a>)]</li>
+<li>SU, Hai-xia et al. Anti-SARS-CoV-2 activities in vitro of Shuanghuanglian preparations and bioactive ingredients. Acta Pharmacologica Sinica, v. 41, n. 9, p. 1167-1177, 2020. [<a href="https://pubmed.ncbi.nlm.nih.gov/32737471/">Pubmed</a>]</li>
+<li>GROSDIDIER, Aurelien; ZOETE, Vincent; MICHIELIN, Olivier. SwissDock, a protein-small molecule docking web service based on EADock DSS. Nucleic acids research, v. 39, n. suppl_2, p. W270-W277, 2011. [<a href="https://pubmed.ncbi.nlm.nih.gov/21624888/#:~:text=This%20article%20presents%20SwissDock%2C%20a,and%20the%20ligand%20input%20files.">Pubmed</a>]</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -49,7 +49,7 @@ jobs:
         
       - name: Build MkDocs tutorials
         run: |
-          pip install mkdocs
+          pip install mkdocs mkdocs-material mkdocs-static-i18n
           cd tutorials
           mkdocs build -d ../dist/tutorials
         

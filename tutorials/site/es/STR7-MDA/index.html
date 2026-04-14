@@ -1,0 +1,2631 @@
+
+<!doctype html>
+<html lang="es" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutoriais básicos de Bioinformática">
+      
+      
+        <meta name="author" content="EvoMol-Lab">
+      
+      
+        <link rel="canonical" href="https://evomol-lab.github.io/tutorials/es/STR7-MDA/">
+      
+      
+        <link rel="prev" href="../STR6-AlphaFold/">
+      
+      
+        <link rel="next" href="../STR8-Aval/">
+      
+      
+        
+          <link rel="alternate" href="../../STR7-MDA/" hreflang="pt">
+        
+          <link rel="alternate" href="../../en/STR7-MDA/" hreflang="en">
+        
+          <link rel="alternate" href="./" hreflang="es">
+        
+      
+      
+      <link rel="icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+    
+    
+      
+        <title>MDA - Tutoriais EvoMol-Lab's Teaching Resources</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#modelagem-com-o-multidomain-assembler" class="md-skip">
+          Saltar a contenido
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Cabecera">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-header__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Tutoriais EvoMol-Lab's Teaching Resources
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              MDA
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+      <div class="md-header__option">
+  <div class="md-select">
+    
+    <button class="md-header__button md-icon" aria-label="Seleccionar idioma">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m12.87 15.07-2.54-2.51.03-.03A17.5 17.5 0 0 0 14.07 6H17V4h-7V2H8v2H1v2h11.17C11.5 7.92 10.44 9.75 9 11.35 8.07 10.32 7.3 9.19 6.69 8h-2c.73 1.63 1.73 3.17 2.98 4.56l-5.09 5.02L4 19l5-5 3.11 3.11zM18.5 10h-2L12 22h2l1.12-3h4.75L21 22h2zm-2.62 7 1.62-4.33L19.12 17z"/></svg>
+    </button>
+    <div class="md-select__inner">
+      <ul class="md-select__list">
+        
+          <li class="md-select__item">
+            <a href="../../STR7-MDA/" hreflang="pt" class="md-select__link">
+              Português
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="../../en/STR7-MDA/" hreflang="en" class="md-select__link">
+              English
+            </a>
+          </li>
+        
+          <li class="md-select__item">
+            <a href="./" hreflang="es" class="md-select__link">
+              Español
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</div>
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Búsqueda" placeholder="Búsqueda" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Buscar">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Limpiar" aria-label="Limpiar" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Inicializando búsqueda
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navegación" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../" title="Tutoriais EvoMol-Lab&#39;s Teaching Resources" class="md-nav__button md-logo" aria-label="Tutoriais EvoMol-Lab's Teaching Resources" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Tutoriais EvoMol-Lab's Teaching Resources
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Página Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../demo/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Representação Computacional de Biomoléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../aboutus/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Sobre o grupo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
+        
+          
+          <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_4">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Tutoriais Iniciais de Bioinformática
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../101/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a linha de comando UNIX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../102/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Manipulando dados na CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CLI-Colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a CLI e ao Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../103/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao GenBank
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../104/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Buscas de Similaridade
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../105/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento entre pares de sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../106-MSA/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Alinhamento Múltiplo de Sequências
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../107-NCBI-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    NCBI/GenBank via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../108-BLAST-CLI/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    BLAST via CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../109-SQL/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Comandos Básicos em SQL
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../r-colab/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução ao R usando o Google Colab
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../enzima-annot/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Integração de Bancos - Exemplo
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dbsnp/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de dados de Mutações e Polimorfismos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../KEGG/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Explorando Vias Metabólicas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../110-BDs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bancos de Dados de Informação Proteica
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../111-Modelagem/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem Computacional de Proteínas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../112-MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Primeiros Passos no MEGA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../113-Genomes/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Navegando por Genomas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../video/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Videoaulas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Bioinformática Estrutural
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_5">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Bioinformática Estrutural
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../basic2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Inicial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../slides/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides de Acompanhamento
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tools/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Programas e Ferramentas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR1-Visualizacao/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Visualização Computacional de Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR2-pred/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Informações a partir da estrutura primária
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR22-Epitopos/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Predição de Epítopos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR3-Model1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 101
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR4-Model2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelagem 102
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR5-Model3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modeller-CLI
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR6-AlphaFold/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Métodos baseados em IA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MDA
+  
+
+    
+  </span>
+  
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    MDA
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-os-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparando os Arquivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executando-o-mda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executando o MDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fazendo-a-modelagem-a-partir-do-resultado-do-mda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fazendo a modelagem a partir do resultado do MDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#salvando-o-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salvando o Modelo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR8-Aval/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Avaliação dos Modelos
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR9-EM/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    EM/CryoEM fitting
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR10-RINs/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    RINs
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR11-APBS/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    APBS
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR12-Memb/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Proteínas de Membrana
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR13-Dock1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Autodock (básico)
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR14-Dock2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR15-VS1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Virtual Screening
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR23-MDIntro/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Introdução a Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR16-EGB1/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Modelos de Pequenas Moléculas
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR17-EGB2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise conformacional
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR18-EGB3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Docking Automático
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR19-EGB4/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Posicionamento Manual
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR20-EGB5/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Dinâmica Molecular
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../STR21-EGB6/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    VS-2
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../comps/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Complements
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        
+          
+          <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_6">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Análise Evolucionária de Sequências (Evolução Molecular)
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../satsub/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Análise de Saturação de Substituições
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../bestfit/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Escolha do Modelo de Substituição
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Usando o BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    
+    
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_7" >
+        
+          
+          <label class="md-nav__link" for="__nav_7" id="__nav_7_label" tabindex="0">
+            
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Diplomado - UChile
+  
+
+    
+  </span>
+  
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_7_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_7">
+            <span class="md-nav__icon md-icon"></span>
+            
+  
+    Diplomado - UChile
+  
+
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../Presentation.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Home
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../UC_slides.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Slides
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Material/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Files and References
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../First_Tutorial.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    First Tutorial
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Substitution_saturation/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Analysis of Substitution Saturation
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ModelTest/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Test of the Best-Fit Models
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MEGAX/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using MEGAX
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../1st_BEAST/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using BEAST
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../BEAST%2BEBSP/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Phylodynamics using EBSP
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../IQTree.md" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Using IQ-Tree
+  
+
+    
+  </span>
+  
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Tabla de contenidos">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Tabla de contenidos
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#preparando-os-arquivos" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Preparando os Arquivos
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#executando-o-mda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Executando o MDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#fazendo-a-modelagem-a-partir-do-resultado-do-mda" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Fazendo a modelagem a partir do resultado do MDA
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#salvando-o-modelo" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Salvando o Modelo
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="modelagem-com-o-multidomain-assembler">Modelagem com o <em>Multidomain Assembler</em></h1>
+<p>O <em>Multidomain Assembler</em> (MDA) (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4423039/">Hertig et al. 2015</a>) é um programa para abordar os problemas especiais que surgem durante a modelagem de proteínas com grande número de domínios. Tais problemas incluem:</p>
+<ul>
+<li>Organizar espacialmente estruturas não sobrepostas.</li>
+<li>Obter a melhor cobertura para um modelo quando existem centenas de estruturas disponíveis para algumas regiões de seqüência, enquanto outras regiões têm poucos homólogos distantes.</li>
+<li>Montar um único modelo de uma proteína com múltiplos domínios e diversos <em>templates</em> disponíveis.</li>
+</ul>
+<p>O MDA automatiza as tarefas de pesquisa, visualização e seleção destes modelos e, em seguida, gera modelos multidomínios. Ele é bem simples de executar, sendo parte integrada ao UCSF CHIMERA (<a href="https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4423039/">Hertig et al. 2015</a>).</p>
+<p>Em seus passos iniciais, o MDA também serve para obtenção de um resumo visual das estruturas disponíveis para uma seqüência de consulta, filtrada opcionalmente por critérios como o escore do BLAST e % de identidade, dispostos horizontalmente do N para o C-terminal. Os prováveis <em>templates</em> sobrepostos são organizados de maneira vertical e os segmentos de sequência sem cobertura estrutural são indicados com esferas. Adicionalmente, o MDA também mostra um  alinhamento dos vários <em>templates</em> com a sequência alvo, o que por si só já é um resultado extremamente útil (Fonte: <a href="https://www.cgl.ucsf.edu/chimera/features.html">https://www.cgl.ucsf.edu/chimera/features.html</a>).</p>
+<p>Para demonstrarmos a utilização do MDA, modelaremos a proteína Ácido Graxo sintase do Boi (<em>Bos taurus</em>), <a href="https://www.uniprot.org/uniprot/Q71SP7">Q71SP7 (FAS_BOVIN)</a>.</p>
+<pre><code>&gt;Q71SP7_FAS_BOVIN
+MEEVVITGMSGKLPESENLEEFWANLIGGVDMVTDDDRRWKAGLYGLPRRSGKLKDLSRF
+DASFFGVHPKQAHNMDPQLRLLLEVTYEAIVDAGINPASIRGTNTGVWVGVSGSEASEAL
+SRDPETLVGYSMVGCQRAMLANRLSFFFDFKGPSITLDTACSSSLLALQRAYQAIQRGEC
+AMAIVGGVNIRLKPNTSVQFMKLGMLSPEGTCKFFDASGNGYCRAKAVMAILLTKKSLAR
+RVYATILNAGTNTDGCKEKGVTFPSGEAQEQLISSLYKPAGLDPETLEYVEAHGTGTKVG
+DPQELNGIVQALCGTRQSPLRIGSTKSNMGHPEPASGLAALAKVLLSLEHGLWAPNLHFH
+NPNPKIPALQDGRLQVVDRPLPVLGGNVGINSFGFGGSNVHVILQPNSQPLPPPAPHAAL
+PRLLRASGRTLEGVQGLLELGLQHSQNLAFVSMLNDIATPSPAAMPFRGYAVLGSQGGSQ
+KVQQVLAGKRPLWFICSGMGTQWRGMGLSLMRLSRFRDSILRSDEAVKPLGLQVSQLLLS
+TDEAIFDDMVISFVSLTAIQIALIDLLTSMGLQPDGIIGHSLGEVACGYADGCISQEEAI
+LSAYWRGQCIKEANIPPGAMAAVGLTWEECKQRCPPGIVPACHNCIDTVTISGPQASMLE
+FVQQLKQEGVFAKEVRTGGMAFHSYFMDAIAPMLLQQLKKVIREPQPRSPRWLSTSIPET
+QWQESLARTFSAEYNVNNLVSPVLFQEALWRVPEDAVVLEIAPHALLQAVLKRGLKSSCT
+IIPLMKKDHRDNLEFFLSNVGQLYLTGIDVNPNGLFPPVEFPAPRGTPLISPHIKWDHSQ
+TWDVPTAEDFPSGSSSSSATIYKIDINPESPDHYLVDHCIDGRIIFPGTGYLCLVWKTLA
+RALDQNMEHTPVVFEDVTLHQAVILPKTGIVLLKVRLLEASCTFEVSENGNLIASGKVYQ
+WEDPNPKLFDNRYGPDPATPVDPTTAIHLSRGDVYKELQLQGFNYGPYFQGILEASSEGN
+TGQLLWKDNWVTFMDTMLQMSILAPSKRSLRLPTRITAIYIHPATHQQKLYTLQDKTQVA
+DVVINRCLDTTVAGGIYISRIHTSVAPRHQQEQLVPILEKFCFTPHVETGCLAGNLALQE
+ELQLCVGLAQALQTRVAQQGIKMVVPGLDGAQAPQEAPQQGLPRLLATACQLQLNGNLQM
+EMGQILAQERALLCDDPLLSGLLNSPALKACVTLALENMTSLKMKVVLAGDGQLYSRIPT
+LLNTQPLLELDYTATDRHPQALEAAQAKLQQLDITQGQWDPSDPAPSNLGGANLVVCNYA
+LASLGDPATAVGNMVAALKEGGFLLLHTLLRGHPLGETVTFLTCPEPQQGQRHLLSQDEW
+ERLFAGASLHLVALKKSFYGSVLFLCRRLAPLDSPIFLPVEDTSFQWVDSLKNILADSSS
+RAVWLMAVGCTTSGVVGLVNCLRKEPDGHRIRCVLVSNLNSTSPIPETDPKSLELQKVLQ
+SDLVMNVYRDGAWGAFRHFPLEQDKPEEQTEHAFINVLTRGDLSSIRWVCSPLRHSQPTA
+PGFQLCTIYYASLNFKRNHAGHGQAVPRRHPRNWASRNCLLGMEFSGRDASGKRVMGLVP
+AEGLATSTLVPQSFLWDVPSNWTLEEAASVPVVYSTAYYALMVRGRMQPGETVLIHSGSG
+GVGQAAIAIALSLGCRVFPLVGSAEKRAYLQSRFPQLNETSFANSRDTSFEQHVLWHTAG
+KGADLVLNSLAEEKLQASVRCLAQHGRFLEIGKFDLSKNHPLGMAIFLKNVTFHGILLDS
+LFEENNTMWQEVSTLLKAGIRKGVVQPLKRTVFPRTQAEDAFRYMAQGKHIGKVVIQVRE
+EEQEAVLHGTKPTQMVALCKTFCPAHKSYIITGGLGGFGLELAHWLVERGAQKLVLTSRS
+GIRTGYQARQVHEWRRQGVQVLVSTSDVSTLDGTRSLITEAAQLGPVGGIFNLAVVLRDA
+MLDNQTPEFFQDVNKPKYNGTLNLDRVTREACPELDYFEVFSSVSCGRGNAGQTNYGFAN
+STMERICEKRRHDGLPGLAVQWGAIADVGLLMELKGTKDKAIGGTLPQRITSCMEVLDLF
+LNQPHPVLSSFVLAEKATSRGPSGSHQDLVKAVTHILGIRDLATVNLDSSLSDLGLDSLM
+GVEVRQMLEREHNLLLSMREIRQLTIHKLQEISAQAGTADELTDSTPKFGSPAQSHTQLN
+LSTLLVNPEGPTLTRLNSVQSSERPLFLVHPIEGSTTVFHSLATKLSIPTYGLQCTGAAP
+LDSIQSLATYYIECIRQVQPEGNYRIAGYSYGACVAFEMCSQLQAQQNAGPTNNSLFLFD
+GSHTFVMAYTQSYRAKLNPGCEAEAEAEAMCFFMQQFTEAEHSRVLEALLPLGDLEARVA
+ATVELIVQSHAGLDRHALSFAARSFYHKLRAAEEYTPRATYHGNVTLLRAKMGSAYQEGL
+GADYNLSQVCDGKVSVHIIEGDHRTLLEGSGLESILSIIHSSLAEPRVSVREG
+</code></pre>
+<p>A enzima FASN de mamíferos possui sete sítios ativos para reações distintas, em domínios separados. Tudo isto em uma única cadeia polipeptídica. Os múltiplos domínios atuam como enzimas distintas. A enzima final forma um homodímero. Mais informações pode ser obtidas do seu registro Uniprot (<a href="https://www.uniprot.org/uniprot/Q71SP7">Q71SP7 (FAS_BOVIN)</a>).</p>
+<p>Abaixo seguem as etapas para a modelagem desta proteína.</p>
+<h2 id="preparando-os-arquivos">Preparando os Arquivos</h2>
+<ul>
+<li>Crie uma pasta no <em>desktop</em> chamada MDA.</li>
+<li>Dentro desta página, crie um arquivo no gedit e cole a sequência acima. Salve-o como <code>FASN_Bos.fasta</code> .</li>
+</ul>
+<p>Esta pasta MDA será também onde os arquivos de saída do programa serão escritos.</p>
+<h2 id="executando-o-mda">Executando o MDA</h2>
+<p>O MDA é executado via linha de comando no UCSF Chimera. Para isso, precisamos mostrar a linha de comando no programa e executar as etapas abaixo:</p>
+<ul>
+<li>Abra o UCSF Chimera.</li>
+</ul>
+<p><img alt="Chimera-MDA-1" src="../../st7.fig1.png" /></p>
+<ul>
+<li>A linha de comando do UCSF Chimera irá aparecer embaixo da janela.</li>
+<li>Nesta caixa, digite o seguinte comando:</li>
+</ul>
+<pre><code>mda ~/Desktop/MDA/FASN_Bos.fasta winnow 8 suppressDoubles true
+</code></pre>
+<p>Ele deverá ficar de acordo com a figura abaixo.</p>
+<p><img alt="Chimera-MDA-2" src="../../st7.fig2.png" /></p>
+<blockquote>
+<p><em>Não esqueça de conferir se o caminho do diretório está correto.</em></p>
+<p><em>O MDA também pode ser executado utilizando como entrada um código Uniprot.</em></p>
+</blockquote>
+<ul>
+<li>O comando está sendo executado com duas opções:<ul>
+<li><strong><em>winnow 8</em></strong> Acertos máximos por região. Valores mais baixos retornam menos <em>hits</em>.</li>
+<li><strong><em>suppressDoubles true:</em></strong> Manter apenas o <em>hit</em> de maior pontuação para uma entrada do PDB.</li>
+</ul>
+</li>
+</ul>
+<blockquote>
+<p><em>Descrições adicionais dos comandos do MDA e suas opções, podem ser encontradas <a href="https://www.cgl.ucsf.edu/chimera/docs/UsersGuide/midas/mda.html">AQUI</a>.</em></p>
+</blockquote>
+<ul>
+<li>Pressione a tecla <code>ENTER</code>para que o comando seja executado.</li>
+</ul>
+<p>Nesta etapa o MDA faz uma busca BLAST contra o banco PDB para encontrar estruturas conhecidas com sequência similar, para toda extensão da sequência alvo. Depois, ele importa as estruturas do PDB correspondentes para o UCSF Chimera e as coloca da esquerda para a direita de acordo com as correspondências de seqüência ao longo da consulta do N ao C-terminal.</p>
+<p>Na pasta de saída especificada, o MDA grava os seguintes arquivos de saída:</p>
+<ul>
+<li>O alinhamento pseudo-múltiplo de sequência do BLAST no formato FASTA alinhado.</li>
+<li>Um arquivo de texto contendo informações da execução.</li>
+</ul>
+<p>Logo após a execução, a seguinte caixa de diálogo irá aparecer:</p>
+<p><img alt="Chimera-MDA-3" src="../../st7.fig3.png" /></p>
+<ul>
+<li>Clique em <code>Yes</code> e espere que todos os arquivos PDBs sejam abertos.</li>
+</ul>
+<p>Quando terminado o processo, os modelos alinhados de acordo com a sequência irão aparecer na área de trabalho do UCSF Chimera, além de duas novas janelas: uma com o alinhamento e a outra já com a interface para modelagem com Modeller.</p>
+<ul>
+<li>As estruturas encontradas pela busca BLAST aparecerão da seguinte maneira, sempre seguindo a sequência alvo, do N para o C-terminal.</li>
+</ul>
+<p><img alt="Chimera-MDA-4" src="../../st7.fig4.png" /></p>
+<blockquote>
+<p><em>Dê um zoom e veja as estruturas com mais detalhes.</em></p>
+</blockquote>
+<ul>
+<li>A janela de alinhamento múltiplo (MAV) aparecerá com a seguinte:</li>
+</ul>
+<p><img alt="Chimera-MDA-5" src="../../st7.fig5.png" /></p>
+<ul>
+<li>Verifique e navegue pelo alinhamento, para confirmar se toda a sequência da FASN_Bos teve estrutura correspondente.</li>
+</ul>
+<h2 id="fazendo-a-modelagem-a-partir-do-resultado-do-mda">Fazendo a modelagem a partir do resultado do MDA</h2>
+<p>O restante dos passos é bem similar aos descritos no tutorial de <a href="https://sites.google.com/imd.ufrn.br/biomemodel/tutoriais-de-modelagem/modelagem-comparativa-1">Modelagem Comparativa 1</a>.</p>
+<ul>
+<li>Na janela aberta da interface com o Modeller, selecione as opções de acordo com a figura abaixo:</li>
+</ul>
+<p><img alt="Chimera-MDA-6" src="../../st7.fig6.png" /></p>
+<blockquote>
+<p><em>Não esqueça de colocar o caminho certo do executável do Modeller.</em> </p>
+<p><em>Deixe apenas como um único modelo, pois esta modelagem costuma ser demorada.</em></p>
+</blockquote>
+<ul>
+<li>Clique em <code>OK</code> e espere os resultados.</li>
+<li>No final da modelagem, aparecerão o modelo na área de trabalho do UCSF Chimera e a janela <strong>Modeller Results</strong>.</li>
+</ul>
+<p><img alt="Chimera-MDA-7" src="../../st7.fig7.png" /></p>
+<h2 id="salvando-o-modelo">Salvando o Modelo</h2>
+<p>Salve o modelo obtido, seguindo os passos abaixo:</p>
+<ul>
+<li>Na janela principal do UCSF Chimera vá em:<ul>
+<li><strong>Select &gt; Chain &gt; (noID).</strong></li>
+</ul>
+</li>
+</ul>
+<p><img alt="Chimera-MDA-8" src="../../st7.fig8.png" /></p>
+<ul>
+<li>Depois vá em:<ul>
+<li><strong>Select &gt; Invert (all models).</strong> </li>
+</ul>
+</li>
+</ul>
+<p><img alt="Chimera-MDA-9" src="../../st7.fig9.png" /></p>
+<ul>
+<li>Depois de selecionados todos os modelos, siga o caminho abaixo:<ul>
+<li><strong>Select &gt; Actions &gt; Atoms/Bonds &gt; Delete.</strong></li>
+</ul>
+</li>
+</ul>
+<p><img alt="Chimera-MDA-10" src="../../st7.fig10.png" /></p>
+<p>Agora você estará apenas com a estrutura que acabou de ser modelada e as estruturas <em>templates</em> foram apagadas.</p>
+<ul>
+<li>Dê um foco na sua estrutura com o seguinte passo:<ul>
+<li>Clique em <strong>Actions &gt; Focus</strong>. </li>
+</ul>
+</li>
+</ul>
+<p>Agora siga os passos abaixo:</p>
+<ul>
+<li>Vá em <strong>Tools &gt; General Controls &gt; Model Panel.</strong></li>
+<li>Uma nova janela irá aparecer, chamada <strong><em>Model Panel</em></strong>.</li>
+<li>Selecione as estruturas classificadas como <em>Gap</em> e aperte a tecla <code>Close</code>ao lado. Faça isso em todas que aparecer. Até que a janela fique semelhante a abaixo:</li>
+</ul>
+<p><img alt="Chimera-MDA-11" src="../../st7.fig11.png" /></p>
+<ul>
+<li>Clique em <code>write PDB</code>. Na janela seguinte, dê um nome ao arquivo e salve o PDB.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": [], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copiado al portapapeles", "clipboard.copy": "Copiar al portapapeles", "search.result.more.one": "1 m\u00e1s en esta p\u00e1gina", "search.result.more.other": "# m\u00e1s en esta p\u00e1gina", "search.result.none": "No se encontraron documentos", "search.result.one": "1 documento encontrado", "search.result.other": "# documentos encontrados", "search.result.placeholder": "Teclee para comenzar b\u00fasqueda", "search.result.term.missing": "Falta", "select.version": "Seleccionar versi\u00f3n"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      
+    
+  </body>
+</html>

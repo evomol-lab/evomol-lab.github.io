@@ -1,303 +1,1755 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/</loc>
-         <lastmod>2026-04-14</lastmod>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xhtml="http://www.w3.org/1999/xhtml">
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/101/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/101/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/101/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/101/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/101/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/102/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/102/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/102/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/102/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/102/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/103/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/103/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/103/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/103/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/103/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/104/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/104/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/104/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/104/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/104/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/105/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/105/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/105/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/105/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/105/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/106-MSA/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/106-MSA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/106-MSA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/106-MSA/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/106-MSA/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/107-NCBI-CLI/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/107-NCBI-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/107-NCBI-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/107-NCBI-CLI/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/107-NCBI-CLI/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/108-BLAST-CLI/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/108-BLAST-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/108-BLAST-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/108-BLAST-CLI/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/108-BLAST-CLI/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/109-SQL/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/109-SQL/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/109-SQL/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/109-SQL/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/109-SQL/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/110-BDs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/110-BDs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/110-BDs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/110-BDs/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/110-BDs/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/111-Modelagem/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/111-Modelagem/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/111-Modelagem/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/111-Modelagem/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/111-Modelagem/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/112-MEGAX/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/112-MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/112-MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/112-MEGAX/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/112-MEGAX/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/113-Genomes/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/113-Genomes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/113-Genomes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/113-Genomes/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/113-Genomes/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/1st_BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/1st_BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/1st_BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/1st_BEAST/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/1st_BEAST/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Ana%CC%81lise%20conformacional%20-%20EGB/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Ana%CC%81lise%20conformacional%20-%20EGB/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Automatic%20Docking/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Automatic%20Docking/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Automatic%20Docking/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Automatic%20Docking/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Automatic%20Docking/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/BEAST%2BEBSP/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/BEAST%2BEBSP/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/BEAST%2BEBSP/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/BEAST%2BEBSP/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/BEAST%2BEBSP/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/BEAST/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/BEAST_ptbr/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/CLI-Colab/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/CLI-Colab/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/CLI-Colab/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/CLI-Colab/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/CLI-Colab/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/First%20steps%20in%20BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/First%20steps%20in%20BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/First%20steps%20in%20BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/First%20steps%20in%20BEAST/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/First%20steps%20in%20BEAST_ENG/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/KEGG/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/KEGG/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/KEGG/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/KEGG/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/KEGG/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/MEGAX/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/MEGAX/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/MEGAX/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Material/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Material/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Material/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Material/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/MEGAX_ptbr/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/ModelTest/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/ModelTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/ModelTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/ModelTest/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Material_ENG/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/ModelTest/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Programs%20and%20Tools/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Programs%20and%20Tools/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Programs%20and%20Tools/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Programs%20and%20Tools/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/ModelTest_ENG/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR1-Visualizacao/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR1-Visualizacao/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR1-Visualizacao/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR1-Visualizacao/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR10-RINs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR10-RINs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR10-RINs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR10-RINs/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Programs%20and%20Tools/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR11-APBS/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR11-APBS/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR11-APBS/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR11-APBS/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR1-Visualizacao/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR12-Memb/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR12-Memb/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR12-Memb/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR12-Memb/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR10-RINs/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR13-Dock1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR13-Dock1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR13-Dock1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR13-Dock1/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR11-APBS/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR14-Dock2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR14-Dock2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR14-Dock2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR14-Dock2/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR12-Memb/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR15-VS1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR15-VS1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR15-VS1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR15-VS1/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR13-Dock1/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR16-EGB1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR16-EGB1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR16-EGB1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR16-EGB1/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR14-Dock2/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR17-EGB2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR17-EGB2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR17-EGB2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR17-EGB2/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR15-VS1/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR18-EGB3/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR18-EGB3/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR18-EGB3/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR18-EGB3/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR16-EGB1/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR19-EGB4/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR19-EGB4/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR19-EGB4/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR19-EGB4/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR17-EGB2/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR2-pred/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR2-pred/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR2-pred/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR2-pred/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR18-EGB3/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR20-EGB5/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR20-EGB5/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR20-EGB5/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR20-EGB5/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR19-EGB4/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR21-EGB6/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR21-EGB6/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR21-EGB6/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR21-EGB6/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR2-pred/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR22-Epitopos/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR22-Epitopos/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR22-Epitopos/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR22-Epitopos/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR20-EGB5/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR23-MDIntro/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR23-MDIntro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR23-MDIntro/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR23-MDIntro/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR21-EGB6/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR3-Model1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR3-Model1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR3-Model1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR3-Model1/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR22-Epitopos/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR4-Model2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR4-Model2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR4-Model2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR4-Model2/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR23-MDIntro/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR5-Model3/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR5-Model3/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR5-Model3/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR5-Model3/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR3-Model1/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR6-AlphaFold/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR6-AlphaFold/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR6-AlphaFold/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR6-AlphaFold/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR4-Model2/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR7-MDA/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR7-MDA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR7-MDA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR7-MDA/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR5-Model3/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR8-Aval/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR8-Aval/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR8-Aval/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR8-Aval/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR6-AlphaFold/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/STR9-EM/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR9-EM/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR9-EM/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR9-EM/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR7-MDA/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Similarity%20Search/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Similarity%20Search/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Similarity%20Search/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Similarity%20Search/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR8-Aval/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Substitution_saturation/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Substitution_saturation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Substitution_saturation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Substitution_saturation/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/STR9-EM/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/Tutorial%20inicial/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Tutorial%20inicial/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Tutorial%20inicial/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Tutorial%20inicial/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Similarity%20Search/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/TutorialVS_MarkText/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/TutorialVS_MarkText/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/TutorialVS_MarkText/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/TutorialVS_MarkText/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Substitution_saturation_ENG/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/aboutus%20copy/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus%20copy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus%20copy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus%20copy/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/Tutorial%20inicial/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/aboutus/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/TutorialVS_MarkText/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/aboutus_old/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus_old/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus_old/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus_old/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/aboutus%20copy/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/basic1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/basic1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/basic1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/basic1/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/aboutus/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/basic2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/basic2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/basic2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/basic2/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/aboutus_old/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/bestfit/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/bestfit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/bestfit/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/bestfit/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/basic1/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/comps/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/comps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/comps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/comps/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/basic2/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/dbsnp/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/dbsnp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/dbsnp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/dbsnp/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/bestfit-ptbr/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/demo/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/demo/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/demo/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/demo/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/comps/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/enzima-annot/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/enzima-annot/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/enzima-annot/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/enzima-annot/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/dbsnp/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/gromacs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/gromacs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/gromacs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/gromacs/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/demo/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/enzima-annot/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/proteins%20databases/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/proteins%20databases/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/proteins%20databases/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/proteins%20databases/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/gromacs/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/r-colab/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/r-colab/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/r-colab/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/r-colab/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/proteins%20databases/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/satsub/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/satsub/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/satsub/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/satsub/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/r-colab/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/slides/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/slides/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/slides/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/slides/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/satsub-ptbr/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/tools/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/tools/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/tools/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/tools/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/slides/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/video/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/video/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/video/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/video/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/tools/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/101/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/101/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/101/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/101/"/>
     </url>
-    <url>
-         <loc>https://evomol-lab.github.io/tutorials/video/</loc>
-         <lastmod>2026-04-14</lastmod>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/102/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/102/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/102/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/102/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/103/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/103/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/103/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/103/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/104/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/104/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/104/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/104/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/105/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/105/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/105/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/105/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/106-MSA/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/106-MSA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/106-MSA/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/106-MSA/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/107-NCBI-CLI/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/107-NCBI-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/107-NCBI-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/107-NCBI-CLI/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/108-BLAST-CLI/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/108-BLAST-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/108-BLAST-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/108-BLAST-CLI/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/109-SQL/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/109-SQL/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/109-SQL/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/109-SQL/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/110-BDs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/110-BDs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/110-BDs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/110-BDs/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/111-Modelagem/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/111-Modelagem/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/111-Modelagem/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/111-Modelagem/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/112-MEGAX/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/112-MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/112-MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/112-MEGAX/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/113-Genomes/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/113-Genomes/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/113-Genomes/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/113-Genomes/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/1st_BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/1st_BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/1st_BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/1st_BEAST/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Ana%CC%81lise%20conformacional%20-%20EGB/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Automatic%20Docking/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Automatic%20Docking/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Automatic%20Docking/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Automatic%20Docking/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/BEAST%2BEBSP/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/BEAST%2BEBSP/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/BEAST%2BEBSP/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/BEAST%2BEBSP/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/BEAST/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/CLI-Colab/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/CLI-Colab/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/CLI-Colab/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/CLI-Colab/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/First%20steps%20in%20BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/First%20steps%20in%20BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/First%20steps%20in%20BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/First%20steps%20in%20BEAST/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/KEGG/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/KEGG/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/KEGG/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/KEGG/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/MEGAX/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/MEGAX/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Material/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Material/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Material/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Material/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/ModelTest/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/ModelTest/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/ModelTest/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/ModelTest/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Programs%20and%20Tools/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Programs%20and%20Tools/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Programs%20and%20Tools/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Programs%20and%20Tools/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR1-Visualizacao/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR1-Visualizacao/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR1-Visualizacao/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR1-Visualizacao/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR10-RINs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR10-RINs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR10-RINs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR10-RINs/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR11-APBS/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR11-APBS/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR11-APBS/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR11-APBS/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR12-Memb/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR12-Memb/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR12-Memb/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR12-Memb/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR13-Dock1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR13-Dock1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR13-Dock1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR13-Dock1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR14-Dock2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR14-Dock2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR14-Dock2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR14-Dock2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR15-VS1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR15-VS1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR15-VS1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR15-VS1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR16-EGB1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR16-EGB1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR16-EGB1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR16-EGB1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR17-EGB2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR17-EGB2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR17-EGB2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR17-EGB2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR18-EGB3/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR18-EGB3/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR18-EGB3/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR18-EGB3/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR19-EGB4/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR19-EGB4/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR19-EGB4/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR19-EGB4/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR2-pred/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR2-pred/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR2-pred/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR2-pred/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR20-EGB5/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR20-EGB5/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR20-EGB5/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR20-EGB5/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR21-EGB6/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR21-EGB6/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR21-EGB6/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR21-EGB6/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR22-Epitopos/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR22-Epitopos/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR22-Epitopos/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR22-Epitopos/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR23-MDIntro/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR23-MDIntro/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR23-MDIntro/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR23-MDIntro/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR3-Model1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR3-Model1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR3-Model1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR3-Model1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR4-Model2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR4-Model2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR4-Model2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR4-Model2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR5-Model3/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR5-Model3/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR5-Model3/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR5-Model3/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR6-AlphaFold/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR6-AlphaFold/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR6-AlphaFold/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR6-AlphaFold/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR7-MDA/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR7-MDA/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR7-MDA/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR7-MDA/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR8-Aval/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR8-Aval/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR8-Aval/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR8-Aval/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/STR9-EM/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR9-EM/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR9-EM/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR9-EM/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Similarity%20Search/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Similarity%20Search/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Similarity%20Search/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Similarity%20Search/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Substitution_saturation/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Substitution_saturation/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Substitution_saturation/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Substitution_saturation/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/Tutorial%20inicial/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Tutorial%20inicial/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Tutorial%20inicial/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Tutorial%20inicial/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/TutorialVS_MarkText/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/TutorialVS_MarkText/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/TutorialVS_MarkText/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/TutorialVS_MarkText/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/aboutus%20copy/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus%20copy/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus%20copy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus%20copy/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/aboutus/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/aboutus_old/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus_old/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus_old/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus_old/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/basic1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/basic1/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/basic1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/basic1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/basic2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/basic2/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/basic2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/basic2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/bestfit/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/bestfit/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/bestfit/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/bestfit/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/comps/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/comps/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/comps/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/comps/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/dbsnp/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/dbsnp/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/dbsnp/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/dbsnp/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/demo/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/demo/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/demo/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/demo/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/enzima-annot/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/enzima-annot/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/enzima-annot/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/enzima-annot/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/gromacs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/gromacs/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/gromacs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/gromacs/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/proteins%20databases/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/proteins%20databases/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/proteins%20databases/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/proteins%20databases/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/r-colab/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/r-colab/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/r-colab/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/r-colab/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/satsub/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/satsub/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/satsub/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/satsub/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/slides/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/slides/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/slides/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/slides/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/tools/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/tools/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/tools/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/tools/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/en/video/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/video/"/>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/video/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/video/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/101/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/101/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/101/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/101/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/102/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/102/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/102/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/102/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/103/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/103/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/103/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/103/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/104/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/104/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/104/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/104/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/105/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/105/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/105/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/105/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/106-MSA/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/106-MSA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/106-MSA/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/106-MSA/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/107-NCBI-CLI/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/107-NCBI-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/107-NCBI-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/107-NCBI-CLI/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/108-BLAST-CLI/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/108-BLAST-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/108-BLAST-CLI/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/108-BLAST-CLI/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/109-SQL/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/109-SQL/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/109-SQL/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/109-SQL/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/110-BDs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/110-BDs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/110-BDs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/110-BDs/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/111-Modelagem/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/111-Modelagem/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/111-Modelagem/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/111-Modelagem/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/112-MEGAX/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/112-MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/112-MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/112-MEGAX/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/113-Genomes/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/113-Genomes/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/113-Genomes/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/113-Genomes/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/1st_BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/1st_BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/1st_BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/1st_BEAST/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Ana%CC%81lise%20conformacional%20-%20EGB/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Ana%CC%81lise%20conformacional%20-%20EGB/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Automatic%20Docking/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Automatic%20Docking/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Automatic%20Docking/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Automatic%20Docking/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/BEAST%2BEBSP/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/BEAST%2BEBSP/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/BEAST%2BEBSP/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/BEAST%2BEBSP/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/BEAST/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informac%CC%A7a%CC%83o%20proteica/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Bancos%20de%20dados%20de%20informa%C3%A7%C3%A3o%20proteica%20%20-%20update2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/CLI-Colab/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/CLI-Colab/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/CLI-Colab/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/CLI-Colab/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/First%20steps%20in%20BEAST/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/First%20steps%20in%20BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/First%20steps%20in%20BEAST/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/First%20steps%20in%20BEAST/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/KEGG/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/KEGG/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/KEGG/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/KEGG/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/MEGAX/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/MEGAX/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/MEGAX/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Material/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Material/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Material/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Material/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/ModelTest/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/ModelTest/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/ModelTest/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/ModelTest/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Mole%CC%81culas%20e%20de%20Estruturas%20de%20Protei%CC%81nas%20-%20WithoutInst/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Programs%20and%20Tools/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Programs%20and%20Tools/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Programs%20and%20Tools/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Programs%20and%20Tools/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR1-Visualizacao/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR1-Visualizacao/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR1-Visualizacao/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR1-Visualizacao/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR10-RINs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR10-RINs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR10-RINs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR10-RINs/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR11-APBS/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR11-APBS/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR11-APBS/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR11-APBS/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR12-Memb/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR12-Memb/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR12-Memb/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR12-Memb/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR13-Dock1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR13-Dock1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR13-Dock1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR13-Dock1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR14-Dock2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR14-Dock2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR14-Dock2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR14-Dock2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR15-VS1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR15-VS1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR15-VS1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR15-VS1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR16-EGB1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR16-EGB1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR16-EGB1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR16-EGB1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR17-EGB2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR17-EGB2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR17-EGB2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR17-EGB2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR18-EGB3/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR18-EGB3/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR18-EGB3/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR18-EGB3/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR19-EGB4/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR19-EGB4/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR19-EGB4/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR19-EGB4/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR2-pred/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR2-pred/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR2-pred/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR2-pred/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR20-EGB5/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR20-EGB5/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR20-EGB5/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR20-EGB5/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR21-EGB6/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR21-EGB6/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR21-EGB6/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR21-EGB6/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR22-Epitopos/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR22-Epitopos/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR22-Epitopos/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR22-Epitopos/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR23-MDIntro/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR23-MDIntro/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR23-MDIntro/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR23-MDIntro/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR3-Model1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR3-Model1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR3-Model1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR3-Model1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR4-Model2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR4-Model2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR4-Model2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR4-Model2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR5-Model3/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR5-Model3/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR5-Model3/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR5-Model3/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR6-AlphaFold/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR6-AlphaFold/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR6-AlphaFold/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR6-AlphaFold/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR7-MDA/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR7-MDA/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR7-MDA/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR7-MDA/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR8-Aval/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR8-Aval/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR8-Aval/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR8-Aval/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/STR9-EM/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/STR9-EM/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/STR9-EM/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/STR9-EM/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Similarity%20Search/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Similarity%20Search/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Similarity%20Search/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Similarity%20Search/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Substitution_saturation/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Substitution_saturation/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Substitution_saturation/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Substitution_saturation/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/Tutorial%20inicial/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/Tutorial%20inicial/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/Tutorial%20inicial/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/Tutorial%20inicial/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/TutorialVS_MarkText/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/TutorialVS_MarkText/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/TutorialVS_MarkText/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/TutorialVS_MarkText/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/aboutus%20copy/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus%20copy/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus%20copy/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus%20copy/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/aboutus/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/aboutus_old/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/aboutus_old/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/aboutus_old/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/aboutus_old/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/basic1/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/basic1/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/basic1/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/basic1/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/basic2/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/basic2/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/basic2/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/basic2/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/bestfit/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/bestfit/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/bestfit/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/bestfit/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/comps/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/comps/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/comps/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/comps/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/dbsnp/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/dbsnp/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/dbsnp/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/dbsnp/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/demo/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/demo/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/demo/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/demo/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/enzima-annot/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/enzima-annot/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/enzima-annot/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/enzima-annot/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/gromacs/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/gromacs/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/gromacs/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/gromacs/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/proteins%20databases/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/proteins%20databases/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/proteins%20databases/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/proteins%20databases/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/r-colab/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/r-colab/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/r-colab/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/r-colab/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/satsub/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/satsub/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/satsub/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/satsub/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/slides/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/slides/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/slides/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/slides/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/tools/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/tools/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/tools/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/tools/"/>
+    </url>
+    <url>
+        <loc>https://evomol-lab.github.io/tutorials/es/video/</loc>
+        <lastmod>2026-04-14</lastmod>
+        <changefreq>daily</changefreq>
+        <xhtml:link rel="alternate" hreflang="es" href="https://evomol-lab.github.io/tutorials/es/video/"/>
+        <xhtml:link rel="alternate" hreflang="en" href="https://evomol-lab.github.io/tutorials/en/video/"/>
+        <xhtml:link rel="alternate" hreflang="pt" href="https://evomol-lab.github.io/tutorials/video/"/>
     </url>
 </urlset>
