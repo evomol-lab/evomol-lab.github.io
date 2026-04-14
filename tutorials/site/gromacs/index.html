@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="EvoMol-Lab" /><link rel="canonical" href="https://evomol-lab.github.io/tutorials/gromacs/" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>GROMACS Post-Simulation Analysis Guide - Tutoriais EvoMol-Lab's Teaching Resources</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "GROMACS Post-Simulation Analysis Guide";
+        var mkdocs_page_input_path = "gromacs.md";
+        var mkdocs_page_url = "/tutorials/gromacs/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/languages/yaml.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Tutoriais EvoMol-Lab's Teaching Resources
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Página Inicial</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../demo/">Representação Computacional de Biomoléculas</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../aboutus/">Sobre o grupo</a>
+                </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Tutoriais Iniciais de Bioinformática</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic1/">Inicial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../101/">Introdução a linha de comando UNIX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../102/">Manipulando dados na CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../CLI-Colab/">Introdução a CLI e ao Google Colab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../103/">Introdução ao GenBank</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../104/">Buscas de Similaridade</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../105/">Alinhamento entre pares de sequências</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../106-MSA/">Alinhamento Múltiplo de Sequências</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../107-NCBI-CLI/">NCBI/GenBank via CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../108-BLAST-CLI/">BLAST via CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../109-SQL/">Comandos Básicos em SQL</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../r-colab/">Introdução ao R usando o Google Colab</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../enzima-annot/">Integração de Bancos - Exemplo</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../dbsnp/">Bancos de dados de Mutações e Polimorfismos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../KEGG/">Explorando Vias Metabólicas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../110-BDs/">Bancos de Dados de Informação Proteica</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../111-Modelagem/">Modelagem Computacional de Proteínas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../112-MEGAX/">Primeiros Passos no MEGA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../113-Genomes/">Navegando por Genomas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../video/">Videoaulas</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Bioinformática Estrutural</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../basic2/">Inicial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../slides/">Slides de Acompanhamento</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../tools/">Programas e Ferramentas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR1-Visualizacao/">Visualização Computacional de Moléculas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR2-pred/">Informações a partir da estrutura primária</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR22-Epitopos/">Predição de Epítopos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR3-Model1/">Modelagem 101</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR4-Model2/">Modelagem 102</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../STR5-Model3.mkdocs gh-deploy --forcemd">Modeller-CLI</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR6-AlphaFold/">Métodos baseados em IA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR7-MDA/">MDA</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR8-Aval/">Avaliação dos Modelos</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR9-EM/">EM/CryoEM fitting</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR10-RINs/">RINs</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR11-APBS/">APBS</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR12-Memb/">Proteínas de Membrana</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR13-Dock1/">Autodock (básico)</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR14-Dock2/">Docking</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR15-VS1/">Virtual Screening</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR23-MDIntro/">Introdução a Dinâmica Molecular</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR16-EGB1/">Modelos de Pequenas Moléculas</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR17-EGB2/">Análise conformacional</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR18-EGB3/">Docking Automático</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR19-EGB4/">Posicionamento Manual</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR20-EGB5/">Dinâmica Molecular</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../STR21-EGB6/">VS-2</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../comps/">Complements</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Análise Evolucionária de Sequências (Evolução Molecular)</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="reference internal" href="../satsub-ptbr/">Análise de Saturação de Substituições</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../bestfit-ptbr/">Escolha do Modelo de Substituição</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../BEAST_ptbr/">Usando o BEAST</a>
+                  </li>
+              </ul>
+              <p class="caption"><span class="caption-text">Diplomado - UChile</span></p>
+              <ul>
+                  <li class="toctree-l1"><a class="" href="../Presentation.md">Home</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../UC_slides.md">Slides</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../Material.md">Files and References</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../First_Tutorial_ENG.md">First Tutorial</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../Substitution_saturation_ENG/">Analysis of Substitution Saturation</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../ModelTest_ENG/">Test of the Best-Fit Models</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../MEGAX_ENG.md">Using MEGAX</a>
+                  </li>
+                  <li class="toctree-l1"><a class="reference internal" href="../1st_BEAST/">Using BEAST</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../BEAST+EBSP_ENG.md">Phylodynamics using EBSP</a>
+                  </li>
+                  <li class="toctree-l1"><a class="" href="../IQTree.md">Using IQ-Tree</a>
+                  </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Tutoriais EvoMol-Lab's Teaching Resources</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">GROMACS Post-Simulation Analysis Guide</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="gromacs-post-simulation-analysis-guide">GROMACS Post-Simulation Analysis Guide</h1>
+<p>After running your molecular dynamics simulation with GROMACS and obtaining 10 frames (<code>.gro</code> files), here are the commands to perform common analyses like RMSD, RMSF, and trajectory visualization.</p>
+<h2 id="prerequisites">Prerequisites</h2>
+<p>First, you'll need to have:
+1. Your original topology file (<code>.tpr</code>)
+2. A compiled version of GROMACS (e.g., <code>gmx</code> or <code>gmx_mpi</code>)</p>
+<h2 id="1-convert-gro-files-to-xtc-trajectory">1. Convert GRO files to XTC trajectory</h2>
+<p>Since you have separate GRO files, first combine them into a trajectory file:</p>
+<pre><code class="language-bash"># Combine GRO files into XTC trajectory
+gmx trjcat -f step1.gro step2.gro step3.gro step4.gro step5.gro step6.gro step7.gro step8.gro step9.gro step10.gro -o trajectory.xtc
+</code></pre>
+<h2 id="2-rmsd-root-mean-square-deviation-analysis">2. RMSD (Root Mean Square Deviation) Analysis</h2>
+<p>Calculate RMSD to assess structural stability:</p>
+<pre><code class="language-bash"># RMSD relative to first frame
+gmx rms -s your_topology.tpr -f trajectory.xtc -o rmsd.xvg -tu ns
+
+# RMSD relative to crystal/reference structure (if available)
+gmx rms -s reference.pdb -f trajectory.xtc -o rmsd_ref.xvg -tu ns
+</code></pre>
+<p>When prompted:
+- Select "Backbone" for protein backbone RMSD
+- Or "Protein" for whole protein RMSD</p>
+<h2 id="3-rmsf-root-mean-square-fluctuation-analysis">3. RMSF (Root Mean Square Fluctuation) Analysis</h2>
+<p>Calculate RMSF to identify flexible regions:</p>
+<pre><code class="language-bash">gmx rmsf -s your_topology.tpr -f trajectory.xtc -o rmsf.xvg -res
+</code></pre>
+<p>When prompted, select the group you want to analyze (typically "Protein").</p>
+<h2 id="4-visualization-of-trajectories">4. Visualization of Trajectories</h2>
+<p>To visualize your trajectory:</p>
+<pre><code class="language-bash"># Convert to PDB format (optional)
+gmx trjconv -s your_topology.tpr -f trajectory.xtc -o trajectory.pdb
+
+# Or visualize directly with VMD/Chimera/PyMOL
+vmd your_topology.tpr trajectory.xtc
+</code></pre>
+<h2 id="5-other-useful-analyses">5. Other Useful Analyses</h2>
+<h3 id="radius-of-gyration">Radius of Gyration</h3>
+<pre><code class="language-bash">gmx gyrate -s your_topology.tpr -f trajectory.xtc -o gyrate.xvg
+</code></pre>
+<h3 id="hydrogen-bonds-analysis">Hydrogen Bonds Analysis</h3>
+<pre><code class="language-bash">gmx hbond -s your_topology.tpr -f trajectory.xtc -num hbonds.xvg
+</code></pre>
+<h3 id="secondary-structure-analysis-dssp">Secondary Structure Analysis (DSSP)</h3>
+<pre><code class="language-bash">gmx do_dssp -f trajectory.xtc -s your_topology.tpr -o ss.xpm -sc ss.xvg
+</code></pre>
+<h2 id="plotting-results">Plotting Results</h2>
+<p>You can plot the <code>.xvg</code> files using <code>xmgrace</code> or Python (matplotlib):</p>
+<pre><code class="language-bash">xmgrace rmsd.xvg
+</code></pre>
+<p>Or in Python:</p>
+<pre><code class="language-python">import numpy as np
+import matplotlib.pyplot as plt
+data = np.loadtxt('rmsd.xvg', comments=['#', '@'])
+plt.plot(data[:,0], data[:,1])
+plt.xlabel('Time (ns)')
+plt.ylabel('RMSD (nm)')
+plt.show()
+</code></pre>
+<h2 id="notes">Notes</h2>
+<ol>
+<li>With only 10 frames, your analysis will be limited in statistical significance</li>
+<li>For more meaningful results, consider running longer simulations (typically 100+ ns for proteins)</li>
+<li>Always check your <code>.xvg</code> files for reasonable values before further analysis</li>
+</ol>
+<p>Would you like me to elaborate on any specific analysis or provide more detailed commands for a particular part of the process?</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
