@@ -42,6 +42,17 @@ jobs:
       - name: Build project
         run: npm run build
         
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.x'
+        
+      - name: Build MkDocs tutorials
+        run: |
+          pip install mkdocs
+          cd tutorials
+          mkdocs build -d ../dist/tutorials
+        
       # 2. Verify the output (this is our debug step)
       - name: Verify build output
         run: ls -R ./dist

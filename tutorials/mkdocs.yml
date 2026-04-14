@@ -37,7 +37,7 @@ nav:
     - Predição de Epítopos: STR22-Epitopos.md
     - Modelagem 101: STR3-Model1.md
     - Modelagem 102: STR4-Model2.md
-    - Modeller-CLI: STR5-Model3.mkdocs gh-deploy --forcemd
+    - Modeller-CLI: STR5-Model3.md
     - Métodos baseados em IA: STR6-AlphaFold.md
     - MDA: STR7-MDA.md
     - Avaliação dos Modelos: STR8-Aval.md
