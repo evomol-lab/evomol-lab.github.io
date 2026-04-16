@@ -53,12 +53,6 @@ const tools: Tool[] = [
     links: [{ label: "Go to DDEA", url: "https://ddealley.streamlit.app/" }]
   },
   {
-    name: "Differential Expression Diagonal Alley (DDEA)",
-    image: "DDEA.png",
-    description: "DDEA is a simple Streamlit application to analyze Case x Control gene expression output data from GEO. Allows users to upload a .tsv file, a custom gene list (optional), and specify a comparison string, with controls in a sidebar. DDEA then plots differentially expressed genes using Plotly and displays their p-values.",
-    links: [{ label: "Go to DDEA", url: "https://ddealley.streamlit.app/" }]
-  },
-  {
     name: "Rictusempra",
     image: "Rictusempra.png",
     description: "Rictusempra is a web-based cheminformatics tool for interactively visualizing small molecules and calculating their most likely protonation state at a given physiological pH. It provides a simple interface to generate 2D and 3D molecular structures and prepare them for further computational chemistry tasks like molecular docking or simulation.",
