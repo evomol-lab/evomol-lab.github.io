@@ -41,10 +41,16 @@ const tools: Tool[] = [
     ]
   },
   {
-    name: "HufflePlots",
-    image: "HufflePlots.jpg",
-    description: "HufflePlots is a simple and interactive tool to visualize, analyze and compare RMSD and RMSF plots of protein structural trajectories data from Molecular Dynamics or Normal mode-based geometric simulations.",
-    links: [{ label: "Go to HufflePlots", url: "https://huffleplots.streamlit.app/" }]
+    name: "Lumos Networks",
+    image: "lumos.png",
+    description: "Lumos Networks is a modular Python web application designed to bridge the gap between raw transcriptomic data and systems biology insights. Developed at EvoMol-Lab (UFRN), the suite provides a streamlined workflow for Differential Expression Analysis, Functional Enrichment, and Knowledge-based Network construction.",
+    links: [{ label: "Go to Lumos Networks", url: "https://lumos-networks.streamlit.app/" }]
+  },
+  {
+    name: "Differential Expression Diagonal Alley (DDEA)",
+    image: "DDEA.png",
+    description: "DDEA is a simple Streamlit application to analyze Case x Control gene expression output data from GEO. Allows users to upload a .tsv file, a custom gene list (optional), and specify a comparison string, with controls in a sidebar. DDEA then plots differentially expressed genes using Plotly and displays their p-values.",
+    links: [{ label: "Go to DDEA", url: "https://ddealley.streamlit.app/" }]
   },
   {
     name: "Differential Expression Diagonal Alley (DDEA)",
