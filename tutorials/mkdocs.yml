@@ -6,7 +6,6 @@ site_description: Tutoriais básicos de Bioinformática
 nav:
   - Página Inicial: index.md
   - Representação Computacional de Biomoléculas: demo.md
-  - Sobre o grupo: aboutus.md
   - Tutoriais Iniciais de Bioinformática: 
     - Inicial: basic1.md
     - Introdução a linha de comando UNIX: 101.md
@@ -118,7 +117,6 @@ plugins:
           nav_translations:
             Página Inicial: "Home Page"
             Representação Computacional de Biomoléculas: "Computational Representation of Biomolecules"
-            Sobre o grupo: "About the group"
             Tutoriais Iniciais de Bioinformática: "Initial Bioinformatics Tutorials"
             Inicial: "Initial"
             Introdução a linha de comando UNIX: "Introduction to UNIX command line"
@@ -166,7 +164,6 @@ plugins:
           nav_translations:
             Página Inicial: "Página de Inicio"
             Representação Computacional de Biomoléculas: "Representación Computacional de Biomoléculas"
-            Sobre o grupo: "Sobre el grupo"
             Tutoriais Iniciais de Bioinformática: "Tutoriales Iniciales de Bioinformática"
             Inicial: "Inicial"
             Introdução a linha de comando UNIX: "Introducción a la línea de comandos UNIX"
