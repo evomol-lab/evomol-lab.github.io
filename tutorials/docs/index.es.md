@@ -1,6 +1,6 @@
 ![BioME Logo](BioME.png)
 
-# BioinfoX
+# Recursos de Enseñanza del Evomol-Lab
 
 El objetivo de esta página es servir de apoyo para las prácticas básicas en Bioinformática de los cursos de pregrado y posgrado en la UFRN. Aquí se podrán encontrar las guías y los archivos con los que se trabajará durante las clases y demostraciones prácticas.
 
@@ -14,4 +14,3 @@ La bioinformática se puede definir como el uso de ordenadores para la adquisici
 - Tutoriales de Filogenia y Análisis Evolutivo de Secuencias.
 - Tutoriales de Bioinformática Estructural.
 
-## Script de Instalación de ChimeraX

@@ -1,6 +1,6 @@
 ![BioME Logo](BioME.png)
 
-# BioinfoX
+# EvoMol-Lab's Teaching Resources
 
 The goal of this page is to serve as a support resource for basic Bioinformatics practicals in undergraduate and graduate courses at UFRN. Here you can find the guidelines and files that will be used during classes and practical demonstrations.
 
@@ -14,4 +14,3 @@ Bioinformatics can be defined as the use of computers for the acquisition, manag
 - Phylogeny and Evolutionary Sequence Analysis Tutorials.
 - Structural Bioinformatics Tutorials.
 
-## ChimeraX Installation Script
