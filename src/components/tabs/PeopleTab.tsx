@@ -114,6 +114,30 @@ const PeopleTab = () => {
     }
   ];
 
+  const collaborators: Person[] = [
+    {
+      name: "Rodrigo Olímpio Orvate Arruda",
+      image: "Orvate.jpeg",
+      bio: "Biomedical scientist and Neuroscience Master's student at UFRN. My work bridges neurobiology and computacional Biology to investigate the molecular mecanism of memory. I'm currently specializing in bioinformatics, developing pipelines for genomics, molecular docking, and automated behavioral analysis using Python and R.",
+      house: "Ravenclaw",
+      links: [
+        { label: "CV Lattes", url: "http://lattes.cnpq.br/2942285049497511" },
+        { label: "Email", url: "mailto:rodrigo.orvate.092@ufrn.edu.br" },
+        { label: "GitHub", url: "https://github.com/RodrigoOrvate/" }
+      ]
+    },
+    {
+      name: "João Pedro Lemos e Silva Rodrigues",
+      image: "JPLemos.jpeg",
+      bio: "Undergraduate student in Biomedical Science at Federal University of Rio Grande do Norte (UFRN)",
+      house: "Hufflepuff",
+      links: [
+        { label: "CV Lattes", url: "http://lattes.cnpq.br/2947388393585011" },
+        { label: "Email", url: "mailto:pedro.lemos.700@ufrn.edu.br " }
+      ]
+    }
+  ];
+
   const renderPerson = (person: Person) => (
     <div className="flex flex-col md:flex-row gap-6 items-start group hover:bg-accent/30 transition-colors rounded-lg p-4 -mx-4">
       <div className="flex-shrink-0 mx-auto md:mx-0">
@@ -204,6 +228,19 @@ const PeopleTab = () => {
           </h3>
           <div className="space-y-6">
             {undergradStudents.map((person, index) => (
+              <div key={index}>
+                {renderPerson(person)}
+              </div>
+            ))}
+          </div>
+
+          <Separator className="my-8" />
+
+          <h3 className="text-2xl font-bold text-foreground mb-6 pb-2 border-b-2 border-border">
+            Collaborators
+          </h3>
+          <div className="space-y-6">
+            {collaborators.map((person, index) => (
               <div key={index}>
                 {renderPerson(person)}
               </div>
