@@ -1,4 +1,4 @@
-[![UChile](https://drive.google.com/uc?id=1xeSo8MOvqmgO4q_6lyidauaKOjdTPu3t)](http://www.postgradoquimica.cl/informacion-diplomado-en-bioinformatica-y-biologia-computacional/)
+[![UChile](UChile.png)](http://www.postgradoquimica.cl/informacion-diplomado-en-bioinformatica-y-biologia-computacional/)
 
 # Material
 
