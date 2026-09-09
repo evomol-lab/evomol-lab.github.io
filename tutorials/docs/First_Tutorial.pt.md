@@ -1,17 +1,14 @@
-# Tutorial inicial
+![UChile](UChile.png)
 
-### Objetivos
+# First Tutorial
 
-- Identificar sequências por meio da busca por similaridade do BLAST.
-- Realizar o alinhamento múltiplo de sequências utilizando o [Jalview](http://jalview.org).
+## 1st Part - Knowing your sequences
 
-## Conhecendo suas sequências
+To execute a phylogenetic analysis, the first thing you're going to have to do is to find a suitable marker (nucleotide or protein sequence). Then, you will construct the dataset (i.e., a Multiple Sequence Alignment - MSA) to use in the subsequent phylogeny pipeline.
 
-Para executar uma análise filogenética, uns dos primeiros passos é encontrar um marcador adequado (uma sequência de nucleotídeos ou  aminoácidos). Em seguida, você tem construir um conjunto de dados (*dataset*) com sequências homólogas alinhadas (ou seja, um Alinhamento Múltiplo de Sequências - MSA) a ser usado no *pipeline* de filogenia subsequente.
+In this example, you're going to start from sequences below, using the .fasta file.
 
-Neste exemplo, você vai começar a partir da seqüência abaixo, usando o arquivo ```.fasta```.
-
-A primeira coisa a fazer é identificar esta sequência usando uma busca de similaridade usando o programa BLAST. Para isso, você pode usar BLASTn ou BLASTx.
+The first thing to do is to identify this sequence using BLAST searches. For this, you can use BLASTn or BLASTx.
 
 ```
 >HomoSapiens
@@ -36,46 +33,48 @@ CAACCAGUAAGCUACCCUUUUACCAUCAUUGGACAAGUAGCAUCCGUACUAUACUUCACA
 ACAAUCCUAAUCCUAAUACCAACUAUCUCCCUAAUUGAAAACAAAAUACUCAAA
 ```
 
-Muitas vezes a sequência alvo é obtida por sequenciamento de DNA (em experimentos de genoma ou transcriptoma), uma vez que estes métodos são normalmente mais acessíveis que os métodos de obtenção de sequências de aminoácidos. Para realizar a busca de similaridade a partir da sequência de nucleotídeos, você tem duas opções:
+Often the target sequence is obtained by DNA sequencing (in genome or transcriptome designs), as these methods are usually more accessible than methods of obtaining amino acid sequences. To search for similarity from the nucleotide coding sequence, you have two options:
 
-- Traduzir a sequência de nucleotídeos nos 3 *frames* e usar as sequências de aminoácidos resultantes como *input* em uma busca de similaridade com o BLASTp. A tradução pode ser realizada usando as ferramentas do [EXPASY] (https://web.expasy.org/cgi-bin/translate/dna2aa.cgi) ou do [EBI](https://www.ebi.ac.uk/ Tools/st/).
-- Usar diretamente o [BLASTx] (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn&QUERY=AB823629.1). Esta variação do BLAST traduz a sequência de nucleotídeos de entrada (*Query*) e a compara com um banco de proteínas.
+- Translate the nucleotide sequence into the 3 frames (open reading frames - ORFs) and to use the resulting sequences as input in BLASTp similarity searches. This translation can be done using tools from [EXPASY](https://web.expasy.org/cgi-bin/translate/dna2aa.cgi) or [EBI](https://www.ebi.ac.uk/Tools/st/).
+- Use [BLASTx](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn&QUERY=AB823629.1). This variation of BLAST translates the input nucleotide sequence (Query) and compares it to protein banks.
 
-Aqui vamos usar o [BLASTx] (https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn&QUERY=AB29).
+To be more straightforward, you could use [BLASTx](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PROGRAM=blastx&PAGE_TYPE=BlastSearch&BLAST_SPEC=&LINK_LOC=blasttab&LAST_PAGE=blastn&QUERY=AB29).
 
-**Passos:**
+**Steps:**
 
-- Abra a página do [NCBI-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi).
+- Open the [NCBI-BLAST](https://blast.ncbi.nlm.nih.gov/Blast.cgi) site.
 
 ![BLAST](1sT-fig1.png)
 
-- Clique em blastx. A página abaixo irá abrir. Cole sua sequência no campo indicado e escolha o banco de dados nr (*nr database*). Depois, só clicar em ```BLAST```.
+- Click in blastx. The following page will open. Paste your sequence in the indicated field and choose the nr database. Then you can click ```BLAST``` button.
 
 ![BLASTx](1sT-fig2.png)
 
-- Após alguns momentos, o resultado da busca irá aparecer, como o abaixo:
+- After a few moments, the BLAST search result will appear, as below:
 
 ![BLASTx](1sT-fig3.png)
 
-- Clique em alinhamentos e analise os resultados.
+- Click in Alignments and analyze the results.
 
 ![BLASTx](1sT-fig4.png)
 
-> *Você também pode traduzir a sequência nucleotídica em seu frame +1 e realizar uma busca com o BLASTp, usando a sequência de aminoácidos.
+> You can also translate the sequence using the frame +1 and perform a BLASTp search with the resulting amino acid sequence.
 
-### Questões
+### Questions
 
-1- Qual proteína essa sequência codifica?
-2- Qual a função dessa proteína?
+1- Which do protein this sequence codes?
+2- What is the function of this protein?
 
-## Alinhamento Múltiplo de Sequências
+## 2nd Part - Sequence Alignment
 
-Vamos supor que o seu objetivo é inferir uma filogenia tomando como partida a sequência acima. A partir dela e usando busca de similaridades, você irá procurar sequências homólogas de outras espécies (de diferentes *ranks* taxonômicos). Existem uma série de opções tanto na página das configurações do BLAST, como na página de resultados da busc que permitem você fazer uma seleção das sequências por espécie e por nível taxonômico. Selecionando as sequências, você pode até já exportar diretamente o arquivo multifasta para posterior alinhamento.
+Let us suppose that you want to infer phylogeny, using the above sequence. And using BLAST searches, you retrieved homologous sequences from other vertebrate species. All you have to do is to find homologous sequences using BLAST searches. However, sometimes it is better to restrict the search database, excluding the species *Homo sapiens*, using the option ```Organism``` from the initial BLAST page.
 
-Por exemplo, encontramos e selecionamos as sequências abaixo:
+> *We're going to give you these sequences, to save you time from getting them.*
+
+So, for example, you've got the following sequences:
 
 ```
->MasturusLanceolatus
+>Masturus_lanceolatus
 AUGGCAAGCCUGCGUAAAACCCACCCACUAUUAAAAAUUGCAAACGACGCACUAGUCGAC
 CUCCCCACCCCUUCAAACAUCUCCGCCUGAUGGAAUUUUGGCUCCCUACUUGGACUCUGC
 CUAAUUAUCCAAAUUCUUACUGGACUAUUCCUCGCAAUACAUUACACCUCCGAUAUCGCU
@@ -95,7 +94,7 @@ CUAAUAGUCGUACCGCUUCUCCACACAUCCAAACAGCGAGGCCUCACGUUCCGCCCCCUU
 ACCCAAUUCCUAUUUUGAACCUUAAUUGCCAACAUUAUUAUUCUAACAUGAAUUGGAGGA
 AUACCCGUAGAACACCCAUUCGUGAUCAUCGGCCAAAUCGCCUCCGUCCUUUACUUCUCC
 CUAUUCCUAGUCUUCAUCCCCCUCACAGGCUGACUAGAAAACAAAGCCCUUGAAUGGUCC
->HomoSapiens
+>Homo_sapiens
 AUGACCCCAAUACGCAAAAUUAACCCCCUAAUAAAAUUAAUUAACCACUCAUUCAUCGAC
 CUCCCCACCCCAUCCAACAUCUCCGCAUGAUGAAACUUCGGCUCACUCCUUGGCGCCUGC
 CUGAUCCUCCAAAUCACCACAGGACUAUUCCUAGCCAUACACUACUCACCAGACGCCUCA
@@ -115,7 +114,7 @@ CUAGCAAUAAUCCCCAUCCUCCAUAUAUCCAAACAACAAAGCAUAAUAUUUCGCCCACUA
 AGCCAAUCACUUUAUUGACUCCUAGCCGCAGACCUCCUCAUUCUAACCUGAAUCGGAGGA
 CAACCAGUAAGCUACCCUUUUACCAUCAUUGGACAAGUAGCAUCCGUACUAUACUUCACA
 ACAAUCCUAAUCCUAAUACCAACUAUCUCCCUAAUUGAAAACAAAAUACUCAAA
->BosTaurus
+>Bos_taurus
 AUGACUAACAUUCGAAAGUCCCACCCACUAAUAAAAAUUGUAAACAAUGCAUUCAUCGAC
 CUUCCAGCCCCAUCAAACAUUUCAUCAUGAUGAAAUUUCGGUUCCCUCCUGGGAAUCUGC
 CUAAUCCUACAAAUCCUCACAGGCCUAUUCCUAGCAAUACACUACACAUCCGACACAACA
@@ -135,7 +134,7 @@ CUUGCUCUAAUCCCCCUACUACACACCUCCAAACAACGAAGCAUAAUAUUCCGACCACUC
 AGCCAAUGCCUAUUCUGAGCCCUAGUAGCAGACCUACUGACACUCACAUGAAUUGGAGGA
 CAACCAGUCGAACACCCAUAUAUCACCAUCGGACAACUAGCAUCUGUCCUAUACUUUCUC
 CUCAUCCUAGUGCUAAUACCAACGGCCGGCACAAUCGAAAACAAAUUACUAAAAUGA
->BalaenopteraMusculus
+>Balaenoptera_musculus
 AUGACCAACAUCCGAAAAACACACCCACUAAUAAAAAUCAUCAACGAUGCAUUCAUUGAU
 CUCCCUACCCCAUCAAACAUCUCCUCAUGAUGAAACUUCGGCUCCCUACUCGGCCUCUGC
 UUAAUUGUACAAAUCCUAACAGGCCUAUUCCUAGCAAUACACUAUACACCAGACACAAUA
@@ -155,7 +154,7 @@ CUAGCUCUAAUCCCAAUACUCCACACAUCCAAACAACGAAGCAUAAUAUUCCGACCCUUU
 AGCCAAUUCCUGUUUUGAGUACUGGUCGCAGACCUACUCACCCUAACGUGGAUCGGCGGC
 CAACCCGUAGAACACCCCUAUGUAAUUGUAGGCCAACUCGCAUCCAUCCUCUACUUCCUC
 UUAAUUCUAGUGUUAAUACCAGUAACUAGUCUUAUCGAAAAUAAACUUAUAAAAUGA
->PongoPygmaeus
+>Pongo_pygmaeus
 AUGACCCCAAUACGCAAAACCAACCCACUAAUAAAAUUAAUUAACCACUCACUCAUCGAC
 CUCCCCACCCCAUCAAACAUCUCUGCAUGAUGGAACUUCGGCUCACUUCUAGGCGCCUGC
 UUAAUCAUCCAAACCAUCACUGGACUAUUCCUAGCCAUACAUUACUCACCAGACGCCACU
@@ -175,7 +174,7 @@ CUAACAACAAUCCCCGCUCUCCACACAUCCAAGCAACAGAGCAUAACAUUCCGCCCAUUA
 AGCCAAUUCCUAUACUGACUCUUAAUCACCGACCUCCUAGUUCUCACCUGAAUUGGAGGA
 CAACCAGUAAGCUACCCCUUUAUUACUAUUGGCCAAGUAGCAUCCGUACUAUACUUUACC
 ACUAUCCUACUCCUUAUACCAACCUCUUCCCUGAUCGAAAACUACAUACUCAAAUGAACC
->PanTroglodytes
+>Pan_troglodytes
 AUGACCCCGACACGCAAAAUUAACCCACUAAUAAAAUUAAUUAAUCACUCAUUUAUCGAC
 CUCCCCACCCCAUCCAACAUUUCCGCAUGAUGGAACUUCGGCUCACUUCUCGGCGCCUGC
 CUAAUCCUUCAAAUUACCACAGGAUUAUUCCUAGCUAUACACUACUCACCAGACGCCUCA
@@ -195,7 +194,7 @@ CUAACAGCAAUCCCUGUCCUCCACACAUCCAAACAACAAAGCAUAAUAUUUCGCCCACUA
 AGCCAACUGCUUUACUGACUCCUAGCCACAGACCUCCUCAUCCUAACCUGAAUCGGAGGA
 CAACCAGUAAGCUACCCCUUCAUCACCAUCGGACAAAUAGCAUCCGUAUUAUACUUCACA
 ACAAUCCUAAUCCUAAUACCAAUCGCCUCUCUAAUCGAAAACAAAAUACUUGAAUGAACC
->GallusGallus
+>Gallus_gallus
 AUGGCACCCAACAUUCGAAAAUCCCACCCCCUACUAAAAAUAAUUAACAACUCCCUAAUC
 GACCUCCCAGCCCCAUCCAACAUCUCUGCUUGAUGAAAUUUCGGCUCCCUAUUAGCAGUC
 UGCCUCAUGACCCAAAUCCUCACCGGCCUACUACUAGCCAUGCACUACACAGCAGACACA
@@ -215,7 +214,7 @@ AUCCUCUUCCUAAUCCCCUUCCUCCACAAAUCUAAACAACGAACAAUAACCUUCCGACCA
 CUCUCCCAAACCUUAUUCUGACUUCUAGUAGCCAACCUUCUUAUCCUAACCUGAAUCGGA
 AGCCAACCAGUAGAACACCCCUUCAUCAUCAUUGGCCAAAUAGCAUCCCUCUCUUACUUC
 ACCAUCCUACUUAUCCUCUUCCCCACAAUCGGAACACUAGAAAACAAAAUACUCAACUAC
->AlligatorMississippiensis
+>Alligator_mississippiensis
 AUGACCCACCAACUACGAAAAUCCCACCCAAUCAUUAAACUCAUCAACCGCUCCCUAAUU
 GACCUACCAACACCCUCAAACAUCUCCGCUUGAUGAAACUUUGGAUCACUACUAGGCCUA
 ACCCUAUUAAUUCAGAUUCUAACAGGAUUCUUCUUAAUAAUGCACUUUUCAUCAAGCGAU
@@ -238,31 +237,38 @@ AUCAUCAUCCUAAUCCUCAUACCAAUAGCAGGCCUCUUAGAGAACAAAAUAGUUGAACCC
 ACCUAUGUUACCCCUAAG
 ```
 
-Você pode baixar este arquivo multifasta [AQUI](https://drive.google.com/uc?export=download&id=1JhtIvER8uxZFrd0obkM_rbMecyEjm6Hc).
+You can also download this multifasta file [HERE](https://drive.google.com/uc?export=download&id=1F4dGdNna7oQQuOF4t1FaSyjuMk_Pc3g0).
 
-O próximo passo a se fazer é alinhar essas sequências, com o objetivo de identificar as homologias posicionais e assim poder inferir um filogenia. As sequências acima apresentam uma alta similaridade e portanto não são difíceis de se alinhar. Você pode usar qualquer programa de alinhamento nesse caso. Aqui iremos usar o programa 
-[Jalview](http://www.jalview.org/).
+The ``tsv`` file with the NCBI taxonomy ID (TxID) can be obtained [HERE](https://drive.google.com/uc?export=download&id=1Rxj5WVgWXKGUVjYmVVMVGsOm_FdqOqKy).
 
-**Passos**
+> *Later, we are going to use this file to annotate the tree using [TaxOnTree](http://bioinfo.icb.ufmg.br/taxontree/#x). This step is very useful, especially if you are not familiar with the complete taxonomic classification of the OTUs you are currently working.* 
 
-- Abra o programa Jalview e feche todas as janelas de exemplo.
-- A o arquivo multifasta acima, seguindo o menu mostrado na figura abaixo:
-- 
+The next step on this tutorial is to align these sequences to get our dataset ready. Since these sequences are not difficult to align, we can use the Clustal program. You can use either the installed programs [Jalview](http://www.jalview.org/) or MEGAX. In this example, we'll show the alignment steps using Jalview.
+
+> *MEGAX also aligns nucleotides and proteins sequences, using the programs Clustal or Muscle. If you want to use MEGA for the alignment, I recommend you to use Clustal program.*
+
+**Steps:**
+
+- Open Jalview. Close all example windows.
+- Open the multifasta file, following the menu, shown in the figure below:
+
 ![Jalview](1sT-fig5.png)
 
-- Em seguida, vamos colocar cores neste alinhamento usando as seguintes opções (a visualização em cores facilita a identificação de sítios semelhantes):
+- Then, put some color in the alignment, using the following options:
 
 ![Jalview](1sT-fig6.png)
 
-- Após isso, você pode iniciar o processo de alinhamento, usando o Clustal, como demonstrado na figura abaixo:
+- After that, you can start the alignment process, using Clustal, as demonstrated in the figure below:
 
 ![Jalview](1sT-fig7.png)
 
-- O alinhamento múltiplo irá aparecer logo após a execução da tarefa. Novamente, coloque um esquema de cores para facilitar a visualização.
-- Agora vamos salvar o alinhamento. Mas primeiro temos de mudar algumas opções no Jalview que dificultam a abertura dos arquivos de alinhamento exportados por outros programas. Na janela principal do Jalview, vá até o menu ```Tools``` e depois clique em preferências. A caixa de diálogo abaixo aparecerá:
+- The aligned sequences will appear right after the job is done. Again, put some color and inspect the alignment.
+- Now we're going to save this alignment. However, first, we have to change some options in Jalview. In Jalview main window, go to the menu ```Tools``` and after that, press ```Preferences```. The following window will appear:
 
 ![Jalview](1sT-fig8.png)
 
-- Pressione a seta a direita até encontrar as opções de ```Output```. Assegure-se de que as opções são extamente as mesmas da figura abaixo. Pressione ```Ok```.
-- Após isso, você pode salvar o seu alinhamento, seguindo o menu ***File > Save as...***
-- Salve seu alinhamento formato fasta.
+- Press the right arrow until you find the ```Output``` options. Make sure the options are the same as the above figure. Press ```OK```.
+- After that, you can save your alignment, following the menu File > Save as...
+- Save your alignment in fasta format.
+
+> *If you want the exported alignment to show the start-end sites for each sequence, you do not need to execute the above steps. However, keep in mind that this information can (and in most cases, will) bring incompatibilities with some programs and tools.*
