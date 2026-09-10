@@ -8,6 +8,14 @@ A grande vantagem do EDirect é que você já baixar os arquivos diretamente no 
 
 > *A criação da conta no NCBI é opcional para a execução deste tutorial.*
 
+## GoogleColab
+
+Para facilitar o uso e acessibilidade ao EDirect, todo este tutorial pode também ser executado no GoogleColab. Essa é forma mais recomendada agora para a disciplina.
+
+[Link direto para o notebook](https://colab.research.google.com/drive/1I4UAo69Ch5znR4cOcymNsEAK1QsrENp_?usp=sharing).
+
+<script src="https://gist.github.com/jpmslima/701816b738158f7ba3425c5131085c1e.js"></script>
+
 ## Acessando a linha de comando
 
 Siga as instruções abaixo para acessar a linha de comando e fazer este tutorial. Você também pode fazer em seu próprio computador, desde que ele tenha um terminal devidamente instalado. 

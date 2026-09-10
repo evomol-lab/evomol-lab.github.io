@@ -57,8 +57,14 @@ nav:
     - VS-2: STR21-EGB6.md
     - Complements: comps.md
   - Análise Evolucionária de Sequências (Evolução Molecular):
+    - Genômica comparativa:
+      - Inicial: GenomicaComparativa.pt.md
+      - Baixando ortólogos utilizando o Oasis: oasis.pt.md
+      - Árvores e dados multi-táxons utilizando o TaxOnTree: taxontree.pt.md
+      - Busca de proteínas com baixa identidade: marauders.pt.md
     - Análise de Saturação de Substituições: satsub.md
     - Escolha do Modelo de Substituição: bestfit.md
+    - Usando o MEGA para filogenias: megax-filogenia.md
     - Usando o BEAST: BEAST.md
   - Diplomado - UChile: 
     - Home: Presentation.md

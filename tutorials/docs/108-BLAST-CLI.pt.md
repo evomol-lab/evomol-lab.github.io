@@ -7,6 +7,14 @@
 - O usuário de cada discente para acesso ao servidor tem restrições e o endereço IP de cada acesso é registrado. Muito cuidado ao usar.
 - Para instalação do BLAST em sua própria máquina UNIX siga as instruções contidas [AQUI](https://blast.ncbi.nlm.nih.gov/Blast.cgi?PAGE_TYPE=BlastDocs&DOC_TYPE=Download).
 
+## GoogleColab
+
+Para facilitar o uso e acessibilidade ao BLAST, todo este tutorial pode também ser executado no GoogleColab. Essa é forma mais recomendada agora para a disciplina.
+
+[Link direto para o notebook](https://colab.research.google.com/drive/1I4UAo69Ch5znR4cOcymNsEAK1QsrENp_?usp=sharing).
+
+<script src="https://gist.github.com/jpmslima/701816b738158f7ba3425c5131085c1e.js"></script>
+
 ## Criando um banco BLAST
 
 Uma das grandes vantagens do BLAST, que o levou a ser a ferramenta padrão para busca de similaridades, é a sua rapidez. Apesar de ser uma heurística, os resultados de suas buscas são confiáveis, desde que bem explorados pelo pesquisador. Uns dos motivos de tal rapidez na comparação é a indexação que o programa faz nas sequências do banco de dados, especificamente com as "*sementes*" contidas nas sequências. Essa indexação é parte do processo de formatação do banco BLAST, que deve ser realizado antes da utilização do programa. A suíte de programas vem com um aplicativo chamado `makeblastdb` que é utilizado para tal fim.
