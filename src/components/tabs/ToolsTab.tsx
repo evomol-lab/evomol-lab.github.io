@@ -100,7 +100,7 @@ const tools: Tool[] = [
     image: "Oasis.png",
     description: "OASIS is a robust, interactive command-line pipeline designed for bioinformatics researchers to effortlessly fetch, align, and strictly filter orthologous sequences from NCBI.",
     links: [{ label: "Go to OASIS (GitHub)", url: "https://github.com/RodrigoOrvate/OASIS" }]
-  }
+  },
   {
     name: "The Pensieve Plotter",
     image: "PensievePlotter.png",
