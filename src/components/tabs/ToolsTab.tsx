@@ -96,6 +96,12 @@ const tools: Tool[] = [
     ]
   },
   {
+    name: "OASIS (Ortholog Alignment & Similarity Screener)",
+    image: "Oasis.png",
+    description: "OASIS is a robust, interactive command-line pipeline designed for bioinformatics researchers to effortlessly fetch, align, and strictly filter orthologous sequences from NCBI.",
+    links: [{ label: "Go to OASIS (GitHub)", url: "https://github.com/RodrigoOrvate/OASIS" }]
+  }
+  {
     name: "The Pensieve Plotter",
     image: "PensievePlotter.png",
     description: "An interactive tool for visualizing Extended Bayesian Skyline Plots (EBSP) from BEAST log files.",
