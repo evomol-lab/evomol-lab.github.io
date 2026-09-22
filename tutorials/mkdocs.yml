@@ -63,6 +63,7 @@ nav:
       - Árvores e dados multi-táxons utilizando o TaxOnTree: taxontree.pt.md
       - Busca de proteínas com baixa identidade: marauders.pt.md
     - Análise de Saturação de Substituições: satsub.md
+    - Usando o Satsub: satsub-tutorial.pt.md
     - Escolha do Modelo de Substituição: bestfit.md
     - Usando o MEGA para filogenias: megax-filogenia.md
     - Usando o BEAST: BEAST.md
@@ -72,7 +73,7 @@ nav:
     - Files and References: Material.md
     - First Tutorial: First_Tutorial.md
     - Analysis of Substitution Saturation: Substitution_saturation.md
-    - Using Satsub: satsub-tutorial.md
+    - Using Satsub: satsub-tutorial.en.md
     - Test of the Best-Fit Models: ModelTest.md
     - Using MEGAX: MEGAX.md
     - Using BEAST: 1st_BEAST.md
