@@ -102,6 +102,12 @@ const tools: Tool[] = [
     links: [{ label: "Go to OASIS (GitHub)", url: "https://github.com/RodrigoOrvate/OASIS" }]
   },
   {
+    name: "SatSub",
+    image: "satsub-logo.png",
+    description: "SatSub is an interactive Streamlit app for exploring multiple sequence alignments and diagnosing substitution saturation. It reports nucleotide and amino-acid statistics, codon usage and RSCU, and JC69/K80/TN93/GTR saturation plots to help you decide which codon positions and models are still trustworthy for phylogenetic inference.",
+    links: [{ label: "Go to SatSub", url: "https://satsub.streamlit.app/" }]
+  },
+  {
     name: "The Pensieve Plotter",
     image: "PensievePlotter.png",
     description: "An interactive tool for visualizing Extended Bayesian Skyline Plots (EBSP) from BEAST log files.",
